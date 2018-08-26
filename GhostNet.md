@@ -1,5 +1,5 @@
 ### Note:
-This document is a copy of Coolstorm#0154 from the previous #modding_readme channel on Discord.
+This document is a copy of Coolstorm#0154's message from the previous #modding_readme channel on Discord.
 
 ---
 
