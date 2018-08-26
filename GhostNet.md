@@ -54,7 +54,7 @@ Hit `Tab` on keyboard, `View` on Xbox One, `Back` on Xbox 360.
 ### Different problem, crash, or nothing works?
 Ping either me or 0x0ade and we'll help you out to the best of our ability.
 
-### Extra information:
+### ℹ Extra information:
 The Ghostnet server's usage graphs can be found here: http://celeste.0x0ade.ga:8080/monitorix/
 
 **I'm also looking for server admins!** To become a ghostnet server admin, you need to be:  
