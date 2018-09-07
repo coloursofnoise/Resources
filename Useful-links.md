@@ -39,6 +39,12 @@ Note for Windows users: [Install 7zip.](https://www.7-zip.org/)
 
 ---
 
+### [List of all maps on GameBanana](https://gamebanana.com/maps/games/6460)
+Note for Windows users: Use the 1-click installer button after installing Everest.  
+The Everest installer will auto-download and verify the .zip for you.
+
+---
+
 ### [Ahorn for Windows](https://thoas.feralhosting.com/oddstr13/sharex/file/setup-Ahorn-0.0.2.exe)
 After installing Ahorn, go to Help > Check for Updates!
 
