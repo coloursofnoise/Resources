@@ -1,5 +1,5 @@
 ### Note:
-This document is a copy of my (Coolstorm#0154)'s message from the previous #modding_readme channel on Discord. If you'd like to contact me, do so either by discord or on email (this may take a while for me to reply to!) at coolstorm10@gmail.com. Or you can mention me on GitHub @CST-100 , but I'm not entirely sure how that works.
+This document is a copy of my (Coolstorm#0154)'s message from the previous #modding_readme channel on Discord. If you'd like to contact me, do so either by discord or on email (this may take a while for me to reply to!) at coolstorm10@gmail.com. Or you can mention me on GitHub @CST-100, but I'm not entirely sure how that works.
 
 ---
 
