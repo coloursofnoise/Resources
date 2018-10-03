@@ -40,7 +40,7 @@ This could also be for a different reason - sometimes your GhostNet version is v
 ### Why are other players invisible?
 This could be one of two things. If you can send messages to each other, see A. If you cannot, see B.
 
-A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game.
+A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game. Be warned this may slow down your game and induce lag while on GhostNet.
 
 B. If you can **not** send messages to each other, it means the server is broken. Message the owner of the server (in the case of the official one, see my contact info at the top) and ask them to restart their server.
 
