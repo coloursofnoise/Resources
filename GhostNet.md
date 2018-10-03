@@ -35,8 +35,14 @@ This could be for a number of reasons. If Everest is working (you should see the
 ### Why can't I connect to the official server?
 This is primarily for a couple of reasons. Sometimes my ISP likes to cut off my internet. You can test this by clicking on the server usage graphs posted beneath this readme. If the page loads, it worked. If it didn't, my internet's dead. If this is the case, just wait, it'll be back up soon. Otherwise, the server probably crashed. Ping me about it and I'll put it back up.
 
-### Why is my name in brackets and/or the players invisible?
-This is a bug with Ghostnet that seems to happen infrequently. However, this bug basically kills any server it's on until said server is restarted, so for the official server, ping me about it, and for any other servers, tell their hosts to restart the server.
+This could also be for a different reason - sometimes your GhostNet version is very far behind. Make sure you've updated to the latest version (as of writing 1.3.14) of GhostNet. 
+
+### Why are other players invisible?
+This could be one of two things. If you can send messages to each other, see A. If you cannot, see B.
+
+A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendMFramesInUStream` to true. After this, restart your game.
+
+B. If you can **not** send messages to each other, it means the server is broken. Message the owner of the server (in the case of the official one, see my contact info at the top) and ask them to restart their server.
 
 ### Why are there clones of me and/or other players?
 This is a very minor bug with Ghostnet that usually only happens on servers with a lot of traffic and after a few days of uptime. These clones do nothing and should not interfere, but they can be removed with a server restart as well. Don't ping me about these.
