@@ -61,7 +61,7 @@ Hit `Tab` on keyboard, `View` on Xbox One, `Back` on Xbox 360.
 Ping either me or 0x0ade and we'll help you out to the best of our ability.
 
 ### ℹ Extra information:
-The Ghostnet server's usage graphs can be found here: http://celeste.0x0ade.ga:8080/monitorix/
+~~The Ghostnet server's usage graphs can be found here: http://celeste.0x0ade.ga:8080/monitorix/
 
 **I'm also looking for server admins!** To become a ghostnet server admin, you need to be:  
 a. Competent with using SSH and the bash terminal  
@@ -69,4 +69,4 @@ b. Willing to take a 1 minute break if stuff dies to restart the server
 c. Not mess with anything else on the server. Ghostnet isn't the only thing that runs on there.  
 d. A good track record, especially with me.
 
-If you are all of these things, slide into my DMs and we can discuss this.
+If you are all of these things, slide into my DMs and we can discuss this.~~ This section no longer applies, as the Ghostnet server is now being hosted on dahlukeh's computer.
