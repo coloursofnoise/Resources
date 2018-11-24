@@ -66,7 +66,7 @@ Ping either me or 0x0ade and we'll help you out to the best of our ability.
 ~~**I'm also looking for server admins!** To become a ghostnet server admin, you need to be:~~  
 ~~a. Competent with using SSH and the bash terminal~~  
 ~~b. Willing to take a 1 minute break if stuff dies to restart the server~~  
-~~c. Not mess with anything else on the server. Ghostnet isn't the only thing that runs on there.  ~~
+~~c. Not mess with anything else on the server. Ghostnet isn't the only thing that runs on there.~~  
 ~~d. A good track record, especially with me.~~
 
 ~~If you are all of these things, slide into my DMs and we can discuss this.~~
