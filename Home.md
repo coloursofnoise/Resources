@@ -6,6 +6,8 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 
 ## [[FAQ]]
 
+## [[Useful Links]]
+
 ## Tutorials
 - [How do I package my maps?](https://everestapi.github.io/tutorials/modstruct.html)
 - [How do I modify the game's code?](https://everestapi.github.io/tutorials/firstcodemod.html)
