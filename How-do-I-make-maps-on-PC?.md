@@ -11,7 +11,7 @@ Alt and Delete.
 Click Room at the top, and then Add.
 
 ### How do I automate boring tasks?
-If you know how to program, use [Maple](https://github.com/CelestialCartographers/Maple). Ahorn will likely not have a GUI macro system, but Maple is quite simple for programmars.
+If you know how to program, use [Maple](https://github.com/CelestialCartographers/Maple). Ahorn will likely not have a GUI macro system, but Maple is quite simple for programmers.
 
 ### How often are collab maps?
 There isn't a set schedule, but generally every 3-6 months. Don't complain if there isn't one.
