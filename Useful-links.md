@@ -45,7 +45,7 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
-### [Ahorn for Windows](https://thoas.feralhosting.com/oddstr13/sharex/file/setup-Ahorn-0.0.2.exe)
+### [Ahorn for Windows](https://thoas.feralhosting.com/oddstr13/sharex/file/setup-Ahorn-0.0.3.exe)
 After installing Ahorn, go to Help > Check for Updates!
 
 Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
