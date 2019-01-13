@@ -26,10 +26,9 @@ The mod structure tutorial applies to non-code-mods as well!
 
 ---
 
-### [Dumped graphics](https://drive.google.com/open?id=1a47of8ejPm2jApe5e9knufhh-fD4-ttN)
+### [Dumped graphics](https://drive.google.com/open?id=1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet)
 They're ordered in the same way as your own mod's graphics should be. Make sure to read the modstruct tutorial.  
 The graphics `.meta.yaml` files are required, as the images have got "whitespace" (transparent borders), which are cut away from the `.png`s.  
-Note for Windows users: [Install 7zip.](https://www.7-zip.org/)
 
 ---
 
