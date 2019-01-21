@@ -1,6 +1,6 @@
 ## How-To: Audio mods without replacing original sounds
 
-You'll need FMOD Studio 1.10.* and the Celeste FMOD project. Both can be found on the FMOD downloads page.  
+You'll need FMOD Studio 1.10.* (compatible with WINE) and the Celeste FMOD project. Both can be found on the FMOD downloads page.  
 **Make sure to read the EULA.**
 
 1. Assign your events to a **new bank per mod.**  
