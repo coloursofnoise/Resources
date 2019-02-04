@@ -1,6 +1,6 @@
 ### Ok, what the heck is ghostnet?
 Ghostnet is a mod for Celeste (it'd be weird if it wasn't) created by 0x0ade. It allows for multiplayer, and you can host and join servers and even create permanent ones.  
-If stuff breaks, and everything you read here doesn't help you, just ping @dahlukeh in #modding_help or #modding_general.
+If stuff breaks, and everything you read here doesn't help you, just ping @leo60228#0480 (between 8AM-7:30PM EST) or @0x0ade#1584 (between 12PM(?)-1AM CEST) in #modding_help or #modding_general.
 
 ### How do I install GhostNet?
 1. Download the [Everest API](https://everestapi.github.io/)  
@@ -9,7 +9,7 @@ If stuff breaks, and everything you read here doesn't help you, just ping @dahlu
 
 ### How do I join a server?
 1. Load up Celeste after doing everything mentioned previously.
-2. Go into Mod Settings,  and down to GhostNet. Set Name to whatever you want to be known as. The server should be preset to `celeste.0x0ade.ga`. If you're just planning on playing on the official server, leave this as it is. If you want to play on a friend's server, set this to their IP (and if they're not on port 2782 add :####, #### being the port they chose). Other servers include `ghostnet.leo60228.space`.
+2. Go into Mod Settings,  and down to GhostNet. Set Name to whatever you want to be known as. The server should be preset to `celeste.0x0ade.ga`. If you're just planning on playing on the official server, leave this as it is. If you want to play on a friend's server, set this to their IP (and if they're not on port 2782 add :####, #### being the port they chose). ~~Other servers include `ghostnet.leo60228.space`~~ (now the official server).
 3. Switch Connected to ON. If it works, congrats! If it doesn't, keep reading!
 
 ### How do I host a server?
@@ -28,7 +28,7 @@ If your ghostnet is broken, see this.
 This could be for a number of reasons. If Everest is working (you should see the Everest version on the CELESTE screen and a mod options menu) then you probably just need to reinstall GhostNet (delete .zip and download it yourself). If Everest is not working, reinstall both.
 
 ### Why can't I connect to the official server?
-This is primarily for a couple of reasons. Sometimes my ISP likes to cut off my internet. You can test this by clicking on the server usage graphs posted beneath this readme. If the page loads, it worked. If it didn't, my internet's dead. If this is the case, just wait, it'll be back up soon. Otherwise, the server probably crashed. Ping me about it and I'll put it back up.
+This is primarily for a couple of reasons. The server is hosted using an AWS Spot instance, meaning that the price of the server is variable (and often 80%+ cheaper). For example, at peak AWS usage (different from server usage!), the price of the server may go above $6/month ($0.0112/hour), at which point the server gets shut down automatically. It'll turn on again when the price goes back down. I don't currently have a monitoring solution, but me or 0x0ade can tell you if this happens.
 
 This could also be for a different reason - sometimes your GhostNet version is very far behind. Make sure you've updated to the latest version (as of writing 1.3.14) of GhostNet. 
 
@@ -37,7 +37,7 @@ Sometimes, certain users have issues connecting to dahlukeh's network. The reaso
 ### Why are other players invisible?
 This could be one of two things. If you can send messages to each other, see A. If you cannot, see B.
 
-A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game. Be warned this may slow down your game and induce lag while on GhostNet. This problem may only occur with the official server, in which case you can use a different one.
+A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game. Be warned this may slow down your game and induce lag while on GhostNet. This problem may only occur with the official server, in which case you can use a different one. The reason isn't currently known, but it may be due to high latency, which TCP is better at handling.
 
 B. If you can **not** send messages to each other, it means the server is broken. Message the owner of the server (in the case of the official one, see the contact info at the top) and ask them to restart their server.
 
@@ -55,4 +55,4 @@ Also, make sure your firewall isn't blocking it. If the server actually crashes 
 Hit `Tab` on keyboard, `View` on Xbox One, `Back` on Xbox 360.
 
 ### Different problem, crash, or nothing works?
-Ping either @dahlukeh or @0x0ade and we'll help you out to the best of our ability.
+Ping either @leo60228 or @0x0ade and we'll help you out to the best of our ability.
