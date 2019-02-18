@@ -38,4 +38,12 @@ If you have any further questions regarding audio mods, please ping 0x0ade#1584 
 ![](https://cdn.discordapp.com/attachments/429775260108324865/478316724907671552/unknown.png)
 
 
+## How-To: Make music loop
 
+1. Right click the black logic track above your audio track.
+
+2. Select "Add Loop Region".
+
+Extend the loop region to however you see fit.
+
+![](https://cdn.discordapp.com/attachments/462498749097443330/547105130441605160/loop.gif)
