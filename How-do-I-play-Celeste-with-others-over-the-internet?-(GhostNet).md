@@ -37,7 +37,7 @@ Sometimes, certain users have issues connecting to dahlukeh's network. The reaso
 ### Why are other players invisible?
 This could be one of two things. If you can send messages to each other, see A. If you cannot, see B.
 
-A. If you can send messages to each other, it means that your settings are off. Go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game. Be warned this may slow down your game and induce lag while on GhostNet. This problem may only occur with the official server, in which case you can use a different one. The reason isn't currently known, but it may be due to high latency, which TCP is better at handling.
+A. If you can send messages to each other, it may mean that your network is broken. First, ask the owner of the server to restart it, which may fix the problem. If it doesn't, this problem may only occur with the official server, in which case you can use a different one. If it's still broken, go into `Celeste/ModSettings/GhostNetMod.yaml` and change `SendUFramesInMStream` to true. After this, restart your game. **Be warned this may damage your router and slow down your game. Be sure to turn it off after testing.** The reason isn't currently known, but it may be due to high latency, which TCP is better at handling.
 
 B. If you can **not** send messages to each other, it means the server is broken. Message the owner of the server (in the case of the official one, see the contact info at the top) and ask them to restart their server.
 
