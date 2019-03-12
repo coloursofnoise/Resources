@@ -32,3 +32,27 @@ It defines in which rooms it'll appear, accepting the following format: `a-1,b-2
 Ahorn will find it if you place it in `Celeste/Mods/YourMod/Graphics/Atlases/Gameplay/decals/author/decal.png`  
 Filenames ending with numbers will be used as animation frames by Celeste; Ahorn hides all of these frames besides the first frame (00) so the decal list is not cluttered.  
 If it doesn't show up in your decals list, even after refreshing it, try to restart Ahorn.
+
+
+### How do I add a checkpoint mask onto my custom checkpoints? (GIMP)
+**Note that these instructions are for the GIMP image editing program (https://www.gimp.org/)**
+
+For starters, download this mask. (using other masks from a graphics dump of Celeste is fine also)
+![](https://cdn.discordapp.com/attachments/429775352295063563/554859401651945472/mask.png)
+
+
+Right click your original image in the layers tab and click Add Layer Mask.
+
+Be sure you have Transfer Layer's Alpha Channel chosen and Invert Mask checkmarked.
+
+Then, right click on the checkpoint mask in the editor and Copy it. (Edit > Copy)
+
+In the layer tab be sure that the black part of the original image is selected. (that's the mask)
+
+Then right click in the editor and paste.
+
+Use a tool like the Rectangle Select tool to get rid of the _floating selection layer_ by clicking anywhere in the editor.
+
+You should now see your image with the checkpoint mask on it.
+
+![](https://cdn.discordapp.com/attachments/429775352295063563/554849542827278346/how2GIMPmask.gif)
