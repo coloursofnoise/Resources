@@ -33,6 +33,9 @@ Ahorn will find it if you place it in `Celeste/Mods/YourMod/Graphics/Atlases/Gam
 Filenames ending with numbers will be used as animation frames by Celeste; Ahorn hides all of these frames besides the first frame (00) so the decal list is not cluttered.  
 If it doesn't show up in your decals list, even after refreshing it, try to restart Ahorn.
 
+### How do I convert my map to a .zip?
+.bin maps are not recommended for public distribution, and it is recommended to use a .zip instead. If you would like to convert them automatically, you can use [Postcard](http://postcard.leo60228.space/start).
+
 ### How do I add a checkpoint mask onto my custom checkpoints?
 [Postcard](http://postcard.leo60228.space/mask) can do this automatically. Simply upload your screenshot, hit submit, and save the new image. Please report issues to @leo60228#0480 on Discord. If this doesn't work, manual instructions are also available.
 
