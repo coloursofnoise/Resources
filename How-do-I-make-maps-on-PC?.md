@@ -33,8 +33,10 @@ Ahorn will find it if you place it in `Celeste/Mods/YourMod/Graphics/Atlases/Gam
 Filenames ending with numbers will be used as animation frames by Celeste; Ahorn hides all of these frames besides the first frame (00) so the decal list is not cluttered.  
 If it doesn't show up in your decals list, even after refreshing it, try to restart Ahorn.
 
+### How do I add a checkpoint mask onto my custom checkpoints?
+[Postcard](http://postcard.leo60228.space/mask) can do this automatically. Simply upload your screenshot, hit submit, and save the new image. Please report issues to @leo60228#0480 on Discord. If this doesn't work, manual instructions are also available.
 
-### How do I add a checkpoint mask onto my custom checkpoints? (GIMP)
+#### Manual instructions
 **Note that these instructions are for the GIMP image editing program (https://www.gimp.org/)**
 
 For starters, download this mask. (using other masks from a graphics dump of Celeste is fine also)
