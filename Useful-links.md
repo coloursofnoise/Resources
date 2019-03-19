@@ -44,13 +44,18 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
+### [Ahorn for Windows](http://oddstr13.thoas.feralhosting.com/CelestialCartographers/Ahorn/Ahorn-0.1.0-setup.exe)
+After installing Ahorn, go to Help > Check for Updates!
+
+Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
+https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
+
+---
+
 ### [Ahorn (Map Editor)](https://github.com/CelestialCartographers/Ahorn/blob/master/README.md)
 **Read the Ahorn README on GitHub!**  
 Ahorn itself doesn't add any features to Celeste.  
 If you want something entirely new, go write a code mod for Everest.
-
-Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
-https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
 
 _Also useful:_
 - [Maple (Ahorn's backbone)](https://github.com/CelestialCartographers/Maple)
