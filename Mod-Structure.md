@@ -6,8 +6,8 @@
 <div class="PREREQUISITES">
 <h5>PREREQUISITES</h5>
 <p>
-<li>Everest: [Website](/)</li>
-<li>Zipping software, f.e. 7zip: [Website](http://7-zip.org/)</li>
+<li>Everest: <a href="https://everestapi.github.io/" target="_blank">Website</a></li>
+<li>Zipping software, f.e. 7zip: <a href="http://7-zip.org/">Website</a></li>
 </p>
 </div>
 
