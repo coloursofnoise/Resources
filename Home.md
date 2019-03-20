@@ -9,8 +9,8 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 ## [[Useful Links]]
 
 ## Tutorials
-- [How do I package my maps?](https://everestapi.github.io/tutorials/modstruct.html)
-- [How do I modify the game's code?](https://everestapi.github.io/tutorials/firstcodemod.html)
+- [How do I package my maps?](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)
+- [How do I modify the game's code?](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)
 - [[How do I install mods on PC?]]
 - [[How do I make maps on PC?]]
 - [[How do I play Celeste with others over the internet? (GhostNet)]]
