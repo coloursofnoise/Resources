@@ -2,12 +2,13 @@
 
 ----
 
-<!-- TODO: Get > [!PREREQUISITES] working -->
-<div class="PREREQUISITES">
+<div>
 <h5>PREREQUISITES</h5>
 <p>
-<li>Everest: <a href="https://everestapi.github.io/" target="_blank">Website</a></li>
-<li>Zipping software, f.e. 7zip: <a href="http://7-zip.org/">Website</a></li>
+
+- Everest: [Website](https://everestapi.github.io/)
+- Zipping software, f.e. 7zip: [Website](http://7-zip.org/)
+
 </p>
 </div>
 
@@ -23,10 +24,20 @@ A mod can't contain "submods", unless a code mod loads the "submods" dynamically
 
 All files in a mod `.zip` must be on the top level (root) and visible when just opening the `.zip` file. `YourMod.zip` shouldn't contain another `YourMod` folder.
 
-> [!NOTE]
-> A code mod can dynamically load external mod content and mod assemblies.  
-> Dynamically loaded mods aren't restricted by the above formats, but rather by how the "supporting" mod loads them.  
-> The following file layout still applies to dynamically loaded mods.
+----
+
+<div>
+<h5>NOTE</h5>
+<p>
+
+A code mod can dynamically load external mod content and mod assemblies.  
+Dynamically loaded mods aren't restricted by the above formats, but rather by how the "supporting" mod loads them.  
+The following file layout still applies to dynamically loaded mods.
+
+</p>
+</div>
+
+----
 
 ## File Layout
 
