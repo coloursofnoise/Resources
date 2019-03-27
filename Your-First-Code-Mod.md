@@ -2,12 +2,14 @@
 
 ----
 
-<!-- TODO: Get > [!PREREQUISITES] working -->
-<div class="PREREQUISITES">
+<div>
 <h5>PREREQUISITES</h5>
 <p>
-<li>Everest: <a href="everestapi.github.io" targer="_blank">Website</a></li>
-<li>Visual Studio 2015 or newer. MonoDevelop instructions are different.</li>
+
+- Everest: <a href="everestapi.github.io" targer="_blank">Website</a>
+
+- Visual Studio 2015 or newer. MonoDevelop instructions are different.
+
 </p>
 </div>
 
@@ -17,8 +19,18 @@ Every Everest code mod starts out as a C# (.NET Framework) class library targeti
 
 ## Project setup
 
-> [!NOTE]
-> If you want a more traditional C# project setup, follow the [old advanced project setup instructions](https://github.com/EverestAPI/EverestAPI.github.io/blob/a789878761965db62c4f3c98f2bda58828e307a4/tutorials/firstcodemod.md#project-setup).
+----
+
+<div>
+<h5>NOTE</h5>
+<p>
+
+If you want a more traditional C# project setup, follow the [old advanced project setup instructions](https://github.com/EverestAPI/EverestAPI.github.io/blob/a789878761965db62c4f3c98f2bda58828e307a4/tutorials/firstcodemod.md#project-setup).
+
+</p>
+</div>
+
+----
 
 This setup doesn't require NuGet or git, but if you're a Windows user, you'll need to switch to the OpenGL branch. Linux and macOS users are already using FNA. **Everest will relink your mod from FNA to XNA at runtime.**
 - In Steam, right-click the game in your library, select "Properties" and select the `opengl` "beta".
@@ -35,7 +47,7 @@ After the update has finished, make sure to reinstall Everest.
 
 The dialog should look like this:
 
-![1-newproj](/images/firstcodemod/1-newproj.png)
+![1-newproj](https://user-images.githubusercontent.com/1200380/55094149-1a7a3f80-50b6-11e9-89bc-939573f4b578.png)
 
 - Create a new `everest.yaml` text file with the following content:
 
@@ -48,38 +60,78 @@ The dialog should look like this:
       Version: 1.0.0
 ```
 
-> [!NOTE]
-> For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](/tutorials/modstruct.html).
+----
+
+<div>
+<h5>NOTE</h5>
+<p>
+
+For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](https://everestapi.github.io/tutorials/modstruct.html).
+
+</p>
+</div>
+
+----
 
 - Right-click your project's "References" and select "Add Reference...", then "Browse..." into your Celeste installation directory and setup your references like on the following screenshot:
 
-![2-refs](/images/firstcodemod/2-refs.png)
+![2-refs](https://user-images.githubusercontent.com/1200380/55094153-1bab6c80-50b6-11e9-8135-2d484d589ab4.png)
 
-> [!IMPORTANT]
-> Make sure to select all those references, right-click > "Properties" and set "Copy Local" to "False", or you will accidentally include copies of those files in your mod!
+----
 
-> [!IMPORTANT]
-> If you want to maintain cross-platform compatibility, make sure to only use .NET Framework system libraries from this list.
-> - System
-> - System.Configuration
-> - System.Core
-> - System.Data
-> - System.Drawing (available, but behaves unpredictably)
-> - System.Runtime.Serialization
-> - System.Security
-> - System.Xml
-> - System.Xml.Linq
->
-> This means: Microsoft.CSharp, System.Windows.Anything, System.IO.Compression and other libraries must be removed from your references.  
-> For an up-to-date list, check the [list of precompiled MonoKickstart libraries](https://github.com/flibitijibibo/MonoKickstart/tree/master/precompiled), as Celeste uses them for Linux / macOS.
+<div>
+<h5>IMPORTANT</h5>
+<p>
+
+Make sure to select all those references, right-click > "Properties" and set "Copy Local" to "False", or you will accidentally include copies of those files in your mod!
+
+</p>
+</div>
+
+----
+
+----
+
+<div>
+<h5>IMPORTANT</h5>
+<p>
+
+If you want to maintain cross-platform compatibility, make sure to only use .NET Framework system libraries from this list.
+- System
+- System.Configuration
+- System.Core
+- System.Data
+- System.Drawing (available, but behaves unpredictably)
+- System.Runtime.Serialization
+- System.Security
+- System.Xml
+- System.Xml.Linq
+
+This means: Microsoft.CSharp, System.Windows.Anything, System.IO.Compression and other libraries must be removed from your references.  
+For an up-to-date list, check the [list of precompiled MonoKickstart libraries](https://github.com/flibitijibibo/MonoKickstart/tree/master/precompiled), as Celeste uses them for Linux / macOS.
+
+</p>
+</div>
+
+----
 
 ## Module class
 
 Your module class should look similar to the example.
 
-> [!NOTE]
-> This example only shows a subset of Everest's capabilities.  
-> [**Read the full `EverestModule` documentation here.**](/api/Celeste.Mod.EverestModule.html)
+----
+
+<div>
+<h5>NOTE</h5>
+<p>
+
+This example only shows a subset of Everest's capabilities.  
+[**Read the full `EverestModule` documentation here.**](https://everestapi.github.io/api/Celeste.Mod.EverestModule.html)
+
+</p>
+</div>
+
+----
 
 ```cs
 // Example usings.
@@ -140,13 +192,23 @@ Your settings class should look similar to the example.
 
 Save data classes are very similar, but inherit from `EverestModuleSaveData` and the `Setting*` attributes are ignored.
 
-> [!NOTE]
-> **All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` to bypass YamlDotNet's restrictions.
->
-> This example only shows a subset of Everest's capabilities.  
-[**Read the full `EverestModuleSettings` documentation here.**](/api/Celeste.Mod.EverestModuleSettings.html)
->
-> For all settings attributes, search for `Celeste.Mod.Setting` in the Everest API.
+----
+
+<div>
+<h5>NOTE</h5>
+<p>
+
+**All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` to bypass YamlDotNet's restrictions.
+
+This example only shows a subset of Everest's capabilities.  
+[**Read the full `EverestModuleSettings` documentation here.**](https://everestapi.github.io/api/Celeste.Mod.EverestModuleSettings.html)
+
+For all settings attributes, search for `Celeste.Mod.Setting` in the Everest API.
+
+</p>
+</div>
+
+----
 
 ```cs
 // Example usings.
