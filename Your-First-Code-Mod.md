@@ -6,8 +6,7 @@
 <h5>PREREQUISITES</h5>
 <p>
 
-- Everest: <a href="everestapi.github.io" targer="_blank">Website</a>
-
+- Everest: [Website](https://everestapi.github.io/)
 - Visual Studio 2015 or newer. MonoDevelop instructions are different.
 
 </p>
