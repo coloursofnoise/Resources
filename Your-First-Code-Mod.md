@@ -33,7 +33,7 @@ If you want a more traditional C# project setup, follow the [old advanced projec
 
 This setup doesn't require NuGet or git, but if you're a Windows user, you'll need to switch to the OpenGL branch. Linux and macOS users are already using FNA. **Everest will relink your mod from FNA to XNA at runtime.**
 - In Steam, right-click the game in your library, select "Properties" and select the `opengl` "beta".
-- In itch, &lt;insert itch instructions here&gt;
+- In itch, simply install the Celeste Windows OpenGL version.
 
 After the update has finished, make sure to reinstall Everest.
 
