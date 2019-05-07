@@ -9,7 +9,7 @@ You'll need FMOD Studio 1.10.* (compatible with WINE) and the Celeste FMOD proje
 2. **Generate the GUIDs.txt** and name it `bankname.guids.txt`  
 ![](https://cdn.discordapp.com/attachments/429775260108324865/473619203174301706/unknown.png)
 
-3. **Follow the [modstruct tutorial.](https://everestapi.github.io/tutorials/modstruct)**
+3. **Follow the [modstruct tutorial.](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)**
 
 If you have any further questions regarding audio mods, please ping 0x0ade#1584 on the Discord server.
 
