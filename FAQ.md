@@ -10,3 +10,9 @@ Replace cs (csharp) with yaml, julia, ...
 ### Why does Celeste crash with `OutOfMemoryException`?
 You've got too many mods (including maps) installed, and your poor PC can't handle them all at once.  
 Open `ModSettings/Everest.yaml` in a text editor (f.e. Notepad) and change `LazyLoading` from `false` to `true`
+
+### The Everest Installer is displaying an empty version list! How do I fix this?
+
+Try getting the last Everest Installer version [here](https://gamebanana.com/tools/download/6449). 
+
+The update servers have changed in March 2019, so if you got an old version of the installer, it will still try to connect to the old servers, and those do not work anymore.
