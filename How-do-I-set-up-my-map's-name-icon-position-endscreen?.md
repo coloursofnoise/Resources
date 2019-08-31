@@ -32,6 +32,8 @@ The banners for the base levels are:
 * areas/Summit
 * areas/core
 
+You can see them in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page).
+
 areas/farewell exists too, but please avoid using it, as it will change when the DLC comes out.
 
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back). Then use `areas/auniquename` as the map's icon. To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
@@ -56,7 +58,7 @@ Mountain:
     State: 2
 ```
 
-You can get the coordinates by enabling debug mode (in Mod Options), and pressing Space. Look around with the mouse and move around with WASD. The coordinates will be displayed on the top left.
+You can get the coordinates by enabling debug mode (in Mod Options), restarting the game, and pressing Space on the mountain screen. Look around with the mouse and move around with WASD. The coordinates will be displayed on the top left.
 
 * `Idle` defines the camera position during level selection.
 * `Select` defines the camera position when you selected the level and looking at checkpoint selection or side selection.
@@ -64,3 +66,26 @@ You can get the coordinates by enabling debug mode (in Mod Options), and pressin
 * `Cursor` is the location of the Madeline cursor on the mountain.
 * `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day.
 
+## Chapter Complete screen
+
+This is also defined in the meta.yaml file (see previous section to set it up). To set up a static image as an endscreen, add something like this:
+
+```yaml
+CompleteScreen:
+    Atlas: "Endscreens/KaydenFox/NewAdventure"
+    Start: [ 0.0, 0.0 ]
+    Center: [ 0.0, 0.0 ]
+    Offset: [ 0.0, 0.0 ]
+    Layers:
+      - Type: "layer"
+        Images: [ "1-Forsaken" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+```
+
+Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/KaydenFox/NewAdventure/1-Forsaken.png`. It's size should be 1920x1080px.
+
+Putting multiple images will create an animation.
+
+
+_If any of this information is incorrect, feel free to correct it and to shout at max480 on Discord._
