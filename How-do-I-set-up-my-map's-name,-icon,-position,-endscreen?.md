@@ -72,18 +72,18 @@ This is also defined in the meta.yaml file (see previous section to set it up). 
 
 ```yaml
 CompleteScreen:
-    Atlas: "Endscreens/KaydenFox/NewAdventure"
+    Atlas: "Endscreens/yournickname/campaignname"
     Start: [ 0.0, 0.0 ]
     Center: [ 0.0, 0.0 ]
     Offset: [ 0.0, 0.0 ]
     Layers:
       - Type: "layer"
-        Images: [ "1-Forsaken" ]
+        Images: [ "mapname" ]
         Position: [ 0.0, 0.0 ]
         Scroll: [ 0.0 ]
 ```
 
-Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/KaydenFox/NewAdventure/1-Forsaken.png`. It's size should be 1920x1080px.
+Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`. It's size should be 1920x1080px.
 
 Putting multiple images will create an animation.
 
