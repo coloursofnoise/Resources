@@ -17,6 +17,8 @@ As a general rule, if you see `{somestring}` in the game, you need to define `so
 
 You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in English.txt to take effect.
 
+(If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`. All non-existing languages will fall back to English.)
+
 ## Map Icon
 
 You can define the map icon in Ahorn, in the "Title Banner Icon" field of the Map > Metadata menu.
