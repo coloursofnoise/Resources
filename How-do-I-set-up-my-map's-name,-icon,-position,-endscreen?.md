@@ -83,7 +83,7 @@ CompleteScreen:
         Scroll: [ 0.0 ]
 ```
 
-Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`. It's size should be 1920x1080px.
+Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`. Its size should be 1920x1080px.
 
 Putting multiple images will create an animation.
 
