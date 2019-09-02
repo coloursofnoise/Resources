@@ -133,11 +133,17 @@ If set to a screen, Lava will appear on the bottom and the top of the screen. Th
 
 # Triggers:
 ### Light Fade
+These triggers will make exactly what their name implies: make the light fade. When setting it up, Light Fade from indicates what level of light fade to force when entering the trigger, and Light Fade to indicates the level when exiting the trigger. Both are based on values from 0 to 1 (including decimals), 0 being full light, and 1 being full darkness. The position mode determines in which order to take the information it's given, meaning that if the position is set backwards relative to how the trigger will be used, it will work incorrectly.
 ### Bloom Fade
+Works the same as Light Fades, but they affect the Bloom instead of the Light.
 ### Camera Offset
+This trigger forces the camera to move a certain amount of space specified, moving it away from the player being in the center. Camera X moves the camera in the X axis and Camera Y in the Y axis. The values can be any, from decimals to negatives. The ratio of camera movement per value is 1 tile offset per 0.25 Value. (Meaning a value of 1 will move the camera 4 tiles). The camera won't move past a screen's edges. This offset will remain after you exit the trigger until the player dies or transitions.
 ### Camera Target
+This trigger will move the camera towards the top left corner of the node. Lerp strength determines how much the camera will move towards the node, so if it's set to 0, it won't move. It depends on a  position mode to work as well. Marking X only or Y only will make the camera only move in the axes marked. The camera offset resets upon leaving the trigger.
 ### Music
+Used to change the music of a screen. If a screen already has music to it (set from the room configuration window), it will change while you're inside it, 
 ### Music Fade
+Works the same as a Light Fade, except they affect the music volume instead. Resets if the player dies.
 ### Change Respawn
 ### Respawn Target
 ### Event 
@@ -147,8 +153,11 @@ If set to a screen, Lava will appear on the bottom and the top of the screen. Th
 ### Refill (Disabled/Enabled)
 ### Mini textbox
 ### Wind pattern
+These triggers active whichever wind pattern they have set when the player enters it.
 ### Stop Boost
+These triggers will stop the player from moving upwards after using a final node of a Badeline doesnt If the player doesn't screen transition or hit this trigger, she will continue to rise of get stuck offscreen or below anything solid, which is essentially a softlock (escapeable with respawns).
 ### Snowballs
+Entering it will either make Snowballs start appearing at regular intervals or stop appearing at all, depending on what it's set to do.
 
 ## Other Triggers:
 * Camera Advance Target
