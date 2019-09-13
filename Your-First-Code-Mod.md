@@ -65,7 +65,7 @@ The dialog should look like this:
 <h5>NOTE</h5>
 <p>
 
-For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](https://everestapi.github.io/tutorials/modstruct.html).
+For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
 
 </p>
 </div>
