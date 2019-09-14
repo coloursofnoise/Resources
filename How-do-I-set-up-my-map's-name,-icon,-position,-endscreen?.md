@@ -68,6 +68,8 @@ You can get the coordinates by enabling debug mode (in Mod Options), restarting 
 * `Cursor` is the location of the Madeline cursor on the mountain.
 * `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day.
 
+**If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
+
 ## Chapter Complete screen
 
 This is also defined in the meta.yaml file (see previous section to set it up). To set up a static image as an endscreen, add something like this:
