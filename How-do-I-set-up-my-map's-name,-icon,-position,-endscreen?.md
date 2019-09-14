@@ -13,7 +13,10 @@ It also works to define checkpoint names:
 yournickname_campaignname_mapname_roomname= Checkpoint Name
 ```
 
-As a general rule, if you see `{somestring}` in the game, you need to define `somestring` in your English.txt.
+As a general rule, if you see `{blah_blah}` in the game, and you want it to display `some text` instead, you need to add this in your English.txt:
+```
+blah_blah= some text
+```
 
 You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in English.txt to take effect.
 
