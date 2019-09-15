@@ -8,6 +8,8 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 
 ## [[Useful Links]]
 
+## [[Mapmaking: Entity and Trigger Documentation]]
+
 ## Tutorials
 - [How do I package my maps?](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)
 - [How do I modify the game's code?](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)
