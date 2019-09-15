@@ -36,10 +36,9 @@ The banners for the base levels are:
 * areas/reflection
 * areas/Summit
 * areas/core
+* areas/farewell
 
 You can see them in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page).
-
-areas/farewell exists too, but please avoid using it, as it will change when the DLC comes out.
 
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back). Then use `areas/auniquename` as the map's icon. To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
 
