@@ -6,10 +6,10 @@ Use the dumped graphics (see [[Useful links]]) and use the template in there to 
 
 ### Step 2
 * Go to your Celeste folder -> Content -> Graphics
-* Copy the ForegroundTiles.xml file
+* Copy the `ForegroundTiles.xml` file
 * Go back to your Celeste folder, and go to Mods -> YourModFolder -> Graphics
 * Create a new folder there (for example `Xaphan`)
-* Past the ForegroundTiles.xml file in that new folder
+* Paste the `ForegroundTiles.xml` file in that new folder
 
 ### Step 3
 
