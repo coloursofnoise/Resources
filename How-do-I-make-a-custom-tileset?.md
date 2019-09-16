@@ -17,16 +17,16 @@ Open that file. Then, at the end, just before the `</Data>` line, add the follow
 ```xml
 <Tileset id="y" copy="z" path="name" sound="8"/>
 ```
-* Replace y by the id you want, that is not one already used (1, 3 to 9, a to o)
-* Replace name by the name you want to call your tileset. Remember that name, you will need it later.
-* Replace 8 by whatever sound you want (see bottom of page for the list). 
+* Replace `y` by the id you want, that is not one already used (1, 3 to 9, a to o)
+* Replace `name` by the name you want to call your tileset. Remember that name, you will need it later.
+* Replace `8` by whatever sound you want (see bottom of page for the list). 
 
 Then, save and close the file.
 
 ### Step 4
 * Go back to your Graphics folder (the one in your mod folder) -> Atlases -> Gameplay
-* Create a tileset folder
-* Copy your tileset there, and name it the same thing you put in ForegroundTiles.xml (name in this exemple)
+* Create a `tileset` folder
+* Copy your tileset there, and name it the same thing you put in ForegroundTiles.xml (`name` in this exemple)
 
 ### Step 5
 * Open Ahorn and load your map
@@ -82,3 +82,5 @@ Additionally, ID 20 doesn't have a sound associated to it in the public Celeste 
 35. (unused)
 36. core ice
 37. core rock
+
+_Thanks 0x0ade for the list!_
