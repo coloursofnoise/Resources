@@ -16,6 +16,7 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 - [[How do I install mods on PC?]]
 - [[How do I make maps on PC?]]
 - [How do I set up my map's name/icon/position/endscreen?](https://github.com/EverestAPI/Resources/wiki/How-do-I-set-up-my-map's-metadata%3F)
+- [[How do I make a custom tileset?]]
 - [[How do I make a texture pack?]]
 - [[How do I play Celeste with others over the internet? (GhostNet)]]
 - [[What's going on with mods on Nintendo Switch?]]
