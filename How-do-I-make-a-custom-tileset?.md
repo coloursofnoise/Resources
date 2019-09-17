@@ -25,7 +25,7 @@ Then, save and close the file.
 
 ### Step 4
 * Go back to your Graphics folder (the one in your mod folder) -> Atlases -> Gameplay
-* Create a `tileset` folder
+* Create a `tilesets` folder
 * Copy your tileset there, and name it the same thing you put in ForegroundTiles.xml (`name` in this exemple)
 
 ### Step 5
