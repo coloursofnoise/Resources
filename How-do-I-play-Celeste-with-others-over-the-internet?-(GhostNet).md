@@ -1,6 +1,6 @@
 ### Ok, what the heck is ghostnet?
 Ghostnet is a mod for Celeste (it'd be weird if it wasn't) created by 0x0ade. It allows for multiplayer, and you can host and join servers and even create permanent ones.  
-If stuff breaks, and everything you read here doesn't help you, just ping @leo60228#0480 (between 8AM-7:30PM EST) or @0x0ade#1584 (between 12PM(?)-1AM CEST) in #modding_help or #modding_general.
+If stuff breaks, and everything you read here doesn't help you, just ask for help in #modding_help.
 
 ### How do I install GhostNet?
 1. Download the [Everest API](https://everestapi.github.io/)  
@@ -55,4 +55,4 @@ Also, make sure your firewall isn't blocking it. If the server actually crashes 
 Hit `Tab` on keyboard, `View` on Xbox One, `Back` on Xbox 360.
 
 ### Different problem, crash, or nothing works?
-Ping either @leo60228 or @0x0ade and we'll help you out to the best of our ability.
+Ask for help in #modding_help on Discord and we'll help you out to the best of our ability. If the main server is down, ping the "ghostbuster" role, they will be able to restart it.
