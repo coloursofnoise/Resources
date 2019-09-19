@@ -42,14 +42,14 @@ A. If you can send messages to each other, it may mean that your network is brok
 B. If you can **not** send messages to each other, it means the server is broken. Message the owner of the server (in the case of the official one, see the contact info at the top) and ask them to restart their server.
 
 ### Why are there clones of me and/or other players?
-This is a very minor bug with Ghostnet that usually only happens on servers with a lot of traffic and after a few days of uptime. These clones do nothing and should not interfere, but they can be removed with a server restart as well. Don't ping me about these.
+This is a very minor bug with Ghostnet that usually only happens on servers with a lot of traffic and after a few days of uptime. These clones do nothing and should not interfere, but they can be removed with a server restart as well.
 
 ### Why do some people have rainbow hair?
 They've got the Fabeline mod installed. It's a pretty... fabulous mod <img alt="thonkerguns" src="https://cdn.discordapp.com/emojis/370633336202330112.png?v=1" height="16"> ([get it here](https://gamebanana.com/skins/163152))
 
 ### Why doesn't my own server work?
 Make sure your ports are forwarded. Some routers will not port forward unless you hit an add button and then an apply button.  
-Also, make sure your firewall isn't blocking it. If the server actually crashes (assuming it's ghostnet doing it and/or you have headless enabled) ping me.
+Also, make sure your firewall isn't blocking it. If the server actually crashes (assuming it's ghostnet doing it and/or you have headless enabled) ask for help on the Discord server.
 
 ### How can I see where other players are?
 Hit `Tab` on keyboard, `View` on Xbox One, `Back` on Xbox 360.
