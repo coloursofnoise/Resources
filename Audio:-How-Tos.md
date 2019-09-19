@@ -11,7 +11,7 @@ You'll need FMOD Studio 1.10.* (compatible with WINE) and the Celeste FMOD proje
 
 3. **Follow the [modstruct tutorial.](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)**
 
-If you have any further questions regarding audio mods, please ping 0x0ade#1584 on the Discord server.
+If you have any further questions regarding audio mods, ask for help in the #modding_help channel on the Discord server.
 
 **Don't modify and share modified music, sfx, ui and master banks.**
 
