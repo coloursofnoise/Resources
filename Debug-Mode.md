@@ -1,3 +1,5 @@
+Enabling Debug Mode gives you access to some debug functions hidden in the game. You get some hotkeys useful when making mods/maps, a debug save and an in-game level viewer allowing you to teleport around.
+
 ## Keys available during gameplay
 
 * F5: Reload active level
