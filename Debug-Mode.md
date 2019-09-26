@@ -14,7 +14,7 @@ This debug map is especially useful to teleport around in the game.
 * Ctrl + Right click on a room: teleport to it **losing your current session** (like collected strawberries)
 * Shift + Right click on a room: teleport to a specific point in the room, rather than to the closest spawn point. (Yes, even in walls.)
 * Mouse wheel: zoom in and out
-* Move around with the keys you use for movement, or by holding the mouse wheel, or by using the left mouse button + Space
+* Move around with the keys you use for movement, or by holding the mouse wheel, or by holding Space and using the left mouse button
 * Ctrl+Space resets zoom and position to default
 
 You can also "edit" levels, but the save function is gone, so you won't be able to play them afterwards. You can still play around with it though:
