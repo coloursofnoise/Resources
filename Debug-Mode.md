@@ -5,6 +5,9 @@ Enabling Debug Mode gives you access to some debug functions hidden in the game.
 * F5: Reload active level
 * F6: Open debug map ("level editor"), allows you to teleport around
 * Ctrl+F5: Reload the entire game. This is the equivalent of hitting Save & Quit, then closing Celeste, opening it again and loading the save file.
+* `.` or `~`: open the debug console
+  * Type `help` to get a list of existing commands, `help [command]` for help about a command
+  * Type `q` to close the console
 
 ## Keys available in the debug map
 
