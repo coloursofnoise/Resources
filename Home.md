@@ -20,3 +20,4 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 - [[How do I make a texture pack?]]
 - [[How do I play Celeste with others over the internet? (GhostNet)]]
 - [[What's going on with mods on Nintendo Switch?]]
+- [What does Debug Mode do?](https://github.com/EverestAPI/Resources/wiki/Debug-Mode)
