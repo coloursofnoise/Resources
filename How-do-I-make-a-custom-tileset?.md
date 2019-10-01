@@ -17,7 +17,7 @@ Open that file. Then, at the end, just before the `</Data>` line, add the follow
 ```xml
 <Tileset id="y" copy="z" path="name" sound="8"/>
 ```
-* Replace `y` by the id you want, that is not one already used (1, 3 to 9, a to o)
+* Replace `y` by the id you want, that is not one already used (so do not use 1, 3 to 9, a to o)
 * Replace `name` by the name you want to call your tileset. Remember that name, you will need it later.
 * Replace `8` by whatever sound you want (see bottom of page for the list). 
 
