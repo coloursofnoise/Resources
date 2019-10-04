@@ -15,6 +15,7 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 - [How do I modify the game's code?](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)
 - [[How do I install mods on PC?]]
 - [[How do I make maps on PC?]]
+- [How do I make custom audio?](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos)
 - [How do I set up my map's name/icon/position/endscreen?](https://github.com/EverestAPI/Resources/wiki/How-do-I-set-up-my-map's-metadata%3F)
 - [[How do I make a custom tileset?]]
 - [[How do I make a texture pack?]]
