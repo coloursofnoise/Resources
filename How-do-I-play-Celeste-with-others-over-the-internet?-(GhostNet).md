@@ -9,7 +9,7 @@ If stuff breaks, and everything you read here doesn't help you, just ask for hel
 
 ### How do I join a server?
 1. Load up Celeste after doing everything mentioned previously.
-2. Go into Mod Settings,  and down to GhostNet. Set Name to whatever you want to be known as. The server should be preset to `celeste.0x0ade.ga`. If you're just planning on playing on the official server, leave this as it is. If you want to play on a friend's server, set this to their IP (and if they're not on port 2782 add :####, #### being the port they chose). ~~Other servers include `ghostnet.leo60228.space`~~ (now the official server).
+2. Go into Mod Settings,  and down to GhostNet. Set Name to whatever you want to be known as. The server should be preset to `celeste.0x0ade.ga`. If you're just planning on playing on the official server, leave this as it is. If you want to play on a friend's server, set this to their IP (and if they're not on port 2782 add :####, #### being the port they chose). Another server you can try is [Ghastly](https://ghastly.leo60228.space).
 3. Switch Connected to ON. If it works, congrats! If it doesn't, keep reading!
 
 ### How do I host a server?
@@ -28,7 +28,7 @@ If your ghostnet is broken, see this.
 This could be for a number of reasons. If Everest is working (you should see the Everest version on the CELESTE screen and a mod options menu) then you probably just need to reinstall GhostNet (delete .zip and download it yourself). If Everest is not working, reinstall both.
 
 ### Why can't I connect to the official server?
-This is primarily for a couple of reasons. The server is hosted using an AWS Spot instance, meaning that the price of the server is variable (and often 80%+ cheaper). For example, at peak AWS usage (different from server usage!), the price of the server may go above $6/month ($0.0112/hour), at which point the server gets shut down automatically. It'll turn on again when the price goes back down. I don't currently have a monitoring solution, but me or 0x0ade can tell you if this happens.
+This is primarily for a couple of reasons. The server is hosted using an AWS Spot instance, meaning that the price of the server is variable (and often 80%+ cheaper). For example, at peak AWS usage (different from server usage!), the price of the server may go above $6/month ($0.0112/hour), at which point the server gets shut down automatically. It'll turn on again when the price goes back down. I don't currently have a monitoring solution, but me or 0x0ade can tell you if this happens. (note from leo60228: I wrote this a while ago, I'm not sure if it applies to dahlukeh's server)
 
 This could also be for a different reason - sometimes your GhostNet version is very far behind. Make sure you've updated to the latest version (as of writing 1.3.14) of GhostNet. 
 
