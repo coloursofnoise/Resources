@@ -16,3 +16,6 @@ Open `ModSettings/Everest.yaml` in a text editor (f.e. Notepad) and change `Lazy
 Try getting the last Everest Installer version [here](https://gamebanana.com/tools/download/6449). 
 
 The update servers have changed in March 2019, so if you got an old version of the installer, it will still try to connect to the old servers, and those do not work anymore.
+
+### Problems with running or installing Ahorn
+[Check this page for detailed information](Ahorn-Installation-Help)
