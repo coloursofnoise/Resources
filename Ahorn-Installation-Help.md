@@ -22,7 +22,9 @@ If you feel confident in your own ability to identify and resolve the issue, her
 > 
 > Run the following code
 > 
-> `using Pkg; Pkg.activate(ENV["LocalAppData"] * "/Ahorn/env")`
+> On windows: `using Pkg; Pkg.activate(ENV["LocalAppData"] * "/Ahorn/env")`
+> 
+> On Linux/Mac: `using Pkg; Pkg.activate(ENV["HOME"] * "/.config/Ahorn/env")`
 
 # Common cases
 Work in progress! Your problem might not be here (yet)!
