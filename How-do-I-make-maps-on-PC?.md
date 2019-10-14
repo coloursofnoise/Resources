@@ -23,7 +23,7 @@ Add one player entity per room entrance / exit.
 YourMap.bin + YourMap-B.bin
 
 ### Why doesn't my golden berry appear? / Why doesn't my C side appear?
-You'll need to collect each heart in every A and B side _in the levelset,_ or use the debug save.
+You'll need to collect each heart in every A and B side _in the levelset_ and complete the side at least once, or use cheat mode.
 
 ### What does the "Only" field mean when adding stylegrounds in Ahorn?
 It defines in which rooms it'll appear, accepting the following format: `a-1,b-2,c-*` (or just `*` for "all rooms")
