@@ -23,7 +23,7 @@ If you have any further questions regarding audio mods, ask for help in the #mod
 1. Open the mixer window.  
 ![](https://cdn.discordapp.com/attachments/429775352295063563/476487647892602892/unknown.png)
 
-2. Right-click your event and reroute the event.  
+2. Right-click your event and reroute the event to the mains group. Don't create a new group.  
 ![](https://cdn.discordapp.com/attachments/429775352295063563/476488253382590464/unknown.png)
 
 
