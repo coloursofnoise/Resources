@@ -82,5 +82,3 @@ Additionally, ID 20 doesn't have a sound associated to it in the public Celeste 
 35. (unused)
 36. core ice
 37. core rock
-
-_Thanks 0x0ade for the list!_
