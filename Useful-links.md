@@ -20,7 +20,7 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
-### [Modding tutorials](https://everestapi.github.io/tutorials/)
+### [Modding tutorials](https://github.com/EverestAPI/Resources/wiki#tutorials)
 If you want to create your own mods or maps, read them.  
 The mod structure tutorial applies to non-code-mods as well!
 
