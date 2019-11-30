@@ -8,8 +8,15 @@ CODE HERE
 Replace cs (csharp) with yaml, julia, ...
 
 ### Why does Celeste crash with `OutOfMemoryException`?
-You've got too many mods (including maps) installed, and your poor PC can't handle them all at once.  
-Open `ModSettings/Everest.yaml` in a text editor (f.e. Notepad) and change `LazyLoading` from `false` to `true`
+You've got too many mods (including maps) installed, and your poor PC can't handle them all at once. Try blacklisting or uninstalling some of them.
+* To blacklist a mod, go to the Mods folder next to Celeste.exe, and add the name of the zip/folder in the `blacklist.txt` file. For example, if you want Everest to skip over `CrystalValley.zip` and `Dadbod.zip`, just put those in `blacklist.txt`:
+```
+CrystalValley.zip
+Dadbod.zip
+```
+* To uninstall a mod, just go to the Mods folder next to Celeste.exe, and delete the mod's zip/folder.
+
+If you are out of luck or don't have much RAM, you can make Everest only load textures when they are required. _Please note this can cause issues._ For that, open `Saves/modsettings-Everest.celeste` in a text editor (f.e. Notepad) and change `LazyLoading_Yes_I_Know_This_Can_Cause_Bugs` from `false` to `true`.
 
 ### The Everest Installer is displaying an empty version list! How do I fix this?
 
