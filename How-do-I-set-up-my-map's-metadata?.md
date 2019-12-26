@@ -70,7 +70,7 @@ You can get the coordinates by enabling debug mode (in Mod Options), restarting 
 * `Zoom` is the camera position when you zoom into the level after you start.
 * `Cursor` is the location of the Madeline cursor on the mountain. To place this, move the camera to where you want the cursor to be, then copy the `Position` coordinates.
 * `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day, 3 is moon.
-# `ShowCore` decides whether the Core Heart should be shown on the Mountain.
+* `ShowCore` decides whether the Core Heart should be shown on the Mountain.
 
 **If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
 
