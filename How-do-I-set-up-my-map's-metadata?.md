@@ -60,6 +60,7 @@ Mountain:
         Target: [ 4.542, 5.754, -1.819 ]
     Cursor: [ 5.706, 5.492, -1.542 ]
     State: 2
+    ShowCore: False
 ```
 
 You can get the coordinates by enabling debug mode (in Mod Options), restarting the game, and pressing Space on the mountain screen. Look around with the mouse, move around with WASD and move the camera up/down with Q and Z. The coordinates will be displayed on the top left.
@@ -68,7 +69,8 @@ You can get the coordinates by enabling debug mode (in Mod Options), restarting 
 * `Select` defines the camera position when you selected the level and looking at checkpoint selection or side selection.
 * `Zoom` is the camera position when you zoom into the level after you start.
 * `Cursor` is the location of the Madeline cursor on the mountain. To place this, move the camera to where you want the cursor to be, then copy the `Position` coordinates.
-* `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day.
+* `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day, 3 is moon.
+# `ShowCore` decides whether the Core Heart should be shown on the Mountain.
 
 **If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
 
