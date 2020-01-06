@@ -28,7 +28,6 @@ The mod structure tutorial applies to non-code-mods as well!
 
 ### [Dumped graphics](https://drive.google.com/open?id=1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet)
 They're ordered in the same way as the game graphics.  
-The graphics `.meta.yaml` files are required, as the images have got "whitespace" (transparent borders), which are cut away from the `.png`s.  
 
 ---
 
@@ -44,9 +43,7 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
-### [Ahorn for Windows](https://thoas.feralhosting.com/oddstr13/CelestialCartographers/Ahorn/Ahorn-0.1.0-setup.exe)
-After installing Ahorn, go to Help > Check for Updates!
-
+### [Ahorn for Windows](https://oddstr13.thoas.feralhosting.com/CelestialCartographers/Ahorn/Ahorn-0.1.2-setup.exe)
 Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
 https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
 
