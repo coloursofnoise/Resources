@@ -178,7 +178,7 @@ namespace Celeste.Mod.Example {
         public override void LoadContent() {
         }
 
-        // Unload the entirety of your mod's content, remove any event listeners and undo all hooks.
+        // Unload the entirety of your mod's content. Free up any native resources.
         public override void Unload() {
         }
 
