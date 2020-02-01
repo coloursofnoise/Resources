@@ -64,6 +64,10 @@ Potential solution:
 
 In some cases it will fail again to build GTK, I have no idea why, but attempting multiple rebuilds has worked for some. Just make sure to keep an eye on the REPL/errorlog to see that it is the same issue.
 
+## Error with `LoadError: LightXML is not properly installed.`
+After running the commands from [above](https://github.com/EverestAPI/Resources/wiki/Ahorn-Installation-Help/_edit#with-crossplatform "crossplatfrom") run `Pkg.build()` in Julia.
+
+
 ## Error with `checkpoints0.data`
 This file was moved with the Farewell update to Celeste, causing older versions of Ahorn to crash since it is missing.
 The easiest solution for this is to simply update Ahorn from the Julia REPL.
