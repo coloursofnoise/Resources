@@ -30,7 +30,7 @@
     *   [Chaser Barriers](#chaser-barriers)
     *   [Touch Switch](#touch-switch)
     *   [Switch Gate](#switch-gate)
-    *   [Crystal Spinners/Dust Bunnies](#crystal-spinners-dust-bunnies)
+    *   [Crystal Spinners/Dust Bunnies](#crystal-spinnersdust-bunnies)
     *   [Water](#water)
     *   [Spinning/Moving Blades/Dust Bunnies/Stars](#spinningmoving-bladesdust-bunniesstars)
     *   [Keys](#keys)
