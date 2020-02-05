@@ -1,25 +1,37 @@
 ## Creating a custom tileset
 
 ### Step 1
-Make your tileset using any image editor.
-Use the dumped graphics (see [[Useful links]]) and use the template in there to help you.
 
-### Step 2
 * Go to your Celeste folder -> Content -> Graphics
 * Copy the `ForegroundTiles.xml` file
 * Go back to your Celeste folder, and go to Mods -> YourModFolder -> Graphics
 * Create a new folder there (for example `Xaphan`)
 * Paste the `ForegroundTiles.xml` file in that new folder
 
+### Step 2
+
+Make a copy of a tileset template, then edit it with any image editor to make your tileset.
+
+#### Using the improved template by 0x0ade
+
+![template](https://i.imgur.com/jUq838l.png)
+
+To set up this template, open the `ForegroundTiles.xml` file you just copied. Just below `<Data>` at the beginning of the file, copy-paste the entirety of [this file](https://gist.github.com/0x0ade/3beb5eb3008f3f25be0b3204d1ee585a).
+
+#### Using the vanilla template
+
+You can find this template in [the graphics dump](https://drive.google.com/file/d/1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet/view), in `Graphics/Atlases/Gameplay/tilesets/template.png`.
+
 ### Step 3
 
-Open that file. Then, at the end, just before the `</Data>` line, add the following line:
+At the end of the `ForegroundTiles.xml` file, just before the `</Data>` line, add the following line:
 ```xml
-<Tileset id="y" copy="z" path="name" sound="8"/>
+<Tileset id="w" copy="y" path="name" sound="8"/>
 ```
-* Replace `y` by the id you want, that is not one already used (so do not use 1, 3 to 9, a to o). **This id has to be 1 character long.**
+* Replace `w` by the id you want, that is not one already used (so do not use 1, 3 to 9, a to o, y and z). **This id has to be 1 character long.**
+* Replace `y` with `z` if using the vanilla template.
 * Replace `name` by the name you want to call your tileset. Remember that name, you will need it later.
-* Replace `8` by whatever sound you want (see bottom of page for the list). 
+* Replace `8` by whatever sound you want (see bottom of page for the list).
 
 Then, save and close the file.
 
