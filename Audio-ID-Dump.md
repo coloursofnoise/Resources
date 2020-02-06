@@ -1,5 +1,5 @@
 ## All sounds currently in the game.
-Use Audio.Play("soundID", position) to play a sound
+Use `Audio.Play("soundID", position);` to play a sound
 
 ## Sound Banks:
 <details>
