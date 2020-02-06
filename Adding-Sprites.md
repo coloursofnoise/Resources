@@ -43,15 +43,15 @@ Spritebank files are xml files that group textures into sprites with animations 
 Most of the SpriteBanks are stored in the <code>Sprites.xml</code> file in the Graphics folder for celeste. To add your own spritebanks, you will need to copy this file into your own mod folder, in the <code>Graphics</code> subfolder.
 
 Adding your own sprite to this file will loosely emulate the following example:
-<pre>
-&lt;spriteName path="sprite/folder" start="initialanimation"&gt;
-	&lt;Center/&gt;If you want it centered
-	&lt;Loop id="loopID" path="texturename" delay="0.15"/&gt; 
+```xml
+<spriteName path="sprite/folder" start="initialanimation">
+	<Center/>If you want it centered
+	<Loop id="loopID" path="texturename" delay="0.15"/>
 	Will loop until changed
-	&lt;Anim id="AnimID" path="othertexturename" delay="0.08" frames="3,7-9"/&gt;
+	<Anim id="AnimID" path="othertexturename" delay="0.08" frames="3,7-9"/>
 	Will loop once
-&lt;/spriteName&gt;
-</pre>
+</spriteName>
+```
 
 In the above example, your file structure would look something like this:
 <pre>
