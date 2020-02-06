@@ -3,17 +3,17 @@ For questions and feedback, please contact @coloursofnoise on the Celeste discor
 
 # Table of Contents:
 ## Understanding the Atlas system
-- Atlases
-- SpriteBanks
+- [Atlases](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites#atlases)
+- [SpriteBanks](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites#spritebanks)
 ## Adding custom sprites to your code mod:
-- Using MTextures in code
-- Using a SpriteBank file
-- Using Sprites in code
+- [Using MTextures in code](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-a-spritebank-file)
+- [Using a SpriteBank file](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-a-spritebank-file)
+- [Using Sprites in code](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-sprites-in-code)
 
 
 # The Atlas System
 ## Atlases
-Celeste stores it’s textures in [Atlases](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites#atlases), with each atlas being used for different aspects of the game.
+Celeste stores it’s textures in Atlases, with each atlas being used for different aspects of the game.
 
 To load a texture into a preexisting atlas, follow the directions [here](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#file-layout) relating to pre-supported content mappings.
 
