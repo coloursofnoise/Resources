@@ -151,7 +151,7 @@ snapshot:/mus_lvl1_verbtransition<br/>
 <details>
 <summary>Sfxs</summary>
 <br/>
-event:/char/badeline/appear<br/>
+event:/char/badeline/appear<br/> 
 event:/char/badeline/booster_begin<br/>
 event:/char/badeline/booster_final<br/>
 event:/char/badeline/booster_reappear<br/>
@@ -162,7 +162,10 @@ event:/char/badeline/boss_hug<br/>
 event:/char/badeline/boss_idle_air<br/>
 event:/char/badeline/boss_laser_charge<br/>
 event:/char/badeline/boss_laser_fire<br/>
-event:/char/badeline/boss_prefight_getup<br/>
+event:/char/badeline/boss_prefight_getup
+<ul><li>Parameters:</li><ul>
+<li>chaser_count min:0 max:4 default:0</li>
+</ul></ul>
 event:/char/badeline/climb_ledge<br/>
 event:/char/badeline/dash_red_left<br/>
 event:/char/badeline/dash_red_right<br/>
@@ -174,7 +177,14 @@ event:/char/badeline/duck<br/>
 event:/char/badeline/footstep<br/>
 event:/char/badeline/grab<br/>
 event:/char/badeline/grab_letgo<br/>
+<ul><li>Parameters:</li><ul>
+<li>chaser_count min:0 max:4 default:0</li>
+</ul></ul>
 event:/char/badeline/handhold<br/>
+<ul><li>Parameters:</li><ul>
+<li>chaser_count min:0 max:4 default:0</li>
+<li>surface_index min:0 max:50 default:0</li>
+</ul></ul>
 event:/char/badeline/jump<br/>
 event:/char/badeline/jump_assisted<br/>
 event:/char/badeline/jump_climb_left<br/>
@@ -206,6 +216,10 @@ event:/char/dialogue/sfx_support/phone_static_ex<br/>
 event:/char/dialogue/sfx_support/phone_static_mom<br/>
 event:/char/dialogue/theo<br/>
 event:/char/dialogue/theo_mirror<br/>
+<ul><li>Parameters:</li><ul>
+<li>dialogue_end min:0 max:1 default:0</li>
+<li>dialogue_portrait min:0 max:12 default:0</li>
+</ul></ul>
 event:/char/granny/cane_tap<br/>
 event:/char/granny/laugh_firstphrase<br/>
 event:/char/granny/laugh_oneha<br/>
@@ -337,6 +351,9 @@ event:/env/amb/06_main<br/>
 event:/env/amb/09_main<br/>
 event:/env/amb/worldmap<br/>
 event:/env/local/02_old_site/phone_lamp<br/>
+<ul><li>Parameters:</li><ul>
+<li>on min:0 max:1 default:0</li>
+</ul></ul>
 event:/env/local/03_resort/broken_window_large<br/>
 event:/env/local/03_resort/broken_window_small<br/>
 event:/env/local/03_resort/pico8_machine<br/>
@@ -498,6 +515,10 @@ event:/game/05_mirror_temple/seeker_statue_break<br/>
 event:/game/05_mirror_temple/swapblock_move<br/>
 event:/game/05_mirror_temple/swapblock_move_end<br/>
 event:/game/05_mirror_temple/swapblock_return<br/>
+<ul><li>Parameters:</li><ul>
+<li>end min:0 max:1 default:0</li>
+</ul></ul>
+
 event:/game/05_mirror_temple/swapblock_return_end<br/>
 event:/game/05_mirror_temple/torch_activate<br/>
 event:/game/06_reflection/badeline_feather_slice<br/>
@@ -590,8 +611,11 @@ event:/game/general/cassette_bubblereturn<br/>
 event:/game/general/cassette_get<br/>
 event:/game/general/cassette_preview<br/>
 event:/game/general/crystalheart_blue_get<br/>
-event:/game/general/crystalheart_bounce<br/>
+event:/game/general/crystalheart_bounce<Fbr/>
 event:/game/general/crystalheart_gold_get<br/>
+<ul><li>Parameters:</li><ul>
+<li>end min:0 max:1 default:0</li>
+</ul></ul>
 event:/game/general/crystalheart_pulse<br/>
 event:/game/general/crystalheart_red_get<br/>
 event:/game/general/debris_dirt<br/>
@@ -644,6 +668,9 @@ event:/music/remix/05_mirror_temple<br/>
 event:/music/remix/06_reflection<br/>
 event:/music/remix/07_summit<br/>
 event:/music/remix/09_core<br/>
+<ul><li>Parameters:</li><ul>
+<li>fade min:0 max:1 default:1</li>
+</ul></ul>
 event:/new_content/game/10_farewell/bird_fly_uptonext<br/>
 event:/state/underwater<br/>
 event:/ui/game/general_text_loop<br/>
