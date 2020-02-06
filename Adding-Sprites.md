@@ -18,7 +18,7 @@ Celeste stores it’s textures in Atlases, with each atlas being used for differ
 To load a texture into a preexisting atlas, follow the directions [here](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#file-layout) relating to pre-supported content mappings.
 
 The atlases present in the game already include:
-- Game - for ingame textures
+- Gameplay - for ingame textures
 - Gui - for menus and title screens
 - Portraits - for character dialogue
 
@@ -31,7 +31,7 @@ SpriteBanks are an extension of the Atlas system that incorporates an xml struct
 This is the simplest way to load a new texture into the game, however it is only really useful for static images. 
 
 To retrieve a texture and assign it to a variable, simply access the Atlas as you would an array, using a string containing the relative path **excluding file extensions** of your image as the index.   
-Ex: <code>MTexture myTexture = GFX.Game["pathname"];</code>
+Ex: <code>MTexture myTexture = GFX.Game["pathname"];</code> for a texture in the Gameplay atlas.
 
 To display your texture in game, hook the relevant Render method and call the Draw() or DrawCentered() method of your texture.  
 Ex: <code>myTexture.Draw(position);</code>
@@ -45,11 +45,14 @@ Most of the SpriteBanks are stored in the <code>Sprites.xml</code> file in the G
 Adding your own sprite to this file will loosely emulate the following example:
 ```xml
 <spriteName path="sprite/folder" start="initialanimation">
-	<Center/>If you want it centered
-	<Loop id="loopID" path="texturename" delay="0.15"/>
-	Will loop until changed
-	<Anim id="AnimID" path="othertexturename" delay="0.08" frames="3,7-9"/>
-	Will loop once
+  <!-- If you want it centered: -->
+  <Center/>
+
+  <!-- This animation will loop until changed: -->
+  <Loop id="loopID" path="texturename" delay="0.15"/>
+
+  <!-- This animation will play once: -->
+  <Anim id="animID" path="othertexturename" delay="0.08" frames="3,7-9"/>
 </spriteName>
 ```
 
@@ -67,7 +70,7 @@ Graphics
 	   ↳ othertexturename9  
 </pre>
 
-To retrieve your sprite for use with an Entity, call <code>Sprite mySprite = GFX.SpriteBank.Create("spriteName");</code>. Then call <code>mySprite.Play("animationID");</code> to play your loop or animation when needed.
+To retrieve your sprite for use with an Entity, call <code>Sprite mySprite = GFX.SpriteBank.Create("spriteName");</code>. Then call <code>mySprite.Play("animID");</code> to play your loop or animation when needed.
 
 ## Using Sprites in Code
 It is also possible to add and play custom animations without adding them to the Sprites.xml file. This allows for animations to be created dynamically as the program runs.
