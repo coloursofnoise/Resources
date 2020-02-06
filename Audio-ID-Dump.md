@@ -948,3 +948,5 @@ snapshot:/game_gen_large_berry_get<br/>
 </details>
 
 Please note that this page was mostly computer generated, but people make mistakes. For questions or feedback, contact @coloursofnoise on the Celeste Discord.
+
+Additionally, many of the sounds listed here require additional parameters to function properly, and this page will be updated in the future to include this.
