@@ -157,13 +157,20 @@ namespace Celeste.Mod.Example {
             Instance = this;
         }
 
-        // If you don't need to store any settings, => null
-        public override Type SettingsType => typeof(ExampleSettings);
-        public static ExampleSettings Settings => (ExampleSettings) Instance._Settings;
+        // Check the next section for more information about mod settings, save data and session.
+        // Those are optional: if you don't need one of those, you can remove it from the module.
 
-        // If you don't need to store any save data, => null
-        public override Type SaveDataType => typeof(ExampleSaveData);
-        public static ExampleSaveData SaveData => (ExampleSaveData) Instance._SaveData;
+        // If you need to store settings:
+        public override Type SettingsType => typeof(ExampleModuleSettings);
+        public static ExampleModuleSettings Settings => (ExampleSettings) Instance._Settings;
+
+        // If you need to store save data:
+        public override Type SaveDataType => typeof(ExampleModuleSaveData);
+        public static ExampleModuleSaveData SaveData => (ExampleModuleSaveData) Instance._SaveData;
+
+        // If you need to store session data:
+        public override Type SessionType => typeof(ExampleModuleSession);
+        public static ExampleModuleSession Session => (ExampleModuleSession) Instance._Session;
 
         // Set up any hooks, event handlers and your mod in general here.
         // Load runs before Celeste itself has initialized properly.
@@ -186,11 +193,16 @@ namespace Celeste.Mod.Example {
 }
 ```
 
-## Settings / SaveData class
+## Mod settings, session and save data
+
+Mods can define several classes to save extra data:
+* **Mod settings** (`EverestModuleSettings`): for _global_ data (for example settings). Those can appear in Mod Options, and are saved in `Saves/modsettings-[modname].celeste`.
+* **Mod save data** (`EverestModuleSaveData`): for data that is specific to a save file (if the player loads another save, other save data will be used). Can be useful to save stats or the player's progress for example. Saved in `Saves/[savenumber]-modsave-[modname].celeste`.
+* **Mod session** (`EverestModuleSession`): for data that is specific to a play session. This is reset each time the player starts a level, so this is reset if the player restarts the chapter, but is saved if they choose to save & quit. Can be useful to save the state of an entity for example. Saved in `Saves/[savenumber]-modsession-[modname].celeste`.
 
 Your settings class should look similar to the example.
 
-Save data classes are very similar, but inherit from `EverestModuleSaveData` and the `Setting*` attributes are ignored.
+Save data and session classes are very similar, but inherit from `EverestModuleSaveData` / `EverestModuleSession` and the `Setting*` attributes are ignored.
 
 ----
 
@@ -198,7 +210,7 @@ Save data classes are very similar, but inherit from `EverestModuleSaveData` and
 <h5>NOTE</h5>
 <p>
 
-**All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` to bypass YamlDotNet's restrictions.
+**All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` / `LoadSession` and `SaveSession` to bypass YamlDotNet's restrictions.
 
 This example only shows a subset of Everest's capabilities.  
 [**Read the full `EverestModuleSettings` documentation here.**](https://everestapi.github.io/api/Celeste.Mod.EverestModuleSettings.html)
@@ -260,6 +272,11 @@ namespace Celeste.Mod.Example {
             }
         }
 
+        // Example string property. Selecting it will show a file naming-like menu.
+        // Max length defaults to 12 if the attribute is not set.
+        [SettingMaxLength(40)]
+        public string ExampleString { get; set; } = "test";
+
         public int SomethingWeird { get; set; } = 42;
 
         // Custom entry creation methods are always called Create[propname]Entry
@@ -273,11 +290,74 @@ namespace Celeste.Mod.Example {
 }
 ```
 
-## Hooking Methods
-You should only care about the following two ways to hook methods:
+## Creating custom entities and triggers
 
-- **Everest.Events:** This is a very restricted event listening method built into Everest, and is only used when Everest needs to do work behind the scenes for you. You can't control when the original method runs.
-- **MMHOOK_Celeste.dll:** This auto-generated file allows you to hook to all Celeste methods as if they were events. You are responsible to run the original method. Also, **you need to install Everest on the OpenGL / FNA version of the game to auto-generate a working .dll**, otherwise you'll need the Windows-only and obsolete XNA Framework to even compile your mod. [Take a look at an example in GhostNet here.](https://github.com/EverestAPI/GhostMod/blob/75bfd526210d151b20ec417757e4cbe4436de16c/GhostNetMod/GhostNetHooks.cs#L18)
+**TODO**, refer to [Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020) in the meantime
 
-If you're interested in lower-level runtime detouring, take a look at [HookedMethod.Hook](https://github.com/EverestAPI/HookedMethod/blob/master/Examples/Program.cs), available via NuGet. Make sure to set it and its dependencies' "Copy Local" property to "False", as Everest provides them for you.  
-If you're interested in the lowest level of detouring, take a look at [MonoMod.RuntimeDetour](https://github.com/0x0ade/MonoMod/tree/master/MonoMod.RuntimeDetour), which also powers `MMHOOK_Celeste.dll`.
+## Executing code when specific events occur
+
+You can use Everest events to execute some actions when an event such as a new level starting, etc. happens.
+
+Here are the events you can listen to:
+- Everest.Events.Celeste.OnExiting
+- Everest.Events.Celeste.OnShutdown
+- Everest.Events.Input.OnInitialize
+- Everest.Events.Input.OnDeregister
+- Everest.Events.Journal.OnEnter
+- Everest.Events.Level.OnComplete
+- Everest.Events.Level.OnCreatePauseMenuButtons
+- Everest.Events.Level.OnEnter
+- Everest.Events.Level.OnExit
+- Everest.Events.Level.OnLoadBackdrop
+- Everest.Events.Level.OnLoadEntity
+- Everest.Events.Level.OnComplete
+- Everest.Events.Level.OnPause
+- Everest.Events.Level.OnTransitionTo
+- Everest.Events.MainMenu.OnCreateButtons
+- Everest.Events.OuiJournal.OnCreateButtons
+- Everest.Events.Player.OnDie
+- Everest.Events.Player.OnSpawn
+
+For example, to call the `onPlayerSpawn` method when the player spawns, use this:
+```cs
+Everest.Events.Player.OnSpawn += onPlayerSpawn;
+```
+
+## Modifying the game's code
+
+Note: `On.Celeste` and `IL.Celeste` come from `MMHOOK_Celeste.dll`, which is auto-generated by [HookGen](https://github.com/MonoMod/MonoMod/tree/master/MonoMod.RuntimeDetour.HookGen) when Everest is installed. **You need to install Everest on the OpenGL / FNA version of the game to auto-generate a working .dll**, otherwise you'll need the Windows-only and obsolete XNA Framework to even compile your mod.
+
+If you want to modify the game's behaviour, you can check the game's code with [ILSpy](https://github.com/icsharpcode/ILSpy/releases). Once you found the method you want to modify, you can use `On.Celeste` or `IL.Celeste` to do this.
+
+### `On.Celeste` hooks
+
+Those hooks allow to "replace" a method in vanilla with your own method. You can call the original method when/if you want, by using the `orig` parameter passed to the hook.
+
+For example, [Extended Variants](https://github.com/max4805/Everest-ExtendedVariants) use the following to make the game think wall-jumping is always impossible:
+```cs
+public void Load() {
+    On.Celeste.Player.modWallJumpCheck += modPlayerWallJumpCheck;
+}
+
+public void Unload() {
+    On.Celeste.Player.modWallJumpCheck -= modPlayerWallJumpCheck;
+}
+
+private bool modWallJumpCheck(On.Celeste.Player.orig_WallJumpCheck orig, Player self, int dir) {
+    if(Settings.DisableWallJumping) {
+        // instead of running the vanilla method, return false all the time.
+        return false;
+    }
+
+    // call the vanilla method by calling the "orig" method.
+    return orig(self, dir);
+}
+```
+
+When `Settings.DisableWallJumping` is true, the vanilla code for `Player.WallJumpCheck()` won't run, and the method will instead always return `false`. Otherwise, the method will behave like vanilla.
+
+### `IL.Celeste` hooks
+
+Those hooks allow modifying the _contents_ of a method. Those are useful when you want to inject or modify code at a specific point in a big method, and don't want to copy-paste the entirety of it in your mod.
+
+**TODO**
