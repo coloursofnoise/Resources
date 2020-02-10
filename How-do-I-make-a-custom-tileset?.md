@@ -64,7 +64,7 @@ Entries marked as (unused) don't have any sound associated to them.
 6. bridge
 7. girder
 8. brick
-9. zip movers (traffic blocks)
+9. traffic block
 10. (unused)
 11. dreamblock inactive
 12. dreamblock active
@@ -98,5 +98,5 @@ Entries marked as (unused) don't have any sound associated to them.
 40. glitch
 41. (unused)
 42. internet café
-43. clouds
+43. cloud
 44. moon
