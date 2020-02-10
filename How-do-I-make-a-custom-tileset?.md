@@ -72,7 +72,7 @@ Entries marked as (unused) don't have any sound associated to them.
 14. resort roof
 15. resort platforms
 16. resort basement
-17. resort linens
+17. resort laundry
 18. resort boxes
 19. resort books
 20. resort forcefield
