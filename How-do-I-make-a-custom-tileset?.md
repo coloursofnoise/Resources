@@ -54,16 +54,15 @@ The following IDs were copied from the Celeste FMOD Studio project.
 They can be found in event:/char/madeline/footstep - thanks to Kevin Regamey from PowerUp Audio!
 
 Entries marked as (unused) don't have any sound associated to them.  
-Additionally, ID 20 doesn't have a sound associated to it in the public Celeste FMOD Studio project.
 
 0. null
 1. asphalt
 2. car
 3. dirt
-4. soft snow
-5. wood walkway
-6. (unused)
-7. metal girder
+4. snow
+5. wood
+6. bridge
+7. girder
 8. brick
 9. zip movers (traffic blocks)
 10. (unused)
@@ -72,7 +71,7 @@ Additionally, ID 20 doesn't have a sound associated to it in the public Celeste 
 13. resort wood
 14. resort roof
 15. resort platforms
-16. (unused)
+16. resort basement
 17. resort linens
 18. resort boxes
 19. resort books
@@ -81,16 +80,23 @@ Additionally, ID 20 doesn't have a sound associated to it in the public Celeste 
 22. resort elevator
 23. cliffside snow
 24. (unused)
-25. (unused)
+25. cliffside grass
 26. (unused)
 27. cliffside whiteblock
-28. cliffside gondola
+28. gondola
 29. (unused)
 30. (unused)
 31. (unused)
-32. reflection aurora glass
-33. reflection grass
+32. glass
+33. grass
 34. (unused)
-35. (unused)
+35. cassette block
 36. core ice
 37. core rock
+38. (unused)
+39. (unused)
+40. glitch
+41. (unused)
+42. internet café
+43. clouds
+44. moon
