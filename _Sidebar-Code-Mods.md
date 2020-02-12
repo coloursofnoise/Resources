@@ -4,6 +4,7 @@
 [**Useful Links**](https://github.com/EverestAPI/Resources/wiki#useful-links)  
 [**Debug Mode**](https://github.com/EverestAPI/Resources/wiki/Debug-Mode)  
 [**Mod Structure**](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)  
+[**Commandline Arguments**](https://github.com/EverestAPI/Resources/wiki/Commandline-Arguments)  
 
 # Map Making
 [**Ahorn Installation**](https://github.com/EverestAPI/Resources/wiki/Ahorn-Installation-Help)  
