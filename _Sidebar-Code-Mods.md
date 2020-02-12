@@ -1,7 +1,7 @@
 # General
 [**Home**](https://github.com/EverestAPI/Resources/wiki)  
 [**FAQ**](https://github.com/EverestAPI/Resources/wiki/FAQ)  
-[**Useful Links**](https://github.com/EverestAPI/Resources/wiki#Useful-links)  
+[**Useful Links**](https://github.com/EverestAPI/Resources/wikiUseful-links)  
 [**Debug Mode**](https://github.com/EverestAPI/Resources/wiki/Debug-Mode)  
 [**Mod Structure**](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)  
 [**Commandline Arguments**](https://github.com/EverestAPI/Resources/wiki/Commandline-Arguments)  
