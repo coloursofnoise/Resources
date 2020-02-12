@@ -21,3 +21,4 @@
 [**Adding Sprites**](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites)  
 [**Adding Preexisting Audio**](https://github.com/EverestAPI/Resources/wiki/Audio-ID-Dump)  
 [**Character Dialogue Reference**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)  
+
