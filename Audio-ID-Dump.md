@@ -1,5 +1,8 @@
 ## All sounds currently in the game.
-Use `Audio.Play("soundID");` to play a sound
+`Audio.Play("soundID");` to play a sound.  
+`Audio.SetParameter(EventInstance instance, string param, float value);` where instance is the return value of `Play()` to set or change a parameter.  
+`Audio.Stop(EventInstance instance, bool allowFadeout = true);` to stop playing the sound.
+
 
 ## Sound Banks:
 <details>
