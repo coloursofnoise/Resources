@@ -1,3 +1,10 @@
+## Community
+
+---
+
+### [Discord](https://discord.gg/6qjaePQ)
+![https://discord.gg/6qjaePQ](https://github.com/EverestAPI/Everest/blob/master/github/invite.png)
+
 ## Modding
 
 ---
