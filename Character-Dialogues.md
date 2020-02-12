@@ -3,6 +3,8 @@ Each dialogue has two parameters:
 - `dialogue_portrait`, which ranges from 0-12, and
 - `dialogue_end`, 0-1, which applies a low-pass filter for a more muted sound.
 
+Characters with `mirror_` prefixes are the regular dialogue with echo and reverb applied.
+
 For questions or feedback, contact @coloursofnoise on the Celeste Discord
 
 ## Characters:
