@@ -1,4 +1,3 @@
-## Character Dialogue
 Character Dialogue in Celeste is contained within the `Sfxs` bank, under the path `event:/char/dialogue/`.
 Each dialogue has two parameters: 
 - `dialogue_portrait`, which ranges from 0-12, and
