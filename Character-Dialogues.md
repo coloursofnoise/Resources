@@ -8,12 +8,12 @@ Characters with `mirror_` prefixes are the regular dialogue with echo and reverb
 For questions or feedback, contact @coloursofnoise on the Celeste Discord
 
 ## Characters:
-- [**Madeline**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#madeline)  
-- [**Theo**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#theo)  
-- [**Badeline**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#badeline)  
-- [**Granny**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#granny)  
-- [**Oshiro**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#oshiro)  
-- [**Others**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogue#others)
+- [**Madeline**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#madeline)  
+- [**Theo**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#theo)  
+- [**Badeline**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#badeline)  
+- [**Granny**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#granny)  
+- [**Oshiro**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#oshiro)  
+- [**Others**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#others)
 
 
 ## Madeline
