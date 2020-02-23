@@ -2,15 +2,15 @@
 
 <div class="table-of-contents">
 
-*   [Table Of Contents](#table-of-contents)
-    *   [Map Name](#map-name)
-    *   [Map Icon](#map-icon)
-    *   [Map Position On The Mountain](#map-position-on-the-mountain)
-    *   [Chapter Complete Screen](#chapter-complete-screen)
+*   [**Table Of Contents**](#table-of-contents)
+    *   [**Map Name**](#map-name)
+    *   [**Map Icon**](#map-icon)
+    *   [**Map Position On The Mountain**](#map-position-on-the-mountain)
+    *   [**Chapter Complete Screen**](#chapter-complete-screen)
 
 </div>
 
-## Map Name
+## **Map Name**
 
 First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
 In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
@@ -35,7 +35,7 @@ You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in Engli
 (If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`.
 All non-existing languages will fall back to English.)
 
-## Map Icon
+## **Map Icon**
 
 You can define the map icon in Ahorn, in the "Title Banner Icon" field of the Map > Metadata menu.
 
@@ -57,7 +57,7 @@ You can see them in the graphics dump (check the [Useful Links](https://github.c
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back), then use `areas/auniquename` as the map's icon.
 To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
 
-## Map Position On The Mountain
+## **Map Position On The Mountain**
 
 To define that, you need to create a meta.yaml next to your map: for example, create `testmap.meta.yaml` next to `testmap.bin`.
 
@@ -90,7 +90,7 @@ The coordinates will be displayed on the top left.
 
 **If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
 
-## Chapter Complete Screen
+## **Chapter Complete Screen**
 
 This is also defined in the meta.yaml file (see previous section to set it up).
 To set up a static image as an endscreen, add something like this:
