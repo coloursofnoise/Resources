@@ -1,8 +1,8 @@
-## Table of contents
+## Table Of Contents
 
 <div class="table-of-contents">
 
-*   [Table of contents](#table-of-contents)
+*   [Table Of Contents](#table-of-contents)
     *   [Map Name](#map-name)
     *   [Map Icon](#map-icon)
     *   [Map Position On The Mountain](#map-position-on-the-mountain)
@@ -12,9 +12,11 @@
 
 ## Map Name
 
-First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure). In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
+First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
+In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
 
-You should now create the file `Mods/yourmodname/Dialog/English.txt`. It should contain the following:
+You should now create the file `Mods/yourmodname/Dialog/English.txt`.
+It should contain the following:
 
     yournickname_campaignname= Campaign Name
     yournickname_campaignname_mapname= Map Name
@@ -23,13 +25,15 @@ It also works to define checkpoint names:
 
     yournickname_campaignname_mapname_roomname= Checkpoint Name
 
-As a general rule, if you see `{blah_blah}` in the game, and you want it to display `some text` instead, you need to add this in your English.txt:
+As a general rule, if you see `{blah_blah}` in the game, and you want it to display `some text` instead,
+you need to add this in your English.txt:
 
     blah_blah= some text
 
 You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in English.txt to take effect.
 
-(If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`. All non-existing languages will fall back to English.)
+(If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`.
+All non-existing languages will fall back to English.)
 
 ## Map Icon
 
@@ -50,7 +54,8 @@ The banners for the base levels are:
 
 You can see them in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page).
 
-If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back). Then use `areas/auniquename` as the map's icon. To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
+If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back), then use `areas/auniquename` as the map's icon.
+To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
 
 ## Map Position On The Mountain
 
@@ -72,7 +77,9 @@ To define your map's position, add this to the meta.yaml file:
         State: 2
         ShowCore: False
 
-You can get the coordinates by enabling debug mode (in Mod Options), restarting the game, and pressing Space on the mountain screen. Look around with the mouse, move around with WASD and move the camera up/down with Q and Z. The coordinates will be displayed on the top left.
+You can get the coordinates by enabling debug mode (in Mod Options), restarting the game, and pressing Space on the mountain screen.
+Look around with the mouse, move around with WASD and move the camera up/down with Q and Z.
+The coordinates will be displayed on the top left.
 
 *   `Idle` defines the camera position during level selection.
 *   `Select` defines the camera position when you selected the level and looking at checkpoint selection or side selection.
@@ -85,7 +92,8 @@ You can get the coordinates by enabling debug mode (in Mod Options), restarting 
 
 ## Chapter Complete Screen
 
-This is also defined in the meta.yaml file (see previous section to set it up). To set up a static image as an endscreen, add something like this:
+This is also defined in the meta.yaml file (see previous section to set it up).
+To set up a static image as an endscreen, add something like this:
 
     CompleteScreen:
         Atlas: "Endscreens/yournickname/campaignname"
@@ -98,7 +106,8 @@ This is also defined in the meta.yaml file (see previous section to set it up). 
             Position: [ 0.0, 0.0 ]
             Scroll: [ 0.0 ]
 
-Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`. Its size should be 1920x1080px.
+Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`.
+Its size should be 1920x1080px.
 
 Putting multiple images will create an animation.
 
