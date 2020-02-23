@@ -44,7 +44,7 @@ The banners for the base levels are:
 *   areas/cliffside
 *   areas/temple
 *   areas/reflection
-*   areas/Summit
+*   areas/summit
 *   areas/core
 *   areas/farewell
 
