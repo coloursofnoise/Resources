@@ -38,7 +38,6 @@ All non-existing languages will fall back to English.)
 ## **Map Icon**
 
 You can define the map icon in Ahorn, in the "Title Banner Icon" field of the Map > Metadata menu.
-
 The banners for the base levels are:
 
 *   areas/intro
@@ -84,7 +83,8 @@ The coordinates will be displayed on the top left.
 *   `Idle` defines the camera position during level selection.
 *   `Select` defines the camera position when you selected the level and looking at checkpoint selection or side selection.
 *   `Zoom` is the camera position when you zoom into the level after you start.
-*   `Cursor` is the location of the Madeline cursor on the mountain. To place this, move the camera to where you want the cursor to be, then copy the `Position` coordinates.
+*   `Cursor` is the location of the Madeline cursor on the mountain.
+To place this, move the camera to where you want the cursor to be, then copy the `Position` coordinates.
 *   `State` defines the lighting of the mountain: 0 is night, 1 is Dawn, 2 is day, 3 is moon.
 *   `ShowCore` decides whether the Core Heart should be shown on the Mountain.
 
