@@ -2,15 +2,15 @@
 
 <div class="table-of-contents">
 
-*   [Table of contents](#table-of-contants)
-    *   [Map name](#map-name)
+*   [Table of contents](#table-of-contents)
+    *   [Map Name](#map-name)
     *   [Map Icon](#map-icon)
-    *   [Map position on the mountain](#map-position-on-the-mountain)
-    *   [Chapter Complete screen](#chapter-complete-screen)
+    *   [Map Position On The Mountain](#map-position-on-the-mountain)
+    *   [Chapter Complete Screen](#chapter-complete-screen)
 
 </div>
 
-## Map name
+## Map Name
 
 First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure). In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
 
@@ -52,7 +52,7 @@ You can see them in the graphics dump (check the [Useful Links](https://github.c
 
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back). Then use `areas/auniquename` as the map's icon. To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
 
-## Map position on the mountain
+## Map Position On The Mountain
 
 To define that, you need to create a meta.yaml next to your map: for example, create `testmap.meta.yaml` next to `testmap.bin`.
 
@@ -83,7 +83,7 @@ You can get the coordinates by enabling debug mode (in Mod Options), restarting 
 
 **If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
 
-## Chapter Complete screen
+## Chapter Complete Screen
 
 This is also defined in the meta.yaml file (see previous section to set it up). To set up a static image as an endscreen, add something like this:
 
