@@ -522,3 +522,39 @@ The dash attack timer (determining dash length) is now multiplied with an arbitr
 [Extended Variants](https://github.com/max4805/Everest-ExtendedVariants/tree/master/ExtendedVariantMode/Variants) rely a lot on IL hooks, to slightly alter game mechanics (like gravity and maximum fall speed, for example), so it has a lot of examples of these.
 
 **Please note that IL code is slightly different between the XNA and FNA versions, at least on Steam**. Testing IL hooks against both versions is highly recommended.
+
+## Accessing private fields or methods
+
+### Private fields / properties
+
+In order to access a private field or property in a class, you can use [DynData](https://github.com/MonoMod/MonoMod/blob/master/MonoMod.Utils/DynData.cs). For that, build a DynData object, passing it the object you want the access the fields of:
+```cs
+DynData<StrawberrySeed> strawberrySeedData = new DynData<StrawberrySeed>(someStrawberrySeedObject);
+```
+You can also omit the `someStrawberrySeedObject` parameter if you want to access a static field/property.
+
+After doing that, you can access and set the fields you want on `someStrawberrySeedObject` by doing this:
+```cs
+Sprite vanillaSprite = strawberrySeedData.Get<Sprite>("sprite"); // gets someStrawberrySeedObject.sprite
+strawberrySeedData["sprite"] = modSprite;    // changes someStrawberrySeedObject.sprite
+selfStrawberrySeed.Set("sprite", modSprite); // same
+```
+
+DynData can also be used to **"attach" data to any object**. This is done by simply writing to a field that doesn't actually exist in the object (`strawberrySeedData["nonExistentField"] = 42`). You can then get this field back with `strawberrySeedData.Get<int>("nonExistentField")`. This can be used, for example, to save some data in a hook on an entity, and get it back later when the hook is executed again / in another hook.
+
+### Private methods
+
+In order to call a private method, you'll have to get a reference to it (this is referred to as "reflection"):
+```cs
+private static MethodInfo strawberryOnDash = typeof(Strawberry).GetMethod("OnDash", BindingFlags.Instance | BindingFlags.NonPublic);
+```
+The "Instance" flag means the method is not static, and should be replaced with "Static" if this is not the case.
+
+**For performance, it is recommended to get the `MethodInfo` once, and reuse it each time it is required**. Putting it as a static field in a class is a way to do this.
+
+To invoke the method, use:
+```cs
+strawberryOnDash.Invoke(this, new object[] { dir });
+```
+
+This is equivalent to calling `this.OnDash(dir)`.
