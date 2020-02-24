@@ -27,5 +27,5 @@ The Aim value is an `Xna.Framework Vector2` with both values clamped between -1 
 #Creating a New Input
 To Be Added
 
-For questions and feedback, please contact @coloursofnoise on the Celeste discord.
+For questions and feedback, please contact @coloursofnoise on the Celeste [Discord](https://discord.gg/6qjaePQ).
 
