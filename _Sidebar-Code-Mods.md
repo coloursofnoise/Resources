@@ -13,6 +13,7 @@
 [**Entity & Trigger Documentation**](https://github.com/EverestAPI/Resources/wiki/Mapmaking:-Entity-and-Trigger-Documentation)  
 [**Texture Packs**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-texture-pack%3F)  
 [**Custom Tilesets**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-custom-tileset%3F)  
+[**Adding Custom Dialogue**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-custom-tileset%3F)  
 
 # Code Mods
 [**Your First Code Mod**](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)  
