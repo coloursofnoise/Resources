@@ -5,7 +5,7 @@ Each dialogue has two parameters:
 
 Characters with `mirror_` prefixes are the regular dialogue with echo and reverb applied.
 
-For questions or feedback, contact @coloursofnoise on the Celeste Discord
+For questions or feedback, contact @coloursofnoise on the Celeste [Discord](https://discord.gg/6qjaePQ)
 
 ## Characters:
 - [**Madeline**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues#madeline)  
