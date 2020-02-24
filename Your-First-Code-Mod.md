@@ -292,7 +292,30 @@ namespace Celeste.Mod.Example {
 
 ## Creating custom entities and triggers
 
-**TODO**, refer to [Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020) in the meantime
+To create a custom entity (objects you can place in a map), you have to make it extend `Entity` and annotate it with `[CustomEntity]` so that the game can detect it when it loads a map:
+```cs
+[CustomEntity("SpringCollab2020/SidewaysJumpThru")]
+class SidewaysJumpThru : Entity { ... }
+```
+
+Please note that triggers are entities, so using the `[CustomEntity]` annotation works for them too (just extend `Trigger` instead of `Entity`).
+
+You have to define a constructor for the game to be able to build your entity. The allowed signatures for this constructor are:
+* `public MyEntity(Level level, LevelData levelData, Vector2 offset, EntityData data)`
+* `public MyEntity(EntityData data, Vector2 offset, EntityID id)`
+* `public MyEntity(EntityData data, Vector2 offset)`
+* `public MyEntity(Vector2 offset)`
+
+To be able to place your entity in Ahorn, you will also have to create a **Ahorn plugin** for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
+
+Ahorn plugin:
+> @mapdef Trigger "**SpringCollab2020/NoRefillField**" NoRefillField(x::Integer, y::Integer, width::Integer=Maple.defaultTriggerWidth, height::Integer=Maple.defaultTriggerHeight)
+
+Code:
+> [CustomEntity("**SpringCollab2020/NoRefillField**")]
+> class NoRefillField : Trigger { ... }
+
+Other useful annotations for classes are: [TODO Tracked and RegisterStrawberry]
 
 ## Executing code when specific events occur
 
