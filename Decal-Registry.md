@@ -11,7 +11,7 @@ To start using it, first create a `DecalRegistry.xml` file in your Mod's root (n
 You can add as many `<decal>`s as you want. The `path` attribute of `<decal>`s is the path to your decal sprite relative to `Graphics/Atlases/Gameplay/decals/`
 
 Inside of a `<decal>`, you can specify as many properties as you want. While other mods can extend this, Everest currently supports these properties:
-* `<baner>`: Attributes: `amplitude(float), sliceSize(int), speed(float), sliceSinIncrement(float), easeDown(bool), offset(float)` - Used for grass for example, makes the decal wobble left/right.
+* `<banner>`: Attributes: `amplitude(float), sliceSize(int), speed(float), sliceSinIncrement(float), easeDown(bool), offset(float)` - Used for grass for example, makes the decal wobble left/right.
 * `<floaty>`: No Attributes - Makes the decal floaty.
 * `<smoke>`: Attributes: `inbg(bool), offsetX(float), offsetY(float)` - Makes the decal create smoke
 * `<parallax>`: Attributes: `amount(float)` - Adds parallax to the decal
