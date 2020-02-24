@@ -1,4 +1,21 @@
-# Your First Code Mod
+## Table of Contents
+
+* [Project setup](#project-setup)
+* [Module class](#module-class)
+* [Mod settings, session and save data](#mod-settings-session-and-save-data)
+* [Creating custom entities and triggers](#creating-custom-entities-and-triggers)
+  * [[Tracked]](#tracked)
+  * [[RegisterStrawberry]](#registerstrawberry)
+* [Executing code when specific events occur](#executing-code-when-specific-events-occur)
+* [Modifying the game's code](#modifying-the-games-code)
+  * [On.Celeste hooks](#onceleste-hooks)
+  * [IL.Celeste hooks](#ilceleste-hooks)
+* [Accessing private fields or methods](#accessing-private-fields-or-methods)
+  * [Private fields / properties](#private-fields--properties)
+  * [Private methods](#private-methods)
+
+
+## Project setup
 
 ----
 
@@ -15,8 +32,6 @@
 ----
 
 Every Everest code mod starts out as a C# (.NET Framework) class library targeting the .NET Framework 4.5.2 (same as Celeste itself).
-
-## Project setup
 
 ----
 
