@@ -25,6 +25,6 @@
 [**Dialogue Reference**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)  
 
 ## Meta
-[**Contributing**](https://github.com/EverestAPI/Resources/wiki/Contributing-To-The-Wiki)  
+[**How To Contribute**](https://github.com/EverestAPI/Resources/wiki/Contributing-To-The-Wiki)  
 [**Articles In Progress**](https://github.com/EverestAPI/Resources/wiki/Contributing-To-The-Wiki#In-Progress)  
 
