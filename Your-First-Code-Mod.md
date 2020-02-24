@@ -315,7 +315,28 @@ Code:
 > [CustomEntity("**SpringCollab2020/NoRefillField**")]
 > class NoRefillField : Trigger { ... }
 
-Other useful attributes for classes are:
+You can also give a custom entity multiple IDs (useful for backwards compatibility):
+```cs
+[CustomEntity("ExtendedVariantTrigger", "ExtendedVariantMode/ExtendedVariantTrigger")]
+```
+or have different IDs call different constructors for your entity:
+```cs
+[CustomEntity(
+    "triggerSpikesOriginalUp = LoadUp",
+    "triggerSpikesOriginalDown = LoadDown"
+)]
+public class TriggerSpikesOriginal : Entity {
+
+    public static Entity LoadUp(Level level, LevelData levelData, Vector2 offset, EntityData entityData)
+        => new TriggerSpikesOriginal(entityData, offset, Directions.Up);
+    public static Entity LoadDown(Level level, LevelData levelData, Vector2 offset, EntityData entityData)
+        => new TriggerSpikesOriginal(entityData, offset, Directions.Down);
+
+    [...]
+}
+```
+
+Other useful attributes for custom entity classes are:
 
 ### `[Tracked]`
 
