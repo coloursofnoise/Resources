@@ -44,7 +44,7 @@ Example: `MAPAUTHOR_MAPNAME_JUMPDIALOG_1` instead of `Jump1`
 
 `left` is the orientation of the Dialogue Portrait, in this case it would appear on the left side of the Dialogue Box.
 
-`normal` is what expression the Dialogue Portrait should use. What expressions are available for a specfic character, can be seen ingame by using the `Blank` in the Debug Mode Console.
+`normal` is what expression the Dialogue Portrait should use. What expressions are available for a specfic character, can be seen ingame by using the `portraits` command in the Debug Mode Console.
 
 This part can be left out, which is useful when an Entity does only display text, and not a Dialogue Box, for Example.
 
