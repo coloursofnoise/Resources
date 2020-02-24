@@ -46,7 +46,7 @@ Example: `MAPAUTHOR_MAPNAME_JUMPDIALOG_1` instead of `Jump1`
 
 `normal` is what expression the Dialogue Portrait should use. What expressions are available for a specfic character, can be seen ingame by using the `portraits` command in the Debug Mode Console.
 
-This part can be left out, which is useful when an Entity does only display text, and not a Dialogue Box, for Example.
+These Attribute can be completely left out, which is useful when an Entity does only display text, and not a Dialogue Box, for Example.
 
 The rest of the Dialogue is the actual lines of text that will appear ingame when the ID is called. Here, text commands can also be used. To see a list of available commands for modifying the displaying of text ingame and what exactly they do, see the top of the Vanilla `English.txt`.
 
