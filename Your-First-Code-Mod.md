@@ -330,6 +330,27 @@ public class MyChildEntity : MyEntity { ... }
 - all MyEntity objects in the scene if MyEntity is annotated with `[Tracked]`
 - all MyEntity **and MyChildEntity** objects if MyEntity is annotated with `[Tracked(true)]`
 
+### `[RegisterStrawberry]`
+
+This attribute can be placed on any class that extends Strawberry or implements IStrawberry. It allows custom strawberries to be taken into account correctly in the total strawberry count, or in the strawberry tracker in the pause menu for example.
+
+This attribute is used like this:
+```cs
+[CustomEntity("SpringCollab2020/CassetteFriendlyStrawberry")]
+[RegisterStrawberry(true, false)]
+class CassetteFriendlyStrawberry : Strawberry { ... }
+```
+This has 2 parameters:
+- **isTracked**: whether the strawberry should be counted in the total berry count, and should show up on the checkpoint card / the pause menu tracker. Its checkpoint ID and order will be auto-assigned by Everest in this case.
+- **blocksNormalCollection**: whether the berry has specific collection rules, like golden berries for example. In this case, it will allow berries behind it in the "berry train" to be collected.
+
+For example, in vanilla:
+- red berries are tracked and do not block normal collection
+- golden berries are untracked and block normal collection
+- the moon berry is untracked and does not block normal collection 
+
+If your custom berry doesn't extend `Strawberry` and you want to have seeds behaving normally, you can have your custom berry implement `IStrawberrySeeded`, then use the `GenericStrawberrySeed` class instead of vanilla strawberry seeds. See [Glass Berry](https://github.com/EverestAPI/SpringCollab2020/blob/master/Entities/GlassBerry.cs) for an example.
+
 ## Executing code when specific events occur
 
 You can use Everest events to execute some actions when an event such as a new level starting, etc. happens.
