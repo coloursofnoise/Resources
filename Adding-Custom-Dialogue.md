@@ -30,7 +30,7 @@ for Example, a Message Box.
 Example of a String and corresponding Dialogue ID out of the Vanilla `English.txt`:
 ```
 CH2_THEO_B=
-[THEO left normal]		`
+[THEO left normal]
 Sorry about that.
 Don't worry, I won't post that one.
 ```
