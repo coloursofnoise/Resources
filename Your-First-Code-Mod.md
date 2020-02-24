@@ -398,4 +398,85 @@ When `Settings.DisableWallJumping` is true, the vanilla code for `Player.WallJum
 
 Those hooks allow modifying the _contents_ of a method. Those are useful when you want to inject or modify code at a specific point in a big method, and don't want to copy-paste the entirety of it in your mod.
 
-**TODO**
+When you add an IL hook to a method, the hook is immediately called with an `ILContext` object. For example:
+```cs
+IL.Celeste.Player.DashBegin += modDashLength;
+
+private void modDashLength(ILContext il) { ... }
+```
+
+This object allows you to modify the _IL code_ for the method directly, and the way you want. CIL stands for [Common Intermediate Language](https://en.wikipedia.org/wiki/Common_Intermediate_Language), and is a lower-level language. For instance, this code:
+```cs
+if (SaveData.Instance.Assists.SuperDashing) {
+    dashAttackTimer += 0.15f;
+}
+```
+translates to:
+```
+IL_009f: ldsfld class Celeste.SaveData Celeste.SaveData::Instance   <= load SaveData.Instance
+IL_00a4: ldflda valuetype Celeste.Assists Celeste.SaveData::Assists <= load the Assists field in it
+IL_00a9: ldfld bool Celeste.Assists::SuperDashing                   <= load the SuperDashing field in it
+IL_00ae: brfalse.s IL_00c2                              <= if this is false, jump over the contents of the if
+
+IL_00b0: ldarg.0                                        <= load "this"
+IL_00b1: ldarg.0                                        <= load "this" again
+IL_00b2: ldfld float32 Celeste.Player::dashAttackTimer  <= load the dashAttackTimer in this
+IL_00b7: ldc.r4 0.15                                    <= load 0.15 to the stack
+IL_00bc: add                                    <= this adds the 2 latest loaded things, so dashAttackTimer + 0.15
+IL_00bd: stfld float32 Celeste.Player::dashAttackTimer  <= save the result to dashAttackTimer
+
+IL_00c2: [...]
+```
+
+[You can find a list of all existing instructions here.](https://en.wikipedia.org/wiki/List_of_CIL_instructions)
+
+In ILSpy and dnSpy, you can view the IL code by using this combo box on the top-left:
+![ILSpy screenshot for the combobox allowing to switch between IL and C#](https://user-images.githubusercontent.com/52103563/75152044-6b504900-5708-11ea-8f00-b42d02946a39.png)
+
+In dnSpy, you can also right-click a line of code to view its IL equivalent.
+
+IL hooks allow you to add, remove or modify those IL instructions. For example:
+
+```cs
+private void modDashLength(ILContext il) {
+    ILCursor cursor = new ILCursor(il);
+
+    // jump where 0.3 or 0.15f are loaded (those are dash times)
+    while (cursor.TryGotoNext(MoveType.After, instr => instr.MatchLdcR4(0.3f) || instr.MatchLdcR4(0.15f))) {
+        Logger.Log("ExtendedVariantMode/DashLength", $"Applying dash length to constant at {cursor.Index} in CIL code for {cursor.Method.FullName}");
+
+        cursor.EmitDelegate<Func<float>>(determineDashLengthFactor);
+        cursor.Emit(OpCodes.Mul);
+    }
+}
+
+private static float determineDashLengthFactor() {
+    return Settings.DashLength / 10f;
+}
+```
+
+This code looks up for every `ldc.r4 0.3` or `ldc.r4 0.15` in the code (that is, each time 0.3f and 0.15f are used), and multiply them with the value returned by `determineDashLengthFactor()`.
+
+Here is a what the IL code looks like before patching:
+```
+dashAttackTimer = 0.3f;
+=>
+ldarg.0
+ldc.r4 0.3
+stfld float32 Celeste.Player::dashAttackTimer
+```
+and here is a simplified view of what the code looks like after patching:
+```
+ldarg.0
+ldc.r4 0.3
+call float32 determineDashLengthFactor()
+mul                               <= multiplies 0.3 and the result from determineDashLengthFactor()
+stfld float32 Celeste.Player::dashAttackTimer
+=>
+dashAttackTimer = 0.3f * determineDashLengthFactor();
+```
+The dash attack timer (determining dash length) is now multiplied with an arbitrary factor, pulled from mod settings.
+
+[Extended Variants](https://github.com/max4805/Everest-ExtendedVariants/tree/master/ExtendedVariantMode/Variants) rely a lot on IL hooks, to slightly alter game mechanics (like gravity and maximum fall speed, for example), so it has a lot of examples of these.
+
+**Please note that IL code is slightly different between the XNA and FNA versions, at least on Steam**. Testing IL hooks against both versions is highly recommended.
