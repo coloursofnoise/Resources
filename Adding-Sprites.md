@@ -1,5 +1,5 @@
 This is a tutorial for adding static or dynamic sprites to the game that can then be accessed from your code mod.  
-For questions and feedback, please contact @coloursofnoise on the Celeste discord.
+For questions and feedback, please contact @coloursofnoise on the Celeste [Discord](https://discord.gg/6qjaePQ).
 
 # Table of Contents:
 ## Understanding the Atlas system
