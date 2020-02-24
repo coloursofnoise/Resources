@@ -377,7 +377,7 @@ This attribute is used like this:
 class CassetteFriendlyStrawberry : Strawberry { ... }
 ```
 This has 2 parameters:
-- **isTracked**: whether the strawberry should be counted in the total berry count, and should show up on the checkpoint card / the pause menu tracker. Its checkpoint ID and order will be auto-assigned by Everest in this case.
+- **isTracked**: whether the strawberry should be counted in the maximum berry count, and should show up on the checkpoint card / the pause menu tracker. Its checkpoint ID and order will be auto-assigned by Everest in this case.
 - **blocksNormalCollection**: whether the berry has specific collection rules, like golden berries for example. In this case, it will allow berries behind it in the "berry train" to be collected.
 
 For example, in vanilla:
