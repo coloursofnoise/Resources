@@ -75,3 +75,5 @@ Here you will likely see `Dialog ID` or something of similar nature. Copy your I
 
 Code Mods can also setup Custom Objects that allow for Custom Dialogue IDs to be used.
 If you want to use Custom Dialog in your own Code Mods, check [this page.](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)
+
+**Note:** if you happen to have Japanese, Chinese or Korean dialogue in particular, and notice that some characters are missing when you view your dialogue in-game, it might mean these characters are not in the game's font. There are ways to add them to the game, feel free to ask max480#4596 about that on [the Discord server](https://discord.gg/6qjaePQ).
