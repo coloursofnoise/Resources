@@ -8,6 +8,7 @@ This tutorial will explain how to integrate your custom Entities and Triggers wi
 - [**Placing**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placing)
   - [Placement](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placement)
   - [Selection](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#selection)
+  - [Adding dropdown options](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#adding-dropdown-options)
 - [**Rendering**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#rendering)
 - [**Examples**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#examples)
   - [All you technically need](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#all-you-technically-need)
