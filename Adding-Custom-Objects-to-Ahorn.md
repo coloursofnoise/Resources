@@ -18,7 +18,7 @@ Within the `Ahorn` folder, entities must be placed in an `entities` folder, and 
 
 Every `.jl` file needs to start with the following code:
 ```julia
-module YourModule
+module YourModuleYourEntity
 using ..Ahorn, Maple
 ```
 This, similarly to C#, defines a "namespace" for your entity/trigger, and imports the Ahorn and Maple libraries for use.
