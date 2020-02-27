@@ -321,7 +321,7 @@ You have to define a constructor for the game to be able to build your entity. T
 * `public MyEntity(EntityData data, Vector2 offset)`
 * `public MyEntity(Vector2 offset)`
 
-To be able to place your entity in Ahorn, you will also have to create a **Ahorn plugin** for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
+To be able to place your entity in Ahorn, you will also have to create a [**Ahorn plugin**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn) for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
 
 Ahorn plugin:
 > @mapdef Trigger "**SpringCollab2020/NoRefillField**" NoRefillField(x::Integer, y::Integer, width::Integer=Maple.defaultTriggerWidth, height::Integer=Maple.defaultTriggerHeight)
