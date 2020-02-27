@@ -78,6 +78,16 @@ const placements = Ahorn.PlacementDict(
 )
 ```
 
+### Adding dropdown options
+In order to define dropdown menus for some attributes, you can define `Ahorn.editingOptions` for your entity (example from [Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020/blob/master/Ahorn/entities/flagTouchSwitch.jl)):
+```julia
+Ahorn.editingOptions(entity::FlagTouchSwitch) = Dict{String,Any}(
+    "icon" => String["vanilla", "tall", "triangle", "circle"]
+)
+```
+
+This will turn the "Icon" option in your entity attributes into a dropdown menu allowing you to pick between "vanilla", "tall", "triangle" or "circle", while _still allowing you to type custom values_.
+
 ### Selection
 Providing additional information to Ahorn on the placement of your entity can be done by overriding the `Ahorn.selection` function.
 This function recieves the selected entity, and can be used to return an Ahorn.Rectangle that will be used to draw the selection.
