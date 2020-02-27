@@ -3,7 +3,7 @@
 This tutorial will explain how to integrate your custom Entities and Triggers with Ahorn, in order to access and place them from within the editor.
 
 ## Contents
-- [**Setup**](https://github.com/EverestAPI/Resources/wiki/Adding_Custom_Objects_to_Ahorn#setup)
+- [**Setup**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#setup)
 - [**Defining**](https://github.com/EverestAPI/Resources/wiki/Adding_Custom_Objects_to_Ahorn#defining)
 - [**Placing**](https://github.com/EverestAPI/Resources/wiki/Adding_Custom_Objects_to_Ahorn#placing)
   - [Placement](https://github.com/EverestAPI/Resources/wiki/Adding_Custom_Objects_to_Ahorn#placement)
