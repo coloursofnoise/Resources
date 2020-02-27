@@ -5,12 +5,12 @@ This tutorial will explain how to integrate your custom Entities and Triggers wi
 ## Contents
 - [**Setup**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#setup)
 - [**Defining**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#defining)
-- [**Placing**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#placing)
-  - [Placement](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#placement)
-  - [Selection](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#selection)
-- [**Rendering**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#rendering)
-- [**Examples**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#examples)
-  - [All you technically need](https://github.com/EverestAPI/Resources/wiki/Adding-Custom_Objects-to-Ahorn#all-you-technically-need)
+- [**Placing**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placing)
+  - [Placement](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placement)
+  - [Selection](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#selection)
+- [**Rendering**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#rendering)
+- [**Examples**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#examples)
+  - [All you technically need](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#all-you-technically-need)
 
 ## Setup
 Every distinct entity or trigger that you want to add to Ahorn needs to be defined in a `.jl` Julia language file within the `Ahorn` subfolder of your mod folder.
