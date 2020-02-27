@@ -98,6 +98,13 @@ This makes the "texture" attribute a dropdown where you can select "wood", "drea
 
 The "surfaceIndex" attribute is a dropdown as well, with values "Default", "Null", "Asphalt", "Car" and "Dirt". The difference is that selecting "Dirt" will set the "surfaceIndex" attribute to 3. This is a way to show more easily understandable options to the user ("Dirt" is more explicit than "3").
 
+**Note**: Maple already defines some lists for the base game (surface sound IDs, spike directions, etc). They are defined [here](https://github.com/CelestialCartographers/Maple/blob/master/src/enums.jl). You can directly use them if needed:
+```julia
+Ahorn.editingOptions(entity::MyEntity) = Dict{String, Any}(
+  "surfaceIndex" => Maple.tileset_sound_ids
+)
+```
+
 ### Selection
 Providing additional information to Ahorn on the placement of your entity can be done by overriding the `Ahorn.selection` function.
 This function recieves the selected entity, and can be used to return an Ahorn.Rectangle that will be used to draw the selection.
