@@ -80,14 +80,23 @@ const placements = Ahorn.PlacementDict(
 ```
 
 ### Adding dropdown options
-In order to define dropdown menus for some attributes, you can define `Ahorn.editingOptions` for your entity (example from [Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020/blob/master/Ahorn/entities/flagTouchSwitch.jl)):
+In order to define dropdown menus for some attributes, you can define `Ahorn.editingOptions` for your entity (simplified example from [Jump Throughs in Ahorn](https://github.com/CelestialCartographers/Ahorn/blob/master/src/entities/jumpthru.jl#L21)):
 ```julia
-Ahorn.editingOptions(entity::FlagTouchSwitch) = Dict{String,Any}(
-    "icon" => String["vanilla", "tall", "triangle", "circle"]
+Ahorn.editingOptions(entity::Maple.JumpThru) = Dict{String, Any}(
+  "texture" => String["wood", "dream", "temple", "templeB"],
+  "surfaceIndex" => Dict{String, Int}(
+    "Default" => -1,
+    "Null" => 0,
+    "Asphalt" => 1,
+    "Car" => 2,
+    "Dirt" => 3
+  )
 )
 ```
 
-This will turn the "Icon" option in your entity attributes into a dropdown menu allowing you to pick between "vanilla", "tall", "triangle" or "circle", while _still allowing you to type custom values_.
+This makes the "texture" attribute a dropdown where you can select "wood", "dream", "temple" or "templeB", and where you can still type in custom values. 
+
+The "surfaceIndex" attribute is a dropdown as well, with values "Default", "Null", "Asphalt", "Car" and "Dirt". The difference is that selecting "Dirt" will set the "surfaceIndex" attribute to 3. This is a way to show more easily understandable options to the user ("Dirt" is more explicit than "3").
 
 ### Selection
 Providing additional information to Ahorn on the placement of your entity can be done by overriding the `Ahorn.selection` function.
