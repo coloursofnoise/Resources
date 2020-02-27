@@ -147,6 +147,6 @@ const placements = Ahorn.PlacementDict(
 )
 ```
 
-Many more examples of various custom Entity and Trigger files can be found in the [Sprint Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn).
+Many more examples of various custom Entity and Trigger files can be found in the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn).
 
 For questions and feedback, please contact @coloursofnoise on the Celeste [Discord](https://discord.gg/6qjaePQ).
