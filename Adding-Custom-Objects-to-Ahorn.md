@@ -1,5 +1,5 @@
 [Ahorn](https://github.com/CelestialCartographers/Ahorn) is a visual level maker and editor for Celeste, based on the 
-[Maple](https://github.com/CelestialCartographers/Maple) wrapper for celeste, written in Julia.  
+[Maple](https://github.com/CelestialCartographers/Maple) wrapper, written in Julia.  
 This tutorial will explain how to integrate your custom Entities and Triggers with Ahorn, in order to access and place them from within the editor.
 
 ## Contents
@@ -23,11 +23,13 @@ using ..Ahorn, Maple
 ```
 This, similarly to C#, defines a "namespace" for your entity/trigger, and imports the Ahorn and Maple libraries for use.
 
+Naming your module `YourModnameYourEntity` ensures that your module name will be unique across all mods. For example, [the Bubble Push Field entity in Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020/blob/master/Ahorn/entities/bubblePushField.jl) has a module named `SpringCollab2020BubblePushField`.
+
 ## Defining
-Defining a custom entity or trigger for ahorn will always look similar to the following:
+Defining a custom entity or trigger for Ahorn will always look similar to the following:
 ```julia
 @mapdef Entity "YourMod/YourEntity" YourEntity(x::Integer, y::Integer,
-   attr1::String="default1, attr2::String="default2")
+   attr1::String="default1", attr2::String="default2")
 ```
 or
 ```julia
@@ -39,6 +41,7 @@ The string (in quotes) should be the name of your [Custom Entity](https://github
 The Entity/Trigger constructor can take any number of arguments, which are then accessible from the EntityData object that is passed to your C# object's constructor.
 Depending on the Type of the argument, it will automatically be displayed in the configuration panel for your entity/trigger within Ahorn.
 
+**Note:** if one of your attributes is a float (`Number`), be sure to give it a float default value as well. That is, instead of using `foo::Number=2`, use `foo::Number=2.0`.
 
 ## Placing
 ### Placement
@@ -54,9 +57,10 @@ placement::String,
 data::Dict{String, Any},
 finalizer::Union{Function, Nothing}
 ```
-`func` in most cases will be YourEntity/YourTrigger, and `placement` will be one of "point"(default), "rectangle", or "line", depending on which best suits your needs.  
-`data` allows for placement-specific attributes to be added to the EntityData,
-and `finalizer` allows for adding a function that is run only when the entity is placed, or the preview is updated.
+- `func` in most cases will be YourEntity or YourTrigger.
+- `placement` will be one of "point"(default), "rectangle", or "line", depending on which best suits your needs.  
+- `data` allows for placement-specific attributes to be added to the EntityData. This is useful if you want to have multiple placements with different "default values" for your entity. For example, [Ahorn uses this to allow placing moon berries and winged strawberries directly](https://github.com/CelestialCartographers/Ahorn/blob/master/src/entities/strawberry.jl#L12).
+- `finalizer` allows for adding a function that is run only when the entity is placed, or the preview is updated.
 
 Ex:
 ```julia
