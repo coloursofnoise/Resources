@@ -8,5 +8,4 @@ If you are working on a page, add it to the [In Progress](https://github.com/Eve
 For any questions, join the celeste [Discord](https://discord.gg/6qjaePQ) and ask under #modding_help
 
 ## In Progress
-- Adding custom Entities/Triggers to Ahorn - @coloursofnoise
 - Custom Mountain (in map metadata)
