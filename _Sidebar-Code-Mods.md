@@ -19,8 +19,9 @@
 ## Code Mods
 [**Your First Code Mod**](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)  
 [**Mod Structure**](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)  
-[**Adding Sprites**](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites)  
+[**Custom Entities**](https://github.com/EverestAPI/Resources/wiki/Custom-Entities-and-Triggers)  
 [**Ahorn Integration**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn)  
+[**Adding Sprites**](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites)  
 [**Adding Preexisting Audio**](https://github.com/EverestAPI/Resources/wiki/Audio-ID-Dump)  
 [**Dialogue Reference**](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)  
 [**Understanding Input**](https://github.com/EverestAPI/Resources/wiki/Understanding-Input)  
