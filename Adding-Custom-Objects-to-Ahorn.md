@@ -15,7 +15,7 @@ This tutorial will explain how to integrate your custom Entities and Triggers wi
 
 ## Setup
 Every distinct entity or trigger that you want to add to Ahorn needs to be defined in a `.jl` Julia language file within the `Ahorn` subfolder of your mod folder.
-Within the `Ahorn` folder, entities must be placed in an `entities` folder, and triggers in `triggers`. Additionally, a `lang` folder can be used to provide tooltips for various options.
+Within the `Ahorn` folder, entities must be placed in an `entities` folder, and triggers in `triggers`. Additionally, a `lang` folder can be used to provide [tooltips](https://github.com/EverestAPI/SpringCollab2020/blob/master/Ahorn/lang/en_gb.lang) for various options.
 
 Every `.jl` file needs to start with the following code:
 ```julia
