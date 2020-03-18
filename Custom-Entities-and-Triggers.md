@@ -5,6 +5,7 @@ This is a guide on how to define a custom Entity or Trigger in a code mod. This 
 * [Attributes](#creating-custom-entities-and-triggers)
   * [[CustomEntity]](#customentity)
   * [[Tracked]](#tracked)
+  * [[TrackedAs]](#trackedas)
   * [[RegisterStrawberry]](#registerstrawberry)  
 <br/>
 
@@ -67,6 +68,23 @@ public class MyChildEntity : MyEntity { ... }
 `Scene.Tracker.GetEntities<MyEntity>()` will return:
 - all MyEntity objects in the scene if MyEntity is annotated with `[Tracked]`
 - all MyEntity **and MyChildEntity** objects if MyEntity is annotated with `[Tracked(true)]`  
+
+### `[TrackedAs]`
+
+If you annotate your entity with `[TrackedAs(type)]`, it will be tracked in the same way as the type you specify. For example:
+
+```cs
+[TrackedAs(typeof(Water))]
+public class MyWater : Water { ... }
+```
+
+This means "MyWater should be tracked exactly the same way as Water is". That way:
+- `CollideCheck<Water>()` will also check collisions with MyWater, making Madeline able to swim in your custom water
+- `Scene.Tracker.GetEntities<Water>()` also returns `MyWater` entities, etc.
+
+[Used here in Spring Collab 2020](https://github.com/EverestAPI/SpringCollab2020/blob/master/Entities/FlagToggleWater.cs).
+
+This is useful when developing an entity extending a tracked vanilla one, when the vanilla one has `[Tracked(false)]` making children not tracked by default.
 
 ### `[RegisterStrawberry]`
 
