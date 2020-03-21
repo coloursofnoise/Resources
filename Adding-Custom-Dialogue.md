@@ -82,7 +82,7 @@ If you happen to have Japanese, Chinese or Korean dialogue in particular, you mi
 
 ### Adding characters to the game's font
 
-The game's vanilla fonts are stored in `Content/Dialog/Fonts`. They consist in pictures containing the characters, and an XML file describing the picture (character positions, etc).
+In order to feed the game with extra characters, you will have to generate pictures of them and a fnt file that describes them:
 
 - Download [BMFont](http://www.angelcode.com/products/bmfont/).
 - Load [a configuration matching what the game expects](https://cdn.discordapp.com/attachments/445236692136230943/691037491112706138/celeste.bmfc), using Options > Load configuration.
