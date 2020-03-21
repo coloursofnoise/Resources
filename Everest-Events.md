@@ -75,6 +75,13 @@ Event | Raised By | Notes
 --- | --- | ---
 `OnHandleDecalRegistry`(Decal decal, DecalRegistry.DecalInfo decalInfo) | Celeste.Decal.Added
    
+
+## FileSelectSlot
+Event | Raised By | Notes
+--- | --- | ---
+`OnCreateButtons`(List<OuiFileSelectSlot.Button> buttons, OuiFileSelectSlot slot, EverestModuleSaveData modSaveData, bool fileExists) | Celeste.OuiFileSelectSlot.CreateButtons
+
+
 ---
 
 The source code for all events can be found [here](https://github.com/EverestAPI/Everest/blob/master/Celeste.Mod.mm/Mod/Everest/Everest.Events.cs).    
