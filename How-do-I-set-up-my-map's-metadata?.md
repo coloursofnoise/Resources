@@ -2,15 +2,15 @@
 
 <div class="table-of-contents">
 
-*   [**Table Of Contents**](#table-of-contents)
-    *   [**Map Name**](#map-name)
-    *   [**Map Icon**](#map-icon)
-    *   [**Map Position On The Mountain**](#map-position-on-the-mountain)
-    *   [**Chapter Complete Screen**](#chapter-complete-screen)
+*   [Map Name](#map-name)
+*   [Map Icon](#map-icon)
+*   [Map Position On The Mountain](#map-position-on-the-mountain)
+*   [Chapter Complete Screen](#chapter-complete-screen)
+*   [Checkpoint Images](#checkpoint-images)
 
 </div>
 
-## **Map Name**
+## Map Name
 
 First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
 In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
@@ -35,7 +35,7 @@ You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in Engli
 (If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`.
 All non-existing languages will fall back to English.)
 
-## **Map Icon**
+## Map Icon
 
 You can define the map icon in Ahorn, in the "Title Banner Icon" field of the Map > Metadata menu.
 The banners for the base levels are:
@@ -56,7 +56,7 @@ You can see them in the graphics dump (check the [Useful Links](https://github.c
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back), then use `areas/auniquename` as the map's icon.
 To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
 
-## **Map Position On The Mountain**
+## Map Position On The Mountain
 
 To define that, you need to create a meta.yaml next to your map: for example, create `testmap.meta.yaml` next to `testmap.bin`.
 
@@ -90,7 +90,7 @@ To place this, move the camera to where you want the cursor to be, then copy the
 
 **If you just want to copy the coordinates of a vanilla chapter, have a look at the values defined in `Content/Overworld/AreaViews.xml`.**
 
-## **Chapter Complete Screen**
+## Chapter Complete Screen
 
 This is also defined in the meta.yaml file (see previous section to set it up).
 To set up a static image as an endscreen, add something like this:
@@ -110,5 +110,36 @@ Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endsc
 Its size should be 1920x1080px.
 
 Putting multiple images will create an animation.
+
+## Checkpoint Images
+
+First of all, checkpoint images need to be masked to look like vanilla ones: [follow the instructions to do that here](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-maps-on-PC%3F#how-do-i-add-a-checkpoint-mask-onto-my-custom-checkpoints).
+
+Then, if your map is in Mods/yourmodname/Maps/**mapfolder/mapname**.bin, you should drop your checkpoint images to this location for them to work:
+
+Mods/yourmodname/Graphics/Atlases/Checkpoints/**mapfolder/mapname**/side/roomname.png
+
+Replace `side` with A, B or C, and `roomname` with the name of the room the checkpoint is in, or `start` for the starting checkpoint.
+
+For example, if your map is in:
+```
+Maps/
+  orbittwz/
+    polygondreams/
+      1-itooktheelevator.bin
+```
+
+and has a checkpoint in room `03a`, your checkpoint images will go here:
+```
+Graphics/
+  Atlases/
+    Checkpoints/
+      orbittwz/
+        polygondreams/
+          1-itooktheelevator/
+            A/
+              03a.png
+              start.png
+```
 
 _If any of this information is incorrect, feel free to correct it and to shout at max480 on Discord._
