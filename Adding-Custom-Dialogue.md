@@ -76,4 +76,61 @@ Here you will likely see `Dialog ID` or something of similar nature. Copy your I
 Code Mods can also setup Custom Objects that allow for Custom Dialogue IDs to be used.
 If you want to use Custom Dialog in your own Code Mods, check [this page.](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)
 
-**Note:** if you happen to have Japanese, Chinese or Korean dialogue in particular, and notice that some characters are missing when you view your dialogue in-game, it might mean these characters are not in the game's font. There are ways to add them to the game, feel free to ask max480#4596 about that on [the Discord server](https://discord.gg/6qjaePQ).
+## Custom Font Loading
+
+If you happen to have Japanese, Chinese or Korean dialogue in particular, you might notice that some characters are missing when you view your dialogue in-game. That's because Celeste only ships with partial fonts. In this case, this will help you:
+
+### Adding characters to the game's font
+
+The game's vanilla fonts are stored in `Content/Dialog/Fonts`. They consist in pictures containing the characters, and an XML file describing the picture (character positions, etc).
+
+- Download [BMFont](http://www.angelcode.com/products/bmfont/).
+- Load [a configuration matching what the game expects](https://cdn.discordapp.com/attachments/445236692136230943/691037491112706138/celeste.bmfc), using Options > Load configuration.
+- Select **Options > Font settings**, then select the font matching your language (you might have to download and install them first, [Noto fonts are available here](https://www.google.com/get/noto/)):
+  - Chinese: Noto Sans CJK SC Medium
+  - Japanese: Noto Sans CJK JP Medium
+  - Korean: Noto Sans CJK KR Medium
+  - Russian: Noto Sans Med
+  - Other languages: Renogare
+- Select **Edit > Clear all chars from font** then **Edit > Select chars from file**, then pick your dialog file. This will make sure all characters used in your dialog file, and only them, are exported.
+- Select **Options > Save bitmap font as**, then save your file with a unique name (`mynickname_mymodname.fnt`). You should get a fnt file and a few png files as a result (`mynickname_mymodname_0.png`, `mynickname_mymodname_1.png`...)
+- Rename the fnt file to (depending on the language):
+  - chinese.fnt
+  - japanese.fnt
+  - korean.fnt
+  - russian.fnt
+  - renogare64.fnt
+- Drop the fnt file into `Mods/yourmod/Dialog/Fonts`
+- Drop the png files into `Mods/yourmod/Graphics/Atlases/Gui`
+
+When the game starts up, you should see something similar to this in the console or in log.txt, telling you that the missing characters have been successfully added to the game's font:
+```
+[PixelFont] Loading font: D:\SteamLibrary\steamapps\common\Celeste\Content\Dialog\Fonts\korean.fnt
+[PixelFont] => vanilla font file
+[PixelFont] => mod font file from ExtendedVariantMode
+[PixelFont] ==> Imported 15 new characters
+```
+
+### Adding a completely custom font for the game
+
+You might be interested by this if you want a "custom font" language, or want to translate Celeste to a language with a different alphabet. The procedure is very similar to the one from the previous section:
+
+- Download [BMFont](http://www.angelcode.com/products/bmfont/).
+- Load [a configuration matching what the game expects](https://cdn.discordapp.com/attachments/445236692136230943/691037491112706138/celeste.bmfc), using Options > Load configuration.
+- Select **Options > Font settings**, then select the font you want.
+- Select **Edit > Clear all chars from font** then **Edit > Select chars from file**, then pick your dialog file. This will make sure all characters used in your dialog file, and only them, are exported.
+- Select **Options > Save bitmap font as**, then save your file with a unique name (`mynickname_mymodname.fnt`). You should get a fnt file and a few png files as a result (`mynickname_mymodname_0.png`, `mynickname_mymodname_1.png`...)
+- Drop the fnt file into `Mods/yourmod/Dialog/Fonts`
+- Drop the png files into `Mods/yourmod/Graphics/Atlases/Gui`
+- In your dialog file, edit this line, and replace "Renogare" with your actual font name (**not** the name you gave to the fnt file).
+```
+	FONT=Renogare,64
+```
+
+When the game starts up, you should see something similar to this in the console or in log.txt, telling you that the font was loaded:
+```
+[PixelFont] Loading font: D:\SteamLibrary\steamapps\common\Celeste\Content\Dialog\Fonts\comic_sans.fnt
+[PixelFont] => mod font file from CelesteInComicSans
+```
+
+For a working language mod with a custom font, check [this example mod](https://cdn.discordapp.com/attachments/445236692136230943/690582152399552542/CelesteInComicSans.zip). It gives you Celeste in Comic Sans. Yeah, I know.
