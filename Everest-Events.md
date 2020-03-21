@@ -20,6 +20,7 @@ private void Your_OnLoadLevel_Method(Level level, Player.IntroTypes playerIntro,
 - [Input](#Input)
 - [Journal](#Journal)
 - [Decal](#Decal)
+- [FileSelectSlot](#FileSelectSlot)
 
 
 # Events
@@ -79,8 +80,52 @@ Event | Raised By | Notes
 ## FileSelectSlot
 Event | Raised By | Notes
 --- | --- | ---
-`OnCreateButtons`(List<OuiFileSelectSlot.Button> buttons, OuiFileSelectSlot slot, EverestModuleSaveData modSaveData, bool fileExists) | Celeste.OuiFileSelectSlot.CreateButtons
+`OnCreateButtons`(List<OuiFileSelectSlot.Button> buttons, OuiFileSelectSlot slot, EverestModuleSaveData modSaveData, bool fileExists) | Celeste.OuiFileSelectSlot.CreateButtons | Added in Everest 1459
 
+Usage example:
+
+```cs
+// event registering (in the Load() method for example)
+Everest.Events.FileSelectSlot.OnCreateButtons += addSilhouetteButton;
+
+private void addSilhouetteButton(List<OuiFileSelectSlot.Button> buttons, OuiFileSelectSlot slot, EverestModuleSaveData saveData, bool fileExists) {
+  // add a simple toggle button for an option in mod save data (SilhouetteEnabled)
+  OuiFileSelectSlot.Button button = new OuiFileSelectSlot.Button {
+    Label = $"Silhouette Mode: {(saveData as MyModuleSaveData).SilhouetteEnabled}",
+    Scale = 0.7f
+  };
+  button.Action = () => {
+    (saveData as MyModuleSaveData).SilhouetteEnabled = !(saveData as MyModuleSaveData).SilhouetteEnabled;
+    button.Label = $"Silhouette Mode: {(saveData as MyModuleSaveData).SilhouetteEnabled}";
+  };
+  buttons.Add(button);
+
+  // add a button opening a OuiFileSelectSlotSubmenu
+  buttons.Add(new OuiFileSelectSlot.Button {
+    Label = $"Silhouette Mode Options",
+    Scale = 0.7f,
+    Action = () => OuiFileSelectSlotSubmenu.Goto<OuiSilhouetteModeOptions>(slot, saveData, fileExists)
+  });
+}
+```
+
+Submenu implementation example:
+```cs
+using Celeste.Mod.UI;
+
+namespace Celeste.Mod.MyMod {
+  class OuiSilhouetteModeOptions : OuiFileSelectSlotSubmenu {
+    public override string MenuName => "SILHOUETTE MODE OPTIONS";
+
+    protected override void addOptionsToMenu(TextMenu menu, OuiFileSelectSlot slot, EverestModuleSaveData modSaveData, bool fileExists) {
+      MyModuleSaveDatacastSaveData = (modSaveData as MyModuleSaveData);
+
+      menu.Add(new TextMenu.SubHeader("Toggle"));
+      menu.Add(new TextMenu.OnOff("Enabled", castSaveData.SilhouetteEnabled).Change(newValue => castSaveData.SilhouetteEnabled = newValue));
+    }
+  }
+}
+```
 
 ---
 
