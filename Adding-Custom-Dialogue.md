@@ -100,8 +100,7 @@ In order to feed the game with extra characters, you will have to generate pictu
   - korean.fnt
   - russian.fnt
   - renogare64.fnt
-- Drop the fnt file into `Mods/yourmod/Dialog/Fonts`
-- Drop the png files into `Mods/yourmod/Graphics/Atlases/Gui`
+- Drop the fnt and png files into `Mods/yourmod/Dialog/Fonts`
 
 When the game starts up, you should see something similar to this in the console or in log.txt, telling you that the missing characters have been successfully added to the game's font:
 ```
@@ -120,8 +119,7 @@ You might be interested by this if you want a "custom font" language, or want to
 - Select **Options > Font settings**, then select the font you want.
 - Select **Edit > Clear all chars from font** then **Edit > Select chars from file**, then pick your dialog file. This will make sure all characters used in your dialog file, and only them, are exported.
 - Select **Options > Save bitmap font as**, then save your file with a unique name (`mynickname_mymodname.fnt`). You should get a fnt file and a few png files as a result (`mynickname_mymodname_0.png`, `mynickname_mymodname_1.png`...)
-- Drop the fnt file into `Mods/yourmod/Dialog/Fonts`
-- Drop the png files into `Mods/yourmod/Graphics/Atlases/Gui`
+- Drop the fnt and png files into `Mods/yourmod/Dialog/Fonts`
 - In your dialog file, edit this line, and replace "Renogare" with your actual font name (**not** the name you gave to the fnt file).
 ```
 	FONT=Renogare,64
