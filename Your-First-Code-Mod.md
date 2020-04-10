@@ -21,7 +21,9 @@
 <p>
 
 - Everest: [Website](https://everestapi.github.io/)
-- Visual Studio 2015 or newer. MonoDevelop instructions are different.
+- Visual Studio 2015 or newer. You need to have the .NET Framework 4.5.2 targeting pack installed. You can use [this vsconfig file](https://cdn.discordapp.com/attachments/445236692136230943/698269484653215844/celeste.vsconfig) and import it in Visual Studio Installer (More > Import configuration).
+
+MonoDevelop instructions are different.
 
 </p>
 </div>
