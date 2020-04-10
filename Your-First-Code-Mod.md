@@ -87,9 +87,11 @@ For more info about the mod structure, the `everest.yaml` format, how to add ext
 
 ----
 
-- Right-click your project's "References" and select "Add Reference...", then "Browse..." into your Celeste installation directory and setup your references like on the following screenshot:
+- Right-click your project's "References" and select "Add Reference...", then "Browse..." into your Celeste installation directory and setup your references like on the following screenshot (add the relevant references and remove extra ones that got added automatically):
 
 ![2-refs](https://user-images.githubusercontent.com/1200380/55094153-1bab6c80-50b6-11e9-8135-2d484d589ab4.png)
+
+You'll find most of those references as dlls in your Celeste installation directory. "Celeste" is Celeste.exe itself.
 
 ----
 
@@ -306,27 +308,7 @@ namespace Celeste.Mod.Example {
 
 ## Executing code when specific events occur
 
-You can use Everest events to execute some actions when an event such as a new level starting, etc. happens.
-
-Here are the events you can listen to:
-- Everest.Events.Celeste.OnExiting
-- Everest.Events.Celeste.OnShutdown
-- Everest.Events.Input.OnInitialize
-- Everest.Events.Input.OnDeregister
-- Everest.Events.Journal.OnEnter
-- Everest.Events.Level.OnComplete
-- Everest.Events.Level.OnCreatePauseMenuButtons
-- Everest.Events.Level.OnEnter
-- Everest.Events.Level.OnExit
-- Everest.Events.Level.OnLoadBackdrop
-- Everest.Events.Level.OnLoadEntity
-- Everest.Events.Level.OnComplete
-- Everest.Events.Level.OnPause
-- Everest.Events.Level.OnTransitionTo
-- Everest.Events.MainMenu.OnCreateButtons
-- Everest.Events.OuiJournal.OnCreateButtons
-- Everest.Events.Player.OnDie
-- Everest.Events.Player.OnSpawn
+You can use Everest events to execute some actions when an event such as a new level starting, etc. happens. You'll find a full list of Everest events in [this page](https://github.com/EverestAPI/Resources/wiki/Everest-Events).
 
 For example, to call the `onPlayerSpawn` method when the player spawns, use this:
 ```cs
