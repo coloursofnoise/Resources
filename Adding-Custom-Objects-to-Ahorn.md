@@ -152,6 +152,7 @@ A .zip file containing all graphics currently in the base game can be found [her
 ### All you technically need:
 ```julia
 module YourModule
+
 using ..Ahorn, Maple
 
 @mapdef Entity "YourMod/YourEntity" YourEntity(x::Integer, y::Integer)
@@ -161,6 +162,8 @@ const placements = Ahorn.PlacementDict(
       YourEntity
    )
 )
+
+end
 ```
 
 Many more examples of various custom Entity and Trigger files can be found in the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn).
