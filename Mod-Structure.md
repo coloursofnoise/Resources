@@ -67,7 +67,7 @@ Mods must contain a [`everest.yaml` metadata file.](#metadata)
         *   Atlas: `Gui`
         *   Texture: `title`
     *   `Graphics/Atlases/Gameplay/scenery/sign.png`
-        *   Atlas: `characters`
+        *   Atlas: `Gameplay`
         *   Texture: `scenery/sign`
 *   `Maps/*.bin`: Add new maps.
     *   Supports `.meta` definition files.
