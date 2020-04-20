@@ -144,6 +144,46 @@ public void CreateToggleBetween40And50Entry(TextMenu menu, bool inGame) {
 
 This code creates an on/off switch for an integer option. If the switch is off, `ToggleBetween40And50` is set to 40, and if the switch is on, `ToggleBetween40And50` is set to 50.
 
+## Creating a Mod Options submenu
+
+You can create a Mod Options submenu by creating a class like this:
+```cs
+using Celeste.Mod.UI;
+
+namespace Celeste.Mod.Example {
+    class OuiExampleSubmenu : OuiGenericMenu, OuiModOptions.ISubmenu {
+        public override string MenuName => "SUBMENU EXAMPLE";
+
+        protected override void addOptionsToMenu(TextMenu menu) {
+            menu.Add(new TextMenu.OnOff("Some toggle", false)
+                .Change(newValue => Logger.Log("OuiExampleSubmenu", $"The value changed to {newValue}")));
+        }
+    }
+}
+```
+
+This will create a menu looking like this:
+
+![Submenu screenshot](https://cdn.discordapp.com/attachments/445236692136230943/701768339126747216/unknown.png)
+
+After that, you have to create a button in Mod Options to access this screen. You can do so by adding this to your settings class:
+
+```cs
+[YamlIgnore]
+public int SubmenuExample { get; set; } = 0;
+
+public void CreateSubmenuExampleEntry(TextMenu menu, bool inGame) {
+    if (!inGame) {
+        menu.Add(new TextMenu.Button("Submenu Example")
+            .Pressed(() => OuiGenericMenu.Goto<OuiExampleSubmenu>(overworld => overworld.Goto<OuiModOptions>(), new object[0])));
+    }
+}
+```
+
+The first parameter of `OuiGenericMenu.Goto` is a delegate called to go back to the parent menu (in this case, Mod Options). The second parameter is an arbitrary parameter array you'll be able to access from your submenu with the `parameters` local variable.
+
+⚠️ This doesn't work for in-game submenus (hence the `!inGame` check in the example code). If you need an in-game submenu, ask max480#4596 on Discord, Extended Variants has those.
+
 ## Making a custom Mod Options section
 
 If the above is not enough for your needs, you can also choose to build the whole Mod Options section by yourself. To do that, override the `CreateModMenuSection` method in your EverestModule class (**not** your settings class):
