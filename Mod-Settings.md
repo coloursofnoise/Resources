@@ -26,6 +26,9 @@ Settings will be saved to and loaded from `Saves/modsettings-[modname].celeste`.
   - [**SettingIgnore**](#SettingIgnore)
   - [**YamlIgnore**](#YamlIgnore)
 - [**Custom Entries**](#custom-entries)
+  - [**Making a custom entry for a property**](#making-a-custom-entry-for-a-property)
+  - [**Creating a Mod Options submenu**](#creating-a-mod-options-submenu)
+  - [**Making a custom Mod Options section**](#making-a-custom-mod-options-section)
 
 # Property Types
 ModSettings options are automatically generated based on the type of each property in your EverestModuleSettings class.
@@ -186,7 +189,7 @@ The first parameter of `OuiGenericMenu.Goto` is a delegate called to go back to 
 
 ## Making a custom Mod Options section
 
-If the above is not enough for your needs, you can also choose to build the whole Mod Options section by yourself. To do that, override the `CreateModMenuSection` method in your EverestModule class (**not** your settings class):
+If the above is not enough for your needs, you can decide to build the whole Mod Options section for your mod by yourself. To do that, override the `CreateModMenuSection` method in your EverestModule class (**not** your settings class):
 
 ```cs
 public override void CreateModMenuSection(TextMenu menu, bool inGame, EventInstance snapshot) {
