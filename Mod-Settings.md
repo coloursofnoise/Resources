@@ -59,7 +59,7 @@ string => TextMenu.Button
 Using a string property will generate a TextMenu.Button which, when pressed, will open up a text entry screen similar to File Naming.  
 The [SettingMaxLength](#SettingMaxLength) attribute can be used to set the maximum possible length of the string (defaults to 12 characters).  
 
-!This property will not display on the in-game pause menu.
+*This property will not display on the in-game pause menu.*
 
 
 # Attributes
