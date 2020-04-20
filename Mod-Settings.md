@@ -59,7 +59,7 @@ string => TextMenu.Button
 Using a string property will generate a TextMenu.Button which, when pressed, will open up a text entry screen similar to File Naming.  
 The [SettingMaxLength](#SettingMaxLength) attribute can be used to set the maximum possible length of the string (defaults to 12 characters).  
 
-*This property will not display on the in-game pause menu.*
+⚠️ _This property will not display on the in-game pause menu._
 
 
 # Attributes
@@ -113,9 +113,45 @@ Adding the `SettingIgnore` attribute to a property will prevent the option from 
 
 ## YamlIgnore
 ```csharp
-[YamlDotNet.Serialization.YamlIgnore]
+[YamlIgnore]
 ```
 Adding the `YamlIgnore` attribute to a property will prevent the setting from being saved into the modsettings file.
 
+ℹ️ This attribute comes from the `YamlDotNet.Serialization` namespace.
+
 # Custom Entries
-TODO: Add Create{PropertyName}Entry Guide
+
+## Making a custom entry for a property
+
+If your setting does not fit any case above and you need to write your own code to make it appear in Mod Options, you can do so by implementing a method called `Create{PropertyName}Entry`:
+
+```cs
+public void CreateSomethingEntry(TextMenu menu, bool inGame)
+```
+
+This method will be called by Everest when the option should be added to the menu. It should add an option to the given `menu`. `inGame` will be `true` if the player accessed mod options from the pause menu, or `false` if they accessed it from the main menu.
+
+For example:
+
+```cs
+public int ToggleBetween40And50 { get; set; } = 40;
+
+public void CreateToggleBetween40And50Entry(TextMenu menu, bool inGame) {
+    menu.Add(new TextMenu.OnOff("Should Be 50", ToggleBetween40And50 == 50)
+        .Change(enabled => ToggleBetween40And50 = (enabled ? 50 : 40)));
+}
+```
+
+This code creates an on/off switch for an integer option. If the switch is off, `ToggleBetween40And50` is set to 40, and if the switch is on, `ToggleBetween40And50` is set to 50.
+
+## Making a custom Mod Options section
+
+If the above is not enough for your needs, you can also choose to build the whole Mod Options section by yourself. To do that, override the `CreateModMenuSection` method in your EverestModule class (**not** your settings class):
+
+```cs
+public override void CreateModMenuSection(TextMenu menu, bool inGame, EventInstance snapshot) {
+    // your own section creation logic
+}
+```
+
+⚠️ _Since, by doing that, you are handling menu creation by yourself, all `Setting*` attributes will stop working._
