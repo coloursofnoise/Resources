@@ -229,9 +229,7 @@ Save data and session classes are very similar, but inherit from `EverestModuleS
 **All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` / `LoadSession` and `SaveSession` to bypass YamlDotNet's restrictions.
 
 This example only shows a subset of Everest's capabilities.  
-[**Read the full `EverestModuleSettings` documentation here.**](https://everestapi.github.io/api/Celeste.Mod.EverestModuleSettings.html)
-
-For all settings attributes, search for `Celeste.Mod.Setting` in the Everest API.
+[**Read the full `EverestModuleSettings` documentation here**](https://github.com/EverestAPI/Resources/wiki/Mod-Settings)
 
 </p>
 </div>
