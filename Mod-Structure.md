@@ -55,7 +55,7 @@ The following file layout still applies to dynamically loaded mods.
 
 ## File Layout
 
-Mods can contain custom content, both overrides / replacements (when supported) and new content. The content paths match the originals as close as possible.
+Mods can contain custom content, both overrides / replacements (when supported) and new content. The content paths match the originals as close as possible. Paths are case sensitive.
 
 Mods must contain a [`everest.yaml` metadata file.](#metadata)
 
