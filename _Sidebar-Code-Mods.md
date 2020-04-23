@@ -19,6 +19,7 @@
 ## Code Mods
 [**Your First Code Mod**](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)  
 [**Mod Structure**](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)  
+[**Mod Settings**](https://github.com/EverestAPI/Resources/wiki/Mod-Settings)  
 [**Custom Entities**](https://github.com/EverestAPI/Resources/wiki/Custom-Entities-and-Triggers)  
 [**Ahorn Integration**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn)  
 [**Everest Events**](https://github.com/EverestAPI/Resources/wiki/Everest-Events)  
