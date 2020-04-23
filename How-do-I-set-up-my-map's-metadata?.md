@@ -30,8 +30,6 @@ you need to add this in your English.txt:
 
     blah_blah= some text
 
-You must restart Celeste or use Ctrl+F5 (in debug mode) for the changes in English.txt to take effect.
-
 (If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`.
 All non-existing languages will fall back to English.)
 
