@@ -9,4 +9,5 @@ For any questions, join the celeste [Discord](https://discord.gg/6qjaePQ) and as
 
 ## In Progress
 - Custom Mountain (in map metadata)
-- EverestModuleSettings Documentation
+- TextMenus
+- Ouis
