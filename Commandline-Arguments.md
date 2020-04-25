@@ -1,4 +1,5 @@
 A list of all currently available arguments when running Celeste.exe from the commandline.
+These can also be entered into Launch.txt to start the game with them enabled.
 
 ## Celeste
 <pre>
