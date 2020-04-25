@@ -22,7 +22,7 @@ The atlases present in the game already include:
 - Gui - for menus and title screens
 - Portraits - for character dialogue
 
-When the game is loaded, it takes every file present in each atlas’ folder, and adds them to an Atlas object. They can then be referenced later by querying the atlas using the relative path of the file within the file structure.
+When the game is loaded, it takes every file present in each atlas’ [folder](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#file-layout), and adds them to an Atlas object. They can then be referenced later by querying the atlas using the relative path of the file within the file structure.
 ## SpriteBanks
 SpriteBanks are an extension of the Atlas system that incorporates an xml structure to compile multiple sprites into animations.
 
