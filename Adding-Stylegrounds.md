@@ -56,7 +56,7 @@ This is the section that decides at which speed your background will move Horizo
 
 ### Speed X & Y
 
-This decides at which speed your background will move _on its own_ Horizontally (X) and Vertically (Y). If Scroll X is 1, the background will move to the right, while if Scroll X is -1, the background will move left instead.
+This decides at which speed your background will move _on its own_ Horizontally (X) and Vertically (Y). If Speed X is 1, the background will move to the right, while if Speed X is -1, the background will move left instead.
 
 ### Alpha
 
