@@ -178,7 +178,7 @@ namespace Celeste.Mod.Example {
 
         // If you need to store settings:
         public override Type SettingsType => typeof(ExampleModuleSettings);
-        public static ExampleModuleSettings Settings => (ExampleSettings) Instance._Settings;
+        public static ExampleModuleSettings Settings => (ExampleModuleSettings) Instance._Settings;
 
         // If you need to store save data:
         public override Type SaveDataType => typeof(ExampleModuleSaveData);
@@ -198,7 +198,7 @@ namespace Celeste.Mod.Example {
         }
 
         // Optional, do anything requiring either the Celeste or mod content here.
-        public override void LoadContent() {
+        public override void LoadContent(bool firstLoad) {
         }
 
         // Unload the entirety of your mod's content. Free up any native resources.
