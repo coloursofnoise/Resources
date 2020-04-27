@@ -3,21 +3,21 @@ Examples in Celeste can be found on the Options screen, Pause screen, and more.
 
 ## Reference
 - [**TextMenu (Celeste)**](#textmenu)
-	- [**Item**](#item)
-		- [**Button**](#button)
-		- [**Header**](#header)
-		- [**SubHeader**](#subheader)
-		- [**Option\<T\>**](#optiont)
-			- [**OnOff**](#onoff)
-			- [**Slider**](#slider)
+   - [**Item**](#item)
+      - [**Button**](#button)
+      - [**Header**](#header)
+      - [**SubHeader**](#subheader)
+      - [**Option\<T\>**](#optiont)
+         - [**OnOff**](#onoff)
+         - [**Slider**](#slider)
 - [**TextMenuExt (Everest)**](#textmenuext)
-	- [**ButtonExt**](#buttonext)
-	- [**SubHeaderExt**](#subheaderext)
-	- [**EaseSubHeaderExt**](#easesubheaderext)
-	- [**HeaderImage**](#headerimage)
-	- [**IntSlider**](#intslider)
-	- [**SubMenu**](#submenu)
-	- [**OptionSubMenu**](#optionsubmenu)
+   - [**ButtonExt**](#buttonext)
+   - [**SubHeaderExt**](#subheaderext)
+   - [**EaseSubHeaderExt**](#easesubheaderext)
+   - [**HeaderImage**](#headerimage)
+   - [**IntSlider**](#intslider)
+   - [**SubMenu**](#submenu)
+   - [**OptionSubMenu**](#optionsubmenu)
 
 # TextMenu
 `TextMenu` is the class that defines the container for all items, as well as holding all the vanilla item classes.  
@@ -27,16 +27,28 @@ If `TextMenu.AutoScroll` is enabled (on by default), the items in the textmenu w
 Changing `TextMenu.InnerContent` will set whether items are displayed centered or aligned to the left.
 Note that [some items](#optiont) will set InnerContent to Two Columns (aligned left) because they make use of both columns.
 
+To change the selection of the textmenu in code, `TextMenu.Selection` can be set
+to the index of the desired item (which can be retrieved using `IndexOf(TextMenu.Item item)`).  
+If the menu contains at least one selectable item, `FirstSelection()` will set the selection to the first one.
+
 ## Item
 `TextMenu.Item` is an abstract parent class for all TextMenu items.  
 It exposes some methods to add Actions that are executed when an event happens.
 
 ex:
 ```csharp
-item.Enter(()=>Logger.Log("ItemTest", "Item is the current selection"));
-item.Leave(()=>Logger.Log("ItemTest", "Item is no longer the current selection"));
-item.Pressed(()=>Logger.Log("ItemTest", "MenuConfirm pressed on item"));
-item.AltPressed(()=>Logger.Log("ItemTest", "MenuJournal pressed on item"));
+item.Enter(
+   ()=> Logger.Log("ItemTest", "Item is the current selection")
+);
+item.Leave(
+   ()=>Logger.Log("ItemTest", "Item is no longer the current selection")
+);
+item.Pressed(
+   ()=>Logger.Log("ItemTest", "MenuConfirm pressed on item")
+);
+item.AltPressed(
+   ()=>Logger.Log("ItemTest", "MenuJournal pressed on item")
+);
 ```
 These methods can be chained for ease of use.  
 
@@ -51,12 +63,12 @@ menu.Add(new TextMenu.Button("ButtonLabel").Pressed(()=>Logger.Log("BtnText", "B
 ## Header
 A large text header.
 ```csharp
-menu.Add(new TextMenu.Header("Title");
+menu.Add(new TextMenu.Header("Title"));
 ```
 ## SubHeader
 A small text subheader.
 ```csharp
-menu.Add(new TextMenu.SubHeader("SubTitle");
+menu.Add(new TextMenu.SubHeader("SubTitle"));
 ```
 
 ## Option\<T\>
@@ -77,6 +89,9 @@ A static class that contains any items and extensions added by Everest.
 
 ## ButtonExt
 A more configurable [Button](#button), with an optional icon.
+```csharp
+menu.Add(new TextMenuExt.Button("Label", "icon/path/here"));
+```
 
 ## SubHeaderExt
 A more configurable [SubHeader](#subheader), with an optional icon.
