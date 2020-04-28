@@ -16,11 +16,17 @@ Make a copy of a tileset template, then edit it with any image editor to make yo
 
 ![template](https://i.imgur.com/jUq838l.png)
 
-To set up this template, open the `ForegroundTiles.xml` file you just copied. Just below `<Data>` at the beginning of the file, copy-paste the entirety of [this file](https://gist.github.com/0x0ade/3beb5eb3008f3f25be0b3204d1ee585a).
+To set up this template, open the `ForegroundTiles.xml` file you just copied. Just below `<Data>` at the beginning of the file, copy-paste the entirety of [this XML file](https://gist.github.com/0x0ade/3beb5eb3008f3f25be0b3204d1ee585a).
+
+This XML refers to the `subfolder/betterTemplate` tileset. For it not to crash, copy the template into `Mods/yourmod/Graphics/Atlases/Gameplay/tilesets/subfolder/betterTemplate.png`.
 
 #### Using the vanilla template
 
 You can find this template in [the graphics dump](https://drive.google.com/file/d/1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet/view), in `Graphics/Atlases/Gameplay/tilesets/template.png`.
+
+Here is an annotated version of this template:
+
+![annotated vanilla template](https://cdn.discordapp.com/attachments/663507492529111057/664207894480289792/unknown.png)
 
 ### Step 3
 
