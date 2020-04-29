@@ -21,6 +21,7 @@ Settings will be saved to and loaded from `Saves/modsettings-[modname].celeste`.
   - [**SettingSubText**](#SettingSubText)
   - [**SettingNeedsRelauch**](#SettingNeedsRelauch)
   - [**SettingRange**](#SettingRange)
+  - [**SettingNumberInput**](#SettingNumberInput)
   - [**SettingMaxLength**](#SettingMaxLength)
   - [**SettingInGame**](#SettingInGame)
   - [**SettingIgnore**](#SettingIgnore)
@@ -95,6 +96,13 @@ Adding the `SettingNeedsRelauch` attribute to a property will show a warning tha
 Adding the `SettingRange` attribute to an [**Integer**](#Integer) property will allow that property to be displayed as a slider.  
 The range of the slider is set using `min` and `max` (inclusive).  
 If `largeRange` is true, the option will be a TextMenuExt.IntSlider, which is functionally the same, but better suited for larger ranges (upwards of 50 values).
+
+## SettingNumberInput
+```csharp
+[SettingNumberInput(bool allowNegatives, int maxLength)]
+```
+Adding the `SettingNumberInput` attribute to an Integer or Float property will create a button to open a number entry screen.  
+`maxLength` (default 12) sets the number of digits allowed.
 
 ## SettingMaxLength
 ```csharp
