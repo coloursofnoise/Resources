@@ -18,11 +18,13 @@ class SidewaysJumpThru : Entity { ... }
 
 Triggers are simply an extension of the  Entity class, so using the `[CustomEntity]` annotation works for them too (just extend `Monocle.Trigger` instead of `Entity`).
 
-You have to define a constructor for the game to be able to build your entity. The allowed signatures for this constructor are:
-* `public MyEntity(Level level, LevelData levelData, Vector2 offset, EntityData data)`
+You have to define a constructor for the game to be able to build your entity. The allowed signatures for this constructor are, in order of precedence:
 * `public MyEntity(EntityData data, Vector2 offset, EntityID id)`
 * `public MyEntity(EntityData data, Vector2 offset)`
 * `public MyEntity(Vector2 offset)`
+* `public MyEntity()` 
+
+<br></br>
 
 To be able to place your entity in Ahorn, you will also have to create an [**Ahorn plugin**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn) for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
 
@@ -33,11 +35,13 @@ Code:
 > [CustomEntity("**SpringCollab2020/NoRefillField**")]
 > class NoRefillField : Trigger { ... }
 
+<br></br>
+
 You can also give a custom entity multiple IDs (useful for backwards compatibility):
 ```cs
 [CustomEntity("ExtendedVariantTrigger", "ExtendedVariantMode/ExtendedVariantTrigger")]
 ```
-or have different IDs call different constructors for your entity:
+or have different IDs call different static generator methods for your entity:
 ```cs
 [CustomEntity(
     "triggerSpikesOriginalUp = LoadUp",
@@ -53,6 +57,11 @@ public class TriggerSpikesOriginal : Entity {
     [...]
 }
 ```
+If no generator method is specified in the CustomEntity ID, Everest will look for a generator method named `Load`.
+
+ℹ️ Note that a generator method, if provided, will take precedence over any defined constructors. 
+
+***
 
 Other useful attributes for custom entity classes are:
 
