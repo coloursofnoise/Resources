@@ -25,8 +25,8 @@ YourMap.bin + YourMap-B.bin
 ### Why doesn't my golden berry appear? / Why doesn't my C side appear?
 You'll need to collect each heart in every A and B side _in the levelset_ and complete the side at least once, or use cheat mode.
 
-### What does the "Only" field mean when adding stylegrounds in Ahorn?
-It defines in which rooms it'll appear, accepting the following format: `a-1,b-2,c-*` (or just `*` for "all rooms")
+### How do I use Stylegrounds in Ahorn?
+See the Stylegrounds tutorial [here](https://github.com/EverestAPI/Resources/wiki/Adding-Stylegrounds).
 
 ### How do I add my own decals in Ahorn?
 Ahorn will find it if you place it in `Celeste/Mods/YourMod/Graphics/Atlases/Gameplay/decals/author/decal.png`  
