@@ -9,6 +9,7 @@
 ## Map Making
 [**Ahorn Installation**](https://github.com/EverestAPI/Resources/wiki/Ahorn-Installation-Help)  
 [**Maps on PC**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-maps-on-PC%3F)  
+[**Stylegrounds**](https://github.com/EverestAPI/Resources/wiki/Adding-Stylegrounds)  
 [**Map Metadata**](https://github.com/EverestAPI/Resources/wiki/How-do-I-set-up-my-map's-metadata%3F)  
 [**Entity & Trigger Documentation**](https://github.com/EverestAPI/Resources/wiki/Mapmaking:-Entity-and-Trigger-Documentation)  
 [**Texture Packs**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-texture-pack%3F)  
