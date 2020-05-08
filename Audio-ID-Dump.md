@@ -3,6 +3,8 @@
 `Audio.SetParameter(EventInstance instance, string param, float value);` where instance is the return value of `Play()` to set or change a parameter.  
 `Audio.Stop(EventInstance instance, bool allowFadeout = true);` to stop playing the sound.
 
+Many of these strings are held as constants in the `SFX` class.
+
 
 ## Sound Banks:
 <details>
