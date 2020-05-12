@@ -12,10 +12,6 @@ The steps to follow depend on which entity you are trying to reskin.
   * [Jump Throughs](#jump-throughs)
 * [Reskinning entities through Sprites.xml](#reskinning-entities-through-spritesxml)
 * [Other entities](#other-entities)
-* [General](#general)
-* [Map Making](#map-making)
-* [Code Mods](#code-mods)
-* [Meta](#meta)
 
 ## Entities that are reskinnable out of the box
 
