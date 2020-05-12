@@ -1,17 +1,22 @@
 # Table of contents
 
-<div class="table-of-contents">
-
-*   [Table of contents](#table-of-contents)
-*   [Mod Structure](#mod-structure)
-    *   [Formats](#formats)
-    *   [File Layout](#file-layout)
-    *   [Metadata](#metadata)
-    *   [Examples](#examples)
-        *   [Code Mod](#code-mod)
-        *   [Level Mod](#level-mod)
-
-</div>
+* [Getting started for mapping](#getting-started-for-mapping)
+* [Getting started for code modding](#getting-started-for-code-modding)
+* [Packaging your mod for publishing](#packaging-your-mod-for-publishing)
+* [Adding content to your mod](#adding-content-to-your-mod)
+  * [Adding More Maps](#adding-more-maps)
+  * [Adding Dialogue](#adding-dialogue)
+  * [Adding Graphics](#adding-graphics)
+  * [Adding Custom Audio](#adding-custom-audio)
+  * [Adding Custom Tutorial Ghosts](#adding-custom-tutorial-ghosts)
+* [Using Helper Mods](#using-helper-mods)
+* [Complete Reference](#complete-reference)
+  * [Formats](#formats)
+  * [File Layout](#file-layout)
+  * [Metadata](#metadata)
+* [Examples](#examples)
+  * [Code Mod](#code-mod)
+  * [Level Mod](#level-mod)
 
 # Mod Structure
 
