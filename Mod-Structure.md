@@ -2,7 +2,6 @@
 
 * [Getting started for mapping](#getting-started-for-mapping)
 * [Getting started for code modding](#getting-started-for-code-modding)
-* [Packaging your mod for publishing](#packaging-your-mod-for-publishing)
 * [Adding content to your mod](#adding-content-to-your-mod)
   * [Adding More Maps](#adding-more-maps)
   * [Adding Dialogue](#adding-dialogue)
@@ -10,6 +9,7 @@
   * [Adding Custom Audio](#adding-custom-audio)
   * [Adding Custom Tutorial Ghosts](#adding-custom-tutorial-ghosts)
 * [Using Helper Mods](#using-helper-mods)
+* [Packaging your mod for publishing](#packaging-your-mod-for-publishing)
 * [Complete Reference](#complete-reference)
   * [Formats](#formats)
   * [File Layout](#file-layout)
@@ -96,14 +96,6 @@ So, if a mod depends on YourMod 1.3:
 - installing YourMod 1.6 will work
 - **installing YourMod 2.0 won't work**. The user will have to get YourMod 1.x instead.
 
-## Packaging your mod for publishing
-
-To get the zip to be published on GameBanana, just go to `Mods/yourmodname`, select everything and compress it (for example `Send to > Compressed folder` on Windows, or `7-Zip > Add to yourmodname.zip` if you have 7-Zip installed). **Be sure to make a zip archive (not a rar or a 7z one)**.
-
-When you open your zip, you should see `Dialog`, `Maps` and `everest.yaml` right away, without needing to open another folder.
-
-If you did that correctly, publish the zip on GameBanana, and a "Everest 1-click installer" button should appear after a bit!
-
 ## Adding content to your mod
 
 ### Adding More Maps
@@ -178,6 +170,14 @@ When you use something from a helper, you must _add a dependency_ to this helper
 **Be sure that all lines in Dependencies are aligned correctly** and add/remove spaces if this is not the case. YAML is very picky about that.
 
 If you want to check that you added the dependency correctly, simply remove the helper zip from your Mods folder. When you start up the game, Everest should tell you it is missing, and offer you to install it in Mod Options.
+
+## Packaging your mod for publishing
+
+To get the zip to be published on GameBanana, just go to `Mods/yourmodname`, select everything and compress it (for example `Send to > Compressed folder` on Windows, or `7-Zip > Add to yourmodname.zip` if you have 7-Zip installed). **Be sure to make a zip archive (not a rar or a 7z one)**.
+
+When you open your zip, you should see `Dialog`, `Maps` and `everest.yaml` right away, without needing to open another folder.
+
+If you did that correctly, publish the zip on GameBanana, and a "Everest 1-click installer" button should appear after a bit!
 
 ## Complete Reference
 
