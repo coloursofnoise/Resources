@@ -16,6 +16,7 @@
 [**Custom Tilesets**](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-custom-tileset%3F)  
 [**Adding Custom Dialogue**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Dialogue)  
 [**Decal Registry**](https://github.com/EverestAPI/Resources/wiki/Decal-Registry)
+[**Reskinning Entities**](https://github.com/EverestAPI/Resources/wiki/Reskinning-Entities)
 
 ## Code Mods
 [**Your First Code Mod**](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)  
