@@ -51,8 +51,7 @@ The banners for the base levels are:
 
 You can see them in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page).
 
-If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/auniquename.png` (and `auniquename_back.png` for the icon's back), then use `areas/auniquename` as the map's icon.
-To ensure the name is unique, include your nickname in the filename for example (`max480_testmap.png`).
+If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/yourmodname/campaignname/mymapicon.png` (and `mymapicon_back.png` for the icon's back), then use `areas/yourmodname/campaignname/mymapicon` as the map's icon.
 
 ## Map Position On The Mountain
 
