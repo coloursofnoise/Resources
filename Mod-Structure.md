@@ -78,7 +78,10 @@ Once you compiled your mod, you should get a DLL (often in a `bin/Debug/net452` 
     - Name: Everest
       Version: 1.1375.0
 ```
-Replace 1375 with the version of Everest you're using, YourModName with your mod name (it should be unique, and you should not change it once your map is published), and `Code/mymod.dll` with the path to your mod's DLL (for example, here, Everest would expect the DLL to be in `Mods/yourmod/Code/mymod.dll`).
+Replace:
+- 1375 with the version of Everest you're using
+- YourModName with your mod name (it should be unique, and you should not change it once your map is published)
+- `Code/mymod.dll` with the path to your mod's DLL (for example, here, Everest would expect the DLL to be in `Mods/yourmod/Code/mymod.dll`).
 
 If you are making a helper, **pay particular attention to the version number**, since your mod is going to be used as a dependency: Everest uses [semantic versioning](https://semver.org/). It means that version numbers are on the format MAJOR.MINOR (or MAJOR.MINOR.PATCH), and that **changing MAJOR means you made a change that would break mods depending on your helper**, which you usually don't want.
 
