@@ -28,7 +28,152 @@
 
 * * *
 
-## Formats
+## Getting started for mapping
+
+To get started and playtest your map quickly, you can just save your map as a bin file in your Mods folder next to Celeste (`Mods/mymap.bin`). It will appear as "uncategorized" in-game.
+
+But you will need to get a folder structure for your mod as soon as:
+- you want to publish your map, and want to package it in a zip
+- or, you need to have custom dialogue, graphics, audio, etc.
+
+To do that:
+- create a directory named after your mod in the Mods folder, for example `Mods/yourmod`
+- drop your map inside it, in `Mods/yourmod/Maps/yournickname/campaignname/1-yourmap.bin`
+  - a "campaign" is a group of maps in chapter select. For example, vanilla Celeste is a campaign with 11 chapters (counting Prologue and Epilogue).
+  - the `1-` prefix in the bin name will be useful if you want to make a campaign with multiple chapters.
+- create the `Mods/yourmod/Dialog` directory (:warning: not Dialogue) and create a file named English.txt in it. Add those lines to it:
+```
+yournickname_campaignname= Your Campaign Name
+yournickname_campaignname_1_yourmap= Your Map Name
+```
+Now, your map should show up in-game in its own category, and have the name you defined in your English.txt. If this doesn't work, double-check the file isn't actually called English.txt.txt. For this, check this box to see the actual file name:
+
+![hide file extensions](https://cdn.discordapp.com/attachments/445236692136230943/709705613692895302/windows_10_file_name_extensions_checkbox.png)
+
+- create an everest.yaml file at `Mods/yourmod/everest.yaml`. Here is how it should look like:
+```yaml
+- Name: YourModName
+  Version: 1.0.0
+  Dependencies:
+    - Name: Everest
+      Version: 1.1375.0
+```
+Replace 1375 with the version of Everest you're using, and YourModName with your mod name (it should be unique, and you should not change it once your map is published).
+
+You are now ready to go and you will be able to add more folders / files to `Mods/yourmod` when you will need to!
+
+## Getting started for code modding
+
+_This page covers mod structure for code mods. To get started with code modding itself, check [Your First Code Mod](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)._
+
+Once you compiled your mod, you should get a DLL (often in a `bin/Debug/net452` folder or similar). In terms of mod structure, all you need to do is:
+- create a `Mods/yourmod` folder
+- have the DLL somewhere inside it
+- create an everest.yaml file (`Mods/yourmod/everest.yaml`) looking like this:
+```yaml
+- Name: YourModName
+  Version: 1.0.0
+  DLL: Code/mymod.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.1375.0
+```
+Replace 1375 with the version of Everest you're using, YourModName with your mod name (it should be unique, and you should not change it once your map is published), and `Code/mymod.dll` with the path to your mod's DLL (for example, here, Everest would expect the DLL to be in `Mods/yourmod/Code/mymod.dll`).
+
+If you are making a helper, **pay particular attention to the version number**, since your mod is going to be used as a dependency: Everest uses [semantic versioning](https://semver.org/). It means that version numbers are on the format MAJOR.MINOR (or MAJOR.MINOR.PATCH), and that **changing MAJOR means you made a change that would break mods depending on your helper**, which you usually don't want.
+
+So, if a mod depends on YourMod 1.3:
+- installing YourMod 1.0 won't work
+- installing YourMod 1.3 will work (of course)
+- installing YourMod 1.6 will work
+- **installing YourMod 2.0 won't work**. The user will have to get YourMod 1.x instead.
+
+## Packaging your mod for publishing
+
+To get the zip to be published on GameBanana, just go to `Mods/yourmodname`, select everything and compress it (for example `Send to > Compressed folder` on Windows, or `7-Zip > Add to yourmodname.zip` if you have 7-Zip installed). **Be sure to make a zip archive (not a rar or a 7z one)**.
+
+When you open your zip, you should see `Dialog`, `Maps` and `everest.yaml` right away, without needing to open another folder.
+
+If you did that correctly, publish the zip on GameBanana, and a "Everest 1-click installer" button should appear after a bit!
+
+## Adding content to your mod
+
+### Adding More Maps
+
+**If you want to make another chapter for your campaign**, just save the map bin in `Mods/yourmodname/Maps/yourname/yourcampaignname` next to your existing chapter. They will appear next to each other in chapter select.
+
+**If you want to make a B-Side or C-Side for `1-mymap.bin`**, save the map bin next to it, and name it `1-mymap-B.bin` or `1-mymap-C.bin`.
+
+### Adding Dialogue
+
+To add dialogue, just edit `Mods/yourmod/Dialog/English.txt` and add more lines to it:
+```
+yourmodname_campaignname_dialogid=
+	[MADELINE left normal]
+	Yay it works!
+```
+Keep in mind that all your dialog IDs should start with `yourmodname_campaignname_` to be sure they are unique.
+
+You can also add more languages (for example, `Mods/yourmod/Dialog/French.txt`). If a language does not exist, the game will use English instead.
+
+For more details about how dialogue works, refer to [Adding Custom Dialogue](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Dialogue).
+
+### Adding Graphics
+
+All custom graphics go to `Mods/yourmod/Graphics`. For example,
+- if you want to add decals, drop them in `Mods/yourmod/Graphics/Atlases/Gameplay/decals/yourmodname/campaignname/decal.png`. The decal's dimensions should be multiples of 16.
+- if you want to add stylegrounds, drop them in `Mods/yourmod/Graphics/Atlases/Gameplay/bgs/yourmodname/campaignname/bg.png`
+- to add Everest custom NPC textures, drop the frames in `Mods/yourmod/Graphics/Atlases/Gameplay/characters/yourmodname/campaignname/animXX.png` then use `yourmodname/campaignname/anim` in the NPC's properties.
+- to add a custom icon to your map, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/yourmodname/campaignname/mymapicon.png` and set the "title banner icon" to `areas/yourmodname/campaignname/mymapicon` in your map's metadata in Ahorn.
+
+**You should always have your mod name and campaign name in the path to prevent conflicts.**
+
+If you are code modding, you can access those textures in code as well: check [Adding Sprites](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites) for more details.
+
+### Adding Custom Audio
+
+_Check the [Audio: How Tos](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos) to learn how to make a custom bank file._
+
+Once you built a bank with your custom audio, drop the .bank and .guids.txt file to the `Mods/yourmod/Audio` directory: `Mods/yourmod/Audio/yourmodname_campaignname.bank` and `.guids.txt`. Everest will load the bank, and you will be able to use events in it as background music in Ahorn, or in code mods.
+
+### Custom Tutorial Ghosts
+
+You can record a tutorial with, for example, [Kayden's Commands](https://gamebanana.com/gamefiles/10271). Open the debug console, type `start_rec`, do the action to record, then type `stop_rec`. You'll find the result in `Content/Tutorials/CustomPlaybacks/latestCustomRecording.bin`.
+
+Move this file to `Mods/yourmod/Tutorials/yourname/campaignname/tutorial.bin`. Then, place a "player playback" and set its tutorial to `yourname/campaignname/tutorial`. The ghost will now replay the action you recorded!
+
+## Using Helper Mods
+
+When making maps, you can use helper mods: you can find the list [on GameBanana, under the Game files category](https://gamebanana.com/gamefiles/games/6460). Just install one of them as you would install any other mod and restart Ahorn to access the entities/triggers it provides.
+
+When you use something from a helper, you must _add a dependency_ to this helper, to be sure that people that play your map also have it installed. To do that:
+- open the helper's zip, and open its everest.yaml. You should see something like this:
+```yaml
+- Name: FrostHelper
+  Version: 1.17.6
+  DLL: Code/FrostTempleHelper/bin/Debug/FrostTempleHelper.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.1375.0
+```
+- pick the two first `Name` and `Version` lines.
+- open your own everest.yaml, and add those two lines under `Dependencies`. It should now look like this:
+```yaml
+- Name: YourModName
+  Version: 1.0.0
+  Dependencies:
+    - Name: Everest
+      Version: 1.1375.0
+    - Name: FrostHelper
+      Version: 1.17.6
+```
+**Be sure that all lines in Dependencies are aligned correctly** and add/remove spaces if this is not the case. YAML is very picky about that.
+
+If you want to check that you added the dependency correctly, simply remove the helper zip from your Mods folder. When you start up the game, Everest should tell you it is missing, and offer you to install it in Mod Options.
+
+## Complete Reference
+
+### Formats
 
 **Everest currently supports the following formats:**
 
@@ -53,7 +198,7 @@ The following file layout still applies to dynamically loaded mods.
 
 * * *
 
-## File Layout
+### File Layout
 
 Mods can contain custom content, both overrides / replacements (when supported) and new content. The content paths match the originals as close as possible. Paths are case sensitive.
 
@@ -105,7 +250,7 @@ For content in form of embedded resources inside of `.dlls`, all mod content req
 
 Additionally, for embedded resources, the C# compiler requires filepaths with `\` as the directory separator, but the content is accessed with `/` as the directory separator. **Everest replaces all `\` symbols with `/` symbols in embedded resource paths at runtime.**
 
-## Metadata
+### Metadata
 
 The `everest.yaml` file in your mod contains a list of all "module" names (ID), version, (optional) DLL paths and any dependencies.
 
@@ -115,7 +260,7 @@ If you've got no mod DLLs, leave that field out. If you've got multiple modules 
 
 *   The MAJOR version must match to prevent breakages caused by API changes (f.e. API removals).
 *   The MINOR version must rise with each backwards-compatible API change (f.e. API additions). If the mod depends on a new version but an older version is installed, the mod won't load.
-*   The PATCH version isn't checked.
+*   The PATCH version is also checked: if the mod depends on a new version but an older version is installed, the mod won't load.
 
 Adding a dependency to a mod with version `0.0.*` ignores the above checks at your own risk.
 
@@ -161,9 +306,9 @@ Adding a dependency to a mod with version `0.0.*` ignores the above checks at yo
 
 *   `everest.yaml`
 *   `Dialog/English.txt`: LevelSet and chapter names.
-*   `Maps/Cruor-Secret.bin`: A-side map binary.
-*   `Maps/Cruor-Secret.meta.yaml`: Chapter metadata. Always the `.meta` of the A-side binary.
-*   `Maps/Cruor-Secret-B.bin`: B-side map binary. The A-side / chapter `.meta` links to this.
-*   `Graphics/Atlases/Gui/areas/secret.png`, `secret_back.png`: The chapter selection screen icon and its backside (when flipping).
-*   `Graphics/Atlases/Gameplay/decals/cruor-secret/*.png`: Any decals used by the A-side or B-side map `.bin`s.
+*   `Maps/Cruor/Mario11/Cruor-Secret.bin`: A-side map binary.
+*   `Maps/Cruor/Mario11/Cruor-Secret.meta.yaml`: Chapter metadata. Always the `.meta` of the A-side binary.
+*   `Maps/Cruor/Mario11/Cruor-Secret-B.bin`: B-side map binary. The A-side / chapter `.meta` links to this.
+*   `Graphics/Atlases/Gui/areas/Cruor/Mario11/secret.png`, `secret_back.png`: The chapter selection screen icon and its backside (when flipping).
+*   `Graphics/Atlases/Gameplay/decals/Cruor/Mario11/*.png`: Any decals used by the A-side or B-side map `.bin`s.
 *   `Graphics/Atlases/Ending-Cruor-Secret-1/*.png`, ...: Chapter completion screen textures. The chapter `.meta` links to this.
