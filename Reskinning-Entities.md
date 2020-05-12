@@ -65,7 +65,7 @@ You're all set! Now, if you place a Theo crystal, it should use your custom text
 
 ## Other entities
 
-If an entity is not reskinnable out of the box and not in Sprites.xml, you might need to make a code mod to reskin it. Ask around on Discord if you are unsure.
+If an entity is not reskinnable out of the box and not in Sprites.xml, you might need to make a code mod to reskin it. Ask around on Discord if you are unsure if a code mod is necessary to reskin your entity.
 
 Existing helpers provide more reskinnable entities:
 - [Frost Helper](https://gamebanana.com/gamefiles/9201):
