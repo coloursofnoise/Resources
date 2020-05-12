@@ -139,7 +139,7 @@ _Check the [Audio: How Tos](https://github.com/EverestAPI/Resources/wiki/Audio:-
 
 Once you built a bank with your custom audio, drop the .bank and .guids.txt file to the `Mods/yourmod/Audio` directory: `Mods/yourmod/Audio/yourmodname_campaignname.bank` and `.guids.txt`. Everest will load the bank, and you will be able to use events in it as background music in Ahorn, or in code mods.
 
-### Custom Tutorial Ghosts
+### Adding Custom Tutorial Ghosts
 
 You can record a tutorial with, for example, [Kayden's Commands](https://gamebanana.com/gamefiles/10271). Open the debug console, type `start_rec`, do the action to record, then type `stop_rec`. You'll find the result in `Content/Tutorials/CustomPlaybacks/latestCustomRecording.bin`.
 
