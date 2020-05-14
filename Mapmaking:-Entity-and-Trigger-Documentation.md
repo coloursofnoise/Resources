@@ -491,6 +491,10 @@ These triggers will stop the player from moving upwards after using a final node
 
 Entering it will either make Snowballs start appearing at regular intervals or stop appearing at all, depending on what it's set to do.
 
+### Rumble
+
+Entering this trigger will cause all Crumble Wall on Rumble entities positioned between the trigger's nodes to crumble. The trigger only checks for the entities' horizontal position - the targeted entities will crumble regardless of their vertical position.
+
 ## Other Triggers:
 
 *   Camera Advance Target
