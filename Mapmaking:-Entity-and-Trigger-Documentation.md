@@ -87,6 +87,7 @@
     *   [Wind pattern](#wind-pattern)
     *   [Stop Boost](#stop-boost)
     *   [Snowballs](#snowballs)
+    *   [Rumble](#rumble)
     *   [Other Triggers:](#other-triggers)
 
 </div>
