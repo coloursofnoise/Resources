@@ -8,9 +8,9 @@ These can also be entered into Launch.txt to start the game with them enabled.
 
 --d3d
 --no-d3d
-	Enable/Disable using Direct3D
+	Enable/Disable using Direct3D (only Everest)
 -d3d11
-	Also Enable using Direct3D
+	Enable using Direct3D (Everest and vanilla)
 
 --language -l
 	Set the language
