@@ -38,8 +38,10 @@ These can also be entered into Launch.txt to start the game with them enabled.
 	Launch Celeste headless
 
 --everest-disabled
---speedrun
-	Launch Celeste without Everest
+        Launch Celeste without Everest (not usable for speedruns)
+
+--vanilla
+	Launch Celeste without Everest (usable for speedruns)
 	
 --whitelist
 	Set the mod whitelist file
