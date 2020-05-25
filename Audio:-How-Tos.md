@@ -9,7 +9,7 @@ _FMOD Studio is compatible with WINE._
 Here is a step-by-step guide to create a bank with music you have as sound files:
 
 1. Open the Celeste FMOD project in FMOD Studio: `fmodstudio20000celeste-project/FMOD Studio Celeste Project/celeste_audio.fspro`.
-2. On the left panel, switch to the Banks tab, and create a new bank for your mod. You need 1 bank per mod: if you have multiple tracks, you can fit them all in one bank.
+2. On the left panel, switch to the Banks tab, and create a new bank for your mod. You need 1 bank per mod: if you have multiple tracks, you can fit them all in one bank. Name it, for example, `yournickname_mapname`.
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714571482231210024/unknown.png)
 
