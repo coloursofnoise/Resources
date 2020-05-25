@@ -19,7 +19,7 @@ Here is a step-by-step guide to create a bank with music you have as sound files
 
 Choose "2D Event", then close the Audio Bin window.
 
-4. On the left panel, switch to the Events tab: you'll find your sound/song there. Preferably drag it into a directory with your nickname and rename it so that the name doesn't contain symbols / spaces / etc.
+4. On the left panel, switch to the Events tab: you'll find your sound/song there. Drag it into a directory with your nickname and rename it so that the name doesn't contain symbols / spaces / etc.
 
 5. Assign your song/sound to your bank:
 
