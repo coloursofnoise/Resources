@@ -17,7 +17,7 @@ Here is a step-by-step guide to create a bank with music you have as sound files
 
 ![image](https://cdn.discordapp.com/attachments/445236692136230943/714572284194455603/unknown.png)
 
-Choose "2D Event", then close the Audio Bin window.
+Choose "2D Event", hit Create, then close the Audio Bin window.
 
 4. On the left panel, switch to the Events tab: you'll find your sound/song there. Drag it into a directory with your nickname and rename it so that the name doesn't contain symbols / spaces / etc.
 
