@@ -58,13 +58,13 @@ Choose "2D Event", hit Create, then close the Audio Bin window.
 
     ![](https://cdn.discordapp.com/attachments/462498749097443330/547105130441605160/loop.gif)
 
-9. Hit File > Build. When this is done, you will find your bank in `fmodstudio20000celeste-project/FMOD Studio Celeste Project/Build/Desktop`. Take **only** the .bank file that has the name of the bank you created earlier, for example `yournickname_mapname.bank` (**don't** take Master Bank.bank, sfx.bank, etc... those are the vanilla banks) and copy it to `Mods/yourmod/Audio`.
+9. Hit File > Build. When this is done, you will find your bank in `fmodstudio20000celeste-project/FMOD Studio Celeste Project/Build/Desktop`. Take **only** the .bank file that has the name of the bank you created earlier, for example `yournickname_mapname.bank` (**don't** take Master Bank.bank, sfx.bank, etc... those are the vanilla banks) and copy it to your mod's folder, in `Mods/yourmod/Audio`.
 
 9. **Generate the GUIDs.txt**:
 
 ![](https://cdn.discordapp.com/attachments/429775260108324865/473619203174301706/unknown.png)
 
-Once generated, you'll find it in `fmodstudio20000celeste-project/FMOD Studio Celeste Project/Build/GUIDs.txt`. Copy it in `Mods/yourmod/Audio` and rename it to `yourbankname.guids.txt`:
+Once generated, you'll find it in `fmodstudio20000celeste-project/FMOD Studio Celeste Project/Build/GUIDs.txt`. Copy it to your mod's folder, in `Mods/yourmod/Audio` and rename it to `yourbankname.guids.txt`:
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714582075646279860/unknown.png)
 
