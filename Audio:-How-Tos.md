@@ -77,6 +77,8 @@ You can use this in Ahorn:
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714583243806212157/unknown.png)
 
+Type the path manually, it does not appear in the dropdown. That's normal!
+
 If you have any further questions regarding audio mods, ask for help in the #modding_help channel on the Discord server.
 
 **Don't modify and share modified music, sfx, ui and master banks.**
