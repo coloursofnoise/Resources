@@ -51,7 +51,7 @@ Choose "2D Event", hit Create, then close the Audio Bin window.
 
 8. Make your music loop:
 
-    - Right click the black logic track above your audio track, and select "Add Loop Region". 
+    - Switch back to the Timeline tab, then right click the black logic track above your audio track, and select "Add Loop Region". 
     ![](https://cdn.discordapp.com/attachments/445236692136230943/714577912963268698/unknown.png)
 
     - Extend the loop region to however you see fit.
