@@ -1,4 +1,4 @@
-## How-To: Audio mods without replacing original sounds
+## How-To: Add custom music to your mod
 
 You'll need:
 - FMOD Studio **1.10.\*** (**Don't** use FMOD Studio 2.\*, as it is incompatible with Celeste and will break projects made in 1.\*.). You will find it on the [FMOD downloads page](https://www.fmod.com/download) (you need to create an account, but the program is free).
@@ -13,13 +13,13 @@ Here is a step-by-step guide to create a bank with music you have as sound files
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714571482231210024/unknown.png)
 
-3. Select File > Import Audio Files... then browse to your sound/song. This brings up a new "Audio Bin" window. You'll want to right click on your song, then select "Create New Event":
+3. Select File > Import Audio Files... then browse to your song. This brings up a new "Audio Bin" window. You'll want to right click on your song, then select "Create New Event":
 
 ![image](https://cdn.discordapp.com/attachments/445236692136230943/714572284194455603/unknown.png)
 
 Choose "2D Event", hit Create, then close the Audio Bin window.
 
-4. On the left panel, switch to the Events tab: you'll find your sound/song there. Drag it into a directory with your nickname and rename it so that the name doesn't contain symbols / spaces / etc.
+4. On the left panel, switch to the Events tab: you'll find your song there. Drag it into a directory with your nickname and rename it so that the name doesn't contain symbols / spaces / etc.
 
 5. Assign your song/sound to your bank:
 
@@ -78,6 +78,10 @@ You can use this in Ahorn:
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714583243806212157/unknown.png)
 
 Type the path manually, it does not appear in the dropdown. That's normal!
+
+---------------------
+
+The procedure to add custom **sounds** is similar to this, but sounds need to be redirected to another bus and you can skip the "make it loop" and "add a fade parameter" steps.
 
 If you have any further questions regarding audio mods, ask for help in the #modding_help channel on the Discord server.
 
