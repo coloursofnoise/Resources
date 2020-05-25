@@ -69,7 +69,7 @@ Once generated, you'll find it in `fmodstudio20000celeste-project/FMOD Studio Ce
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714582075646279860/unknown.png)
 
-10. In Ahorn, you can use your music by typing its event name manually. For example, if you have this in the Events tab:
+11. In Ahorn, you can use your music by typing its event name manually. For example, if you have this in the Events tab:
 
 ![](https://cdn.discordapp.com/attachments/445236692136230943/714582221805060228/unknown.png)
 
