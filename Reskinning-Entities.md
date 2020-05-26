@@ -59,7 +59,7 @@ In this example, we are reskinning Theo Crystal.
   <theo_crystal path="yourname/campaignname/theoCrystalReskin/" start="idle">
 ```
 :warning: If there is a slash at the end of the path, don't remove it.
-- in your map metadata in Ahorn, change Sprites to `Mods/yourmod/Graphics/yourname/campaignname/Sprites.xml`.
+- in your map metadata in Ahorn, change Sprites to `Graphics/yourname/campaignname/Sprites.xml`.
 
 You're all set! Now, if you place a Theo crystal, it should use your custom texture in-game.
 
