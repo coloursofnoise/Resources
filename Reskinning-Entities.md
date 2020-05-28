@@ -72,6 +72,24 @@ Existing helpers provide more reskinnable entities:
   - Spinners
   - Springs
   - Zip Movers
-  - Custom colors for Fire Barriers, Rising Lava and Dream Blocks
 - [max480's Helping Hand](https://gamebanana.com/gamefiles/11423):
   - Touch Switch and Switch Gate _icons_. Switch gate _blocks_ are reskinnable out of the box (see first part)
+- [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
+  - Starfield effect with custom particles
+
+Some others allow you to customize colors:
+- [Frost Helper](https://gamebanana.com/gamefiles/9201):
+  - Fire Barriers
+  - Rising Lava
+  - Dream Blocks
+- [Pandora's Box](https://gamebanana.com/gamefiles/9518):
+  - Water
+  - Waterfalls
+  - Dust bunnies
+- [max480's Helping Hand](https://gamebanana.com/gamefiles/11423):
+  - Touch Switch and Switch Gate icons
+- [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
+  - Starfield effect
+  - Stardust effect
+- [Shroom Helper](https://gamebanana.com/gamefiles/11588):
+  - Petals effect
