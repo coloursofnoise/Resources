@@ -77,7 +77,7 @@ Existing helpers provide more reskinnable entities:
 - [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
   - Starfield effect with custom particles
 
-Some others allow you to customize colors:
+Some helpers also allow you to **recolor** entities:
 - [Frost Helper](https://gamebanana.com/gamefiles/9201):
   - Fire Barriers
   - Rising Lava
