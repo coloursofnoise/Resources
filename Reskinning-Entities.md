@@ -10,6 +10,7 @@ The steps to follow depend on which entity you are trying to reskin.
   * [Spikes](#spikes)
   * [Switch Gates](#switch-gates)
   * [Jump Throughs](#jump-throughs)
+  * [Planets effect](#planets-effect)
 * [Reskinning entities through Sprites.xml](#reskinning-entities-through-spritesxml)
 * [Other entities](#other-entities)
 
@@ -35,6 +36,15 @@ In order to customize jumpthru textures:
 - head to `Graphics/Atlases/Gameplay/objects/jumpthru` in the graphics dump and copy one of them.
 - paste it in `Mods/yourmod/Graphics/Atlases/Gameplay/objects/jumpthru/yourmod/campaignname/myjumpthru.png`.
 - in Ahorn, in the "Texture" field, use `yourmod/campaignname/myjumpthru`. Note that you can also change the footstep sounds with the "Surface Index" parameter.
+
+### Planets effect
+
+You can have a Planets styleground with custom planets:
+- if you want to use the vanilla planets as a reference, have a look at `Graphics/Atlases/Gameplay/bgs/10/smallXX.png` and `bigXX.png` in the graphics dump. 
+- drop your custom planets in `Mods/yourmod/Graphics/Atlases/Gameplay/bgs/10/yourmod/campaignname/customplanetXX.png`, XX being a number starting from 00. You can have as many as you want, the planets displayed will be randomly picked from them.
+- in Ahorn, in the "Size" field for the planets effect, use `yourmod/campaignname/customplanet`.
+
+Note: if you check the graphics dump, you can see that the `Graphics/Atlases/Gameplay/bgs/10/Planets` folder has actual planets (instead of stars). You can use those by typing `Planets/big` and `Planets/small` in the "Size" field of your planets effect, without having to ship those with your mod!
 
 ## Reskinning entities through Sprites.xml
 
