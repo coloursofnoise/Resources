@@ -86,8 +86,6 @@ Some helpers also allow you to **recolor** entities:
   - Water
   - Waterfalls
   - Dust bunnies
-- [max480's Helping Hand](https://gamebanana.com/gamefiles/11423):
-  - Touch Switch and Switch Gate icons
 - [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
   - Starfield effect
   - Stardust effect
