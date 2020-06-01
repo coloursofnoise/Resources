@@ -21,21 +21,21 @@ The steps to follow depend on which entity you are trying to reskin.
 In order to make custom spikes textures:
 - head to `Graphics/Atlases/Gameplay/danger/spikes` in the graphics dump and copy the spike textures you want to base yourself on.
 - paste those in `Mods/yourmod/Graphics/Atlases/Gameplay/danger/spikes/yourmod/campaignname` and rename them. For example, `custom_down00.png`, `custom_down01.png`, etc. **Don't touch anything after the _**
-- in Ahorn, in the "Type" field, use `yourmod/campaignname/custom`
+- in Ahorn, right click on your spikes, then in the "Type" field, use `yourmod/campaignname/custom`
 
 ### Switch Gates
 
 In order to customize the switch gate block:
 - head to `Graphics/Atlases/Gameplay/objects/switchgate` in the graphics dump and copy one of block.png, mirror.png, stars.png or temple.png.
 - paste it in `Mods/yourmod/Graphics/Atlases/Gameplay/objects/switchgate/yourmod/campaignname/myblock.png`.
-- in Ahorn, in the "Sprite" field, use `yourmod/campaignname/myblock`
+- in Ahorn, right click on your switch gate, then in the "Sprite" field, use `yourmod/campaignname/myblock`
 
 ### Jump Throughs
 
 In order to customize jumpthru textures:
 - head to `Graphics/Atlases/Gameplay/objects/jumpthru` in the graphics dump and copy one of them.
 - paste it in `Mods/yourmod/Graphics/Atlases/Gameplay/objects/jumpthru/yourmod/campaignname/myjumpthru.png`.
-- in Ahorn, in the "Texture" field, use `yourmod/campaignname/myjumpthru`. Note that you can also change the footstep sounds with the "Surface Index" parameter.
+- in Ahorn, right click on your jump through, then in the "Texture" field, use `yourmod/campaignname/myjumpthru`. Note that you can also change the footstep sounds with the "Surface Index" parameter.
 
 ### Planets effect
 
