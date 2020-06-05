@@ -21,6 +21,7 @@ private void Your_OnLoadLevel_Method(Level level, Player.IntroTypes playerIntro,
 - [Journal](#Journal)
 - [Decal](#Decal)
 - [FileSelectSlot](#FileSelectSlot)
+- [EventTrigger](#EventTrigger)
 
 
 # Events
@@ -126,6 +127,12 @@ namespace Celeste.Mod.MyMod {
   }
 }
 ```
+
+## EventTrigger
+Event | Raised By | Notes
+--- | --- | ---
+`OnEventTrigger`(EventTrigger trigger, Player player, string eventID) | EventTrigger.OnEnter| Added in Everest 1767
+
 
 ---
 
