@@ -6,6 +6,7 @@
 *   [Map Icon](#map-icon)
 *   [Map Position On The Mountain](#map-position-on-the-mountain)
 *   [Chapter Complete Screen](#chapter-complete-screen)
+*   [Loading Vignette](#loading-vignette)
 *   [Checkpoint Images](#checkpoint-images)
 
 </div>
@@ -107,6 +108,19 @@ Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endsc
 Its size should be 1920x1080px.
 
 Putting multiple images will create an animation.
+
+## Loading Vignette
+
+A loading vignette is displayed when a level is selected, similarly to the Intro, Summit, and Core chapters.
+
+To display an image, use the same structure as a [Chapter Complete Screen](#chapter-complete-screen), but replace `CompleteScreen` with `LoadingVignetteScreen`.
+
+To display text, add the following:
+```
+LoadingVignetteText:
+    Dialog: "YourDialogHere"
+```
+Note that only one of these can be used for each level.
 
 ## Checkpoint Images
 
