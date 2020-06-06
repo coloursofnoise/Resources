@@ -16,6 +16,7 @@ Settings will be saved to and loaded from `Saves/modsettings-[modname].celeste`.
   - [**Integer**](#Integer)
   - [**Enum**](#Enum)
   - [**String**](#String)
+  - [**ButtonBinding**](#ButtonBinding)
 - [**Attributes**](#attributes)
   - [**SettingName**](#SettingName)
   - [**SettingSubText**](#SettingSubText)
@@ -23,6 +24,7 @@ Settings will be saved to and loaded from `Saves/modsettings-[modname].celeste`.
   - [**SettingRange**](#SettingRange)
   - [**SettingNumberInput**](#SettingNumberInput)
   - [**SettingMaxLength**](#SettingMaxLength)
+  - [**DefaultButtonBinding**](#DefaultButtonBinding)
   - [**SettingInGame**](#SettingInGame)
   - [**SettingIgnore**](#SettingIgnore)
   - [**YamlIgnore**](#YamlIgnore)
@@ -65,6 +67,13 @@ The [SettingMaxLength](#SettingMaxLength) attribute can be used to set the maxim
 
 ⚠️ _This property will not display on the in-game pause menu._
 
+# ButtonBinding
+```csharp
+ButtonBinding
+```
+Using a ButtonBinding property will generate two TextMenu.Buttons which will open up a ButtonConfigUI and KeyboardConfigUI, respectively.
+The [DefaultButtonBinding](#DefaultButtonBinding) attribute can be used to set the default bindings.
+
 
 # Attributes
 
@@ -93,7 +102,7 @@ Adding the `SettingNeedsRelauch` attribute to a property will show a warning tha
 [SettingRange(int min, int max)]  
 [SettingRange(int min, int max, bool largeRange)]  
 ```
-Adding the `SettingRange` attribute to an [**Integer**](#Integer) property will allow that property to be displayed as a slider.  
+Adding the `SettingRange` attribute to an [Integer](#Integer) property will allow that property to be displayed as a slider.  
 The range of the slider is set using `min` and `max` (inclusive).  
 If `largeRange` is true, the option will be a TextMenuExt.IntSlider, which is functionally the same, but better suited for larger ranges (upwards of 50 values).
 
@@ -101,14 +110,23 @@ If `largeRange` is true, the option will be a TextMenuExt.IntSlider, which is fu
 ```csharp
 [SettingNumberInput(bool allowNegatives, int maxLength)]
 ```
-Adding the `SettingNumberInput` attribute to an Integer or Float property will create a button to open a number entry screen.  
+Adding the `SettingNumberInput` attribute to an [Integer](#Integer) or Float property will create a button to open a number entry screen.  
 `maxLength` (default 12) sets the number of digits allowed.
 
 ## SettingMaxLength
 ```csharp
 [SettingMaxLength(int max)]
 ```
-Adding the `SettingMaxLength` attribute to a [**String**](#String) property will set the maximum possible length of the string to `max` (defaults to 12 characters).  
+Adding the `SettingMaxLength` attribute to a [String](#String) property will set the maximum possible length of the string to `max` (defaults to 12 characters).  
+
+## DefaultButtonBinding
+```csharp
+[DefaultButtonBinding(Buttons button, Keys key)]
+```
+Adding the `DefaultButtonBinding` attribute to a [ButtonBinding](#ButtonBinding) property will set the default button and key associated with the setting to the supplied values. 
+The `ForceDefaultButton` and `ForceDefaultKey` properties can be set in order to ensure that the specified input is always bound.
+
+ℹ️ The `Buttons` and `Keys` Enumeration types come from the `Microsoft.Xna.Framework.Input` namespace.
 
 ## SettingInGame
 ```csharp
