@@ -17,6 +17,7 @@
 [**Adding Custom Dialogue**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Dialogue)  
 [**Decal Registry**](https://github.com/EverestAPI/Resources/wiki/Decal-Registry)  
 [**Reskinning Entities**](https://github.com/EverestAPI/Resources/wiki/Reskinning-Entities)  
+[**Custom Entity List**](https://max480-random-stuff.appspot.com/celeste/custom-entity-catalog)
 
 ## Code Mods
 [**Your First Code Mod**](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)  
