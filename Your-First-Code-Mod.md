@@ -133,6 +133,8 @@ For an up-to-date list, check the [list of precompiled MonoKickstart libraries](
 
 ## Module class
 
+For your mod to load, you **have** to create a class extending `EverestModule` in your project. (You can leave `Load()` and `Unload()` methods empty if you don't need them though.)
+
 Your module class should look similar to the example.
 
 ----
