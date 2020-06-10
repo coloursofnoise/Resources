@@ -60,19 +60,28 @@ Using an `Enum` type property will generate a TextMenu.Slider item using the val
 
 ## String
 ```csharp
-string => TextMenu.Button  
+string => TextMenu.Button => OuiTextEntry
 ```
 Using a string property will generate a TextMenu.Button which, when pressed, will open up a text entry screen similar to File Naming.  
 The [SettingMaxLength](#SettingMaxLength) attribute can be used to set the maximum possible length of the string (defaults to 12 characters).  
 
 ⚠️ _This property will not display on the in-game pause menu._
 
-# ButtonBinding
+## ButtonBinding
 ```csharp
-ButtonBinding
+ButtonBinding => TextMenu.Button => ModuleSettingsButtonConfigUI/ModuleSettingsKeyboardConfigUI
 ```
 Using a ButtonBinding property will generate two TextMenu.Buttons which will open up a ButtonConfigUI and KeyboardConfigUI, respectively.
-The [DefaultButtonBinding](#DefaultButtonBinding) attribute can be used to set the default bindings.
+The [DefaultButtonBinding](#DefaultButtonBinding) attribute can be used to set the default bindings.  
+
+Once added, the ButtonBinding property can then be used similarly to any `Input`.  
+For example:
+```csharp
+public override void Update(){
+   if (Settings.CustomButtonBinding.Pressed)
+      // Do something
+}
+```
 
 
 # Attributes
