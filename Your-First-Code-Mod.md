@@ -337,7 +337,7 @@ public void Unload() {
     On.Celeste.Player.modWallJumpCheck -= modPlayerWallJumpCheck;
 }
 
-private bool modWallJumpCheck(On.Celeste.Player.orig_WallJumpCheck orig, Player self, int dir) {
+private bool modPlayerWallJumpCheck(On.Celeste.Player.orig_WallJumpCheck orig, Player self, int dir) {
     if(Settings.DisableWallJumping) {
         // instead of running the vanilla method, return false all the time.
         return false;
