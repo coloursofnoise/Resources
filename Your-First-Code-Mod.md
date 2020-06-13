@@ -384,7 +384,9 @@ IL_00bd: stfld float32 Celeste.Player::dashAttackTimer  <= save the result to da
 IL_00c2: [...]
 ```
 
-[You can find a list of all existing instructions here.](https://en.wikipedia.org/wiki/List_of_CIL_instructions)
+[You can find a list of all existing instructions here.](https://en.wikipedia.org/wiki/List_of_CIL_instructions)  
+A reference for what Operand type corresponds to each OpCode can be downloaded [here](https://github.com/EverestAPI/Resources/files/4774310/MonoCecilOpCodes.txt),
+as described [here](https://stackoverflow.com/a/7215711)
 
 In ILSpy and dnSpy, you can view the IL code by using this combo box on the top-left:
 ![ILSpy screenshot for the combobox allowing to switch between IL and C#](https://user-images.githubusercontent.com/52103563/75152044-6b504900-5708-11ea-8f00-b42d02946a39.png)
