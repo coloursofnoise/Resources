@@ -330,11 +330,11 @@ Those hooks allow to "replace" a method in vanilla with your own method. You can
 For example, [Extended Variants](https://github.com/max4805/Everest-ExtendedVariants) use the following to make the game think wall-jumping is always impossible:
 ```cs
 public void Load() {
-    On.Celeste.Player.modWallJumpCheck += modPlayerWallJumpCheck;
+    On.Celeste.Player.WallJumpCheck += modPlayerWallJumpCheck;
 }
 
 public void Unload() {
-    On.Celeste.Player.modWallJumpCheck -= modPlayerWallJumpCheck;
+    On.Celeste.Player.WallJumpCheck -= modPlayerWallJumpCheck;
 }
 
 private bool modPlayerWallJumpCheck(On.Celeste.Player.orig_WallJumpCheck orig, Player self, int dir) {
