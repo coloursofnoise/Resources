@@ -1,7 +1,4 @@
-**:warning: This page is a work in progress. It is only on this wiki because it is referenced elsewhere.**  
-**For any questions, and before editing this page, please contact @coloursofnoise on the Celeste discord.**
-
-The [Monocle Engine](https://bitbucket.org/MattThorson/monocle-engine/src) is an open source game engine, developed by Matt Thorson, 
+The [Monocle Engine](https://bitbucket.org/MattThorson/monocle-engine/src) is an open source game engine, developped by Matt Thorson, 
 that is based on the [MonoGame Framework](https://www.monogame.net/).  
 It is based on the [TowerFall Ascension](http://www.towerfall-game.com/) core engine, and has since been used as the base for Celeste.
 
@@ -26,7 +23,6 @@ The (incomplete) reference that follows is in no particular order, however they 
   - [**BitTag**](#BitTag)
   - [**Coroutine**](#Coroutine) <!-- Functional -->
   - [**Alarm**](#Alarm)
-  - [**CheatListener**](#CheatListener)
   - [**Wiggler**](#Wiggler) <!-- Visual -->
   - [**Shaker**](#Shaker)
   - [**ParticleSystem**](#ParticleSystem)
@@ -51,7 +47,7 @@ The `Tracker` class provides an efficient way of accessing select entities and c
 :information_source: [Modified by Everest](https://github.com/EverestAPI/Everest/blob/master/Celeste.Mod.mm/Patches/Monocle/Tracker.cs) 
 to include support for [`[TrackedAs]`](#TrackedAs) Attribute.
 
-### `[Tracked]`(https://bitbucket.org/MattThorson/monocle-engine/src/85205ffbfe927b41f5dfe85fdb3f09f42770ff1a/Monocle/Util/Tracker.cs#lines-389)
+### [`[Tracked]`](https://bitbucket.org/MattThorson/monocle-engine/src/85205ffbfe927b41f5dfe85fdb3f09f42770ff1a/Monocle/Util/Tracker.cs#lines-389)
 Marks an entity or component to be added to the [`Tracker`](#Tracker).
 If `Inherited` is true, all classes that extend this one will also be tracked.
 
@@ -67,7 +63,7 @@ on the objects returned being of the tracked type.
 ## [Pooler](https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Util/Pooler.cs)
 
 
-### `[Pooled]`(https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Util/Pooler.cs#lines-63)
+### [`[Pooled]`](https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Util/Pooler.cs#lines-63)
 
 ## [BitTag](https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Util/BitTag.cs)
 The `BitTag` class allows for up to 32<!-- (limited by the size of an int)--> bit flags to be added to the program as needed, without needing to worry
@@ -82,8 +78,12 @@ Using a `yield return` statement in the method will determine how often the code
 - Returning an `int` or `float` value will wait the specified number of seconds before trying to continue.
 - Returning a `null` value will wait for the next update to continue.
 
+Uising a `yield break` statement will cause the coroutine to end when the statement is reached.
+
 :information_source: [Modified by Everest](https://github.com/EverestAPI/Everest/blob/master/Celeste.Mod.mm/Patches/Monocle/Coroutine.cs) 
 to add `Jump()` to skip the wait timer.
+
+## [Alarm](https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Components/Logic/Alarm.cs)
 
 
 ## [Wiggler](https://bitbucket.org/MattThorson/monocle-engine/src/default/Monocle/Components/Logic/Wiggler.cs)
