@@ -85,6 +85,7 @@ Existing helpers provide more reskinnable entities:
 - [max480's Helping Hand](https://gamebanana.com/gamefiles/11423):
   - Touch Switch and Switch Gate _icons_. Switch gate _blocks_ are reskinnable out of the box (see first part)
   - Refills (for custom particle colors, or for using different sprites in the same map)
+  - Swap Blocks
 - [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
   - Starfield effect with custom particles
 
@@ -100,5 +101,7 @@ Some helpers also allow you to **recolor** entities:
 - [Lunatic Helper](https://gamebanana.com/gamefiles/11682):
   - Starfield effect
   - Stardust effect
+- [max480's Helping Hand](https://gamebanana.com/gamefiles/11423):
+  - Blackhole effect
 - [Shroom Helper](https://gamebanana.com/gamefiles/11588):
   - Petals effect
