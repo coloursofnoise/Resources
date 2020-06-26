@@ -37,7 +37,7 @@ At the end of the `ForegroundTiles.xml` file, just before the `</Data>` line, ad
 * Replace `w` by the id you want, that is not one already used (so do not use 1, 3 to 9, a to o, y and z). **This id has to be 1 character long.**
 * Replace `y` with `z` if using the vanilla template.
 * Replace `name` by the name you want to call your tileset. Remember that name, you will need it later.
-* Replace `8` by whatever sound you want (see bottom of page for the list).
+* Replace `8` by whatever sound you want (see [bottom of page](#Tileset-sound-IDs) for the list).
 
 Then, save and close the file.
 
@@ -53,6 +53,24 @@ Then, save and close the file.
 * Click Update. Save and reload your map.
 
 _Thanks Xaphan for the tutorial!_
+
+## Adding custom debris
+
+A custom debris texture can be added to your tileset by including the optional `debris` attribute.  
+Using the example above, your tileset definition should look like this:
+```xml
+<Tileset id="w" copy="y" path="name" sound="8" debris="Xaphan/debrisTexture"/>
+```
+Where the debris texture is located at `Mods/yourmod/Graphics/Atlases/Gameplay/debris/Xaphan/debrisTexture.png`.
+
+Multiple debris textures for a single tileset, which will be selected from randomly, can be added by renaming the images as follows:
+```
+debrisTexture00.png
+debrisTexture01.png
+debrisTexture02.png
+...
+```
+
 
 ## Tileset sound IDs
 
