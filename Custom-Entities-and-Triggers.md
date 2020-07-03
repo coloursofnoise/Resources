@@ -10,7 +10,7 @@ This is a guide on how to define a custom Entity or Trigger in a code mod. This 
 <br/>
 
 ### `[CustomEntity]`
-To create a custom entity (objects you can place in a map), create a class that extends `Monocle.Entity` and annotate it with `[CustomEntity]` so that the game can detect it when it loads a map:
+To create a custom entity (objects you can place in a map), create a class that extends `Monocle.Entity`, add `using Celeste.Mod.Entities;` to the top of the file, and annotate the class with `[CustomEntity]` so that the game can detect it when it loads a map:
 ```cs
 [CustomEntity("SpringCollab2020/SidewaysJumpThru")]
 class SidewaysJumpThru : Entity { ... }
