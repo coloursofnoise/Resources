@@ -50,7 +50,7 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
-### [Ahorn for Windows](https://oddstr13.thoas.feralhosting.com/CelestialCartographers/Ahorn/Ahorn-0.1.2-setup.exe)
+### [Ahorn for Windows](http://oddstr13.thoas.feralhosting.com/cruor/hefin/CelestialCartographers/Ahorn/setup-Ahorn-1.3.0.exe)
 Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
 https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
 
