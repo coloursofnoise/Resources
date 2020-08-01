@@ -81,7 +81,7 @@ Type the path manually, it does not appear in the dropdown. That's normal!
 
 ---------------------
 
-The procedure to add custom **sounds** is similar to this, but sounds need to be redirected to another bus and you can skip the "make it loop" and "add a fade parameter" steps.
+The procedure to add custom **sounds** is similar to this, but sounds need to be redirected to another bus and you can skip the "make it loop" and "add a fade parameter" steps. For _gameplay_ sounds, use the `gameplay_sfx/game/general/yes_pause` bus.
 
 If you have any further questions regarding audio mods, ask for help in the #modding_help channel on the Discord server.
 
