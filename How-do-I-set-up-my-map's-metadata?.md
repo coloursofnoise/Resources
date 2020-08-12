@@ -10,6 +10,7 @@
      * [Custom textures](#custom-textures)
      * [Custom colors](#custom-colors)
      * [Custom Background Music](#custom-background-music)
+     * [Disabling the snow](#disabling-the-snow)
 *   [Chapter Complete Screen](#chapter-complete-screen)
 *   [Loading Vignette](#loading-vignette)
 *   [Checkpoint Images](#checkpoint-images)
@@ -106,7 +107,9 @@ Mountain:
 ```
 After defining that, you can drop your custom objects in `Mods/yourmod/Mountain/yourname/campaignname`.
 
-You can find the vanilla mountain models in the Content/Overworld folder.
+You can find the vanilla mountain models in the Content/Overworld folder. If you need to add more models than there are in vanilla in the overworld, you can add them in the same folder, naming them `extra0.obj`, extra1.obj`, etc.
+
+ℹ️ Be sure to use models using triangles for their faces; some display issues might occur otherwise.
 
 ### Custom textures
 
@@ -118,6 +121,8 @@ Mountain:
 After defining that, you can drop your custom textures in `Mods/yourmod/Graphics/Atlases/Mountain/yourname/campaignname`.
 
 You can find the vanilla mountain textures in the graphics dump, in `Graphics/Atlases/Mountain`. `buildings`, `mountain` and `skybox` have 3 textures, depending on the mountain `State` (0 is night, 1 is Dawn, 2 is day; see the [Map Position On The Mountain](#map-position-on-the-mountain) section).
+
+If you added extra models, you should add their textures in this directory: for example, `extra1_2.png` will be the texture applied to `extra1.obj` when the mountain is in state 2 (day).
 
 ### Custom colors
 
@@ -150,6 +155,30 @@ Mountain:
   BackgroundMusic: event:/max480/test_music
 ```
 Check the [custom audio tutorial](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos) to make the game load your custom music.
+
+You can also set _music params_ through metadata, following the following format:
+```yaml
+Mountain:
+  BackgroundMusicParams:
+    param1: value1
+    param2: value2
+```
+
+For example, **this is what you want to use if you want to have the Farewell background music on your map**:
+```yaml
+Mountain:
+  BackgroundMusicParams:
+    moon: 1
+```
+
+### Disabling the snow
+
+```yaml
+Mountain:
+  ShowSnow: false
+```
+
+This will turn off the snow that is falling on the mountain, or floating in space.
 
 ## Chapter Complete Screen
 
