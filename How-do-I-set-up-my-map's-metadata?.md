@@ -60,6 +60,16 @@ You can see them in the graphics dump (check the [Useful Links](https://github.c
 
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/yournickname/campaignname/mymapicon.png` (and `mymapicon_back.png` for the icon's back), then use `areas/yournickname/campaignname/mymapicon` as the map's icon.
 
+## Map Icon background ("scarf")
+
+You can change the scarf that appears behind your map's icon by placing it in the right place.
+
+If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
+- if you want a scarf specific to your campaign, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/hover.png` 
+- if you want a scarf specific to one of your maps, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/mapname_hover.png`
+
+You will find the vanilla scarf in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page), in `Graphics/Atlases/Gui/areas/hover.png`.
+
 ## Map Position On The Mountain
 
 To define that, you need to create a meta.yaml next to your map: for example, create `testmap.meta.yaml` next to `testmap.bin`.
@@ -107,7 +117,7 @@ Mountain:
 ```
 After defining that, you can drop your custom objects in `Mods/yourmod/Mountain/yourname/campaignname`.
 
-You can find the vanilla mountain models in the Content/Overworld folder. If you need to add more models than there are in vanilla in the overworld, you can add them in the same folder, naming them `extra0.obj`, extra1.obj`, etc.
+You can find the vanilla mountain models in the Content/Overworld folder. If you need to add more models than there are in vanilla in the overworld, you can add them in the same folder, naming them `extra0.obj`, `extra1.obj`, etc.
 
 ℹ️ Be sure to use models using triangles for their faces; some display issues might occur otherwise.
 
