@@ -4,6 +4,7 @@
 
 *   [Map Name](#map-name)
 *   [Map Icon](#map-icon)
+*   [Map Icon background ("scarf")](#map-icon-background-scarf)
 *   [Map Position On The Mountain](#map-position-on-the-mountain)
 *   [Customizing the overworld](#customizing-the-overworld)
      * [Custom mountain/moon models](#custom-mountainmoon-models)
