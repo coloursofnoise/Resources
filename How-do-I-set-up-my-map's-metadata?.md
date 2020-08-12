@@ -63,7 +63,7 @@ If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases
 
 ## Map Icon background ("scarf")
 
-You can change the scarf that appears behind your map's icon by placing it in the right place.
+You can change the scarf that appears behind your map's icon by placing the texture for it in a folder that matches your campaign/map's path.
 
 If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
 - if you want a scarf specific to your campaign, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/hover.png` 
