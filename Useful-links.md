@@ -52,6 +52,7 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ### Ahorn for Windows
 Available on [Discord](https://discord.gg/6qjaePQ).
+
 Note for Windows 7 users: You'll need to install this update and the "easy fix" further down that page.  
 https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
 
