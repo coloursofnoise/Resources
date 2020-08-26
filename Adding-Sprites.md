@@ -60,14 +60,14 @@ In the above example, your file structure would look something like this:
 <pre>
 Graphics  
    ↳ sprite  
-        ↳ folder  
-	   ↳ texturename0  
-	   ↳ texturename1  
-	   ↳ texturename2  
-	   ↳ othertexturename3  
-	   ↳ othertexturename7  
-	   ↳ othertexturename8  
-	   ↳ othertexturename9  
+      ↳ folder  
+	     ↳ texturename0  
+	     ↳ texturename1  
+	     ↳ texturename2  
+	     ↳ othertexturename3  
+	     ↳ othertexturename7  
+	     ↳ othertexturename8  
+	     ↳ othertexturename9  
 </pre>
 
 To retrieve your sprite for use with an Entity, call <code>Sprite mySprite = GFX.SpriteBank.Create("spriteName");</code>. Then call <code>mySprite.Play("animID");</code> to play your loop or animation when needed.
