@@ -5,6 +5,7 @@
 *   [Map Name](#map-name)
 *   [Map Icon](#map-icon)
 *   [Map Icon background ("scarf")](#map-icon-background-scarf)
+*   [Chapter Card](#chapter-card)
 *   [Map Position On The Mountain](#map-position-on-the-mountain)
 *   [Customizing the overworld](#customizing-the-overworld)
      * [Custom mountain/moon models](#custom-mountainmoon-models)
@@ -70,6 +71,22 @@ If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
 - if you want a scarf specific to one of your maps, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/mapname_hover.png`
 
 You will find the vanilla scarf in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page), in `Graphics/Atlases/Gui/areas/hover.png`.
+
+## Chapter Card
+
+You can change the chapter card (the card that shows up when your chapter is selected, showing collected berries, deaths, etc):
+
+![image](https://cdn.discordapp.com/attachments/445236692136230943/749300899813261392/unknown.png)
+
+If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
+- if you want a chapter card specific to your campaign, drop the textures in `Mods/yourmod/Graphics/Atlases/Gui/areaselect/foldername/card.png`, `cardtop.png`, `card_golden.png` and `cardtop_golden.png`.
+- if you want a chapter card specific to one of your maps, drop the textures in `Mods/yourmod/Graphics/Atlases/Gui/areaselect/foldername/mapname_card.png`, `mapname_cardtop.png`, `mapname_card_golden.png` and `mapname_cardtop_golden.png`.
+
+Here is an example setup for a map in `Mods/CardTestMod/Maps/SSM24/cardtest/test2.bin`:
+
+![image](https://cdn.discordapp.com/attachments/429775439423209472/748488914138038282/unknown.png)
+
+You will find the vanilla chapter card in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page), in `Graphics/Atlases/Gui/areaselect`.
 
 ## Map Position On The Mountain
 
