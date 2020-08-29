@@ -146,7 +146,7 @@ Usage example:
 ```cs
 Everest.Events.CustomBirdTutorial.OnParseCommand += onParseCommand;
 
-private object onParseCommand(string command) {
+private object OnParseCommand(string command) {
     // this method can return:
     // - a MTexture => displays that texture
     if (command == "StrawberryIcon") {
