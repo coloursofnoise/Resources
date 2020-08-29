@@ -82,7 +82,7 @@ If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
 - if you want a chapter card specific to your campaign, drop the textures in `Mods/yourmod/Graphics/Atlases/Gui/areaselect/foldername/card.png`, `cardtop.png`, `card_golden.png` and `cardtop_golden.png`.
 - if you want a chapter card specific to one of your maps, drop the textures in `Mods/yourmod/Graphics/Atlases/Gui/areaselect/foldername/mapname_card.png`, `mapname_cardtop.png`, `mapname_card_golden.png` and `mapname_cardtop_golden.png`.
 
-Here is an example setup for a map in `Mods/CardTestMod/Maps/SSM24/cardtest/test2.bin`:
+Here is an example setup for a map in `Mods/CardTestMod/Maps/SSM24/cardtest/test2.bin`, for both the campaign and the map itself:
 
 ![image](https://cdn.discordapp.com/attachments/429775439423209472/748488914138038282/unknown.png)
 
