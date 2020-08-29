@@ -22,6 +22,7 @@ private void Your_OnLoadLevel_Method(Level level, Player.IntroTypes playerIntro,
 - [Decal](#Decal)
 - [FileSelectSlot](#FileSelectSlot)
 - [EventTrigger](#EventTrigger)
+- [CustomBirdTutorial](#CustomBirdTutorial)
 
 
 # Events
@@ -133,6 +134,40 @@ Event | Raised By | Notes
 --- | --- | ---
 `OnEventTrigger`(EventTrigger trigger, Player player, string eventID) | EventTrigger.OnEnter| Added in Everest 1767
 
+
+---
+
+## CustomBirdTutorial
+Event | Raised By | Notes
+--- | --- | ---
+`onParseCommand`(string command) | CustomBirdTutorial constructor| Added in Everest 1925
+
+Usage example:
+```cs
+Everest.Events.CustomBirdTutorial.OnParseCommand += onParseCommand;
+
+private object onParseCommand(string command) {
+    // this method can return:
+    // - a MTexture => displays that texture
+    if (command == "StrawberryIcon") {
+        return GFX.Gui["collectables/strawberry"];
+    }
+    // - a Vector2 representing a direction (x, y) => displays an arrow
+    if (command == "DownLeft") {
+        return new Vector2(-1, 1);
+    }
+    // - a ButtonBinding or VirtualButton => displays the button it is set to (useful for custom bindings)
+    if (command == "RandomBinding") {
+        return (_Settings as MaxHelpingHandModuleSettings).RandomBinding;
+    }
+    // - a string => displays that text
+    if (command == "SayHi") {
+        return "Hi!";
+    }
+    // if your mod doesn't recognize the command, return null to let other mods / Everest handle it instead.
+    return null;
+}
+```
 
 ---
 
