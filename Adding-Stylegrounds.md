@@ -9,22 +9,21 @@ The Stylegrounds menu is divided into two sections, **Parallax** and **Effect**.
 
 ## Parallax
 
-The **Parallax** section may seem complicated at first but it's actually quite easy to use and get used to.
-Here's what it looks like and I will go in order, explaining what each of these sections do.
+The **Parallax** section may seem complicated at first, but it's actually quite easy to use and get used to.
+Below is an image of what it looks like, followed by explanations of each of the parameters in order.
 ![Parallax Window](https://user-images.githubusercontent.com/64371989/80315026-5c177580-87f5-11ea-96fa-82edf32c95d8.png)
 
 ### Texture
 
-This is where you pick what your background will look like. Backgrounds that begin with bgs/number are the ones you should use as the ones starting with bgs/nameguysdsides_stylegrounds are from the D-sides Pack and if someone that doesn't have that mod the game will crash. There also four other backgrounds that you can freely use at the bottom of the list: _purplesunset_, _darkswamp_, _mist_ and _northernlights_.
+In this parameter, you pick the actual image file that the parallax will use. Typically, you should only use background textures from the vanilla game (bgs/[number]) or ones you've inserted into your own mod (more on that below), as using backgrounds from other mods will add unnecessary dependencies. There also four other backgrounds that you can freely use at the bottom of the list: _purplesunset_, _darkswamp_, _mist_ and _northernlights_.
 
 ### Only
 
-This is where you pick in which rooms your background will appear. let's say you have three rooms, **a1, a2 and a3**. If you wanted your background to appear in all of those rooms, you'd put _a1,a2,a3_ in the Only section. You can alternatively put in _a*_. The * makes it so that the background appears in every room starting with the letter a. If you put just * then your background will appear in every room.
+This and the following parameter are where you pick the rooms your background will appear in. The internal room names that appear on the left in the main Ahorn window should be used, separated by commas but _not_ spaces if you want multiple (for example, "a1,b1,b2"). The * can be used as a character stand-in, allowing you to include multiple rooms at once (for example, "a-*" will count every room that begins with "a-").
 
 ### Exclude
 
-This is very similar to the Only section. Here go all of the rooms you _don't_ want the background to appear.
-Let's say you have rooms **a1, a2, a3, a4 and a5** and you want the background to appear only in **a1 and a2**. You can put _a*_ in the Only section and then put _a3,a4,a5_ in the Exclude section.
+This follows the same format as the Only parameter, but it force-excludes rooms rather than including them. Anything placed in this parameter will have priority over commands from the Only parameter.
 
 ### Tag
 
@@ -39,28 +38,27 @@ You can use the Flag trigger and the flag you set in the Not Flag section to mak
 
 ### Blend Mode
 
-This decides in what way your background will blend with the other effects and backgrounds.
+This decides in what way your background will blend with the other effects and backgrounds. **additive** will add the colors of the image to any images below it, which is typically unwanted unless there is nothing but black below the image. **alphablend** will instead attempt to blend the layer colors together, which is more useful for adding transparency.
 
 ### Colour
 
-Here you pick the colour of your background. You need to use Hex Colors so putting in _Red_ will not work.
+Here you pick what color to tint your background image, in hexadecimal. Typically you won't want to change this from FFFFFF, as lower values will subtract color from the image.
 
 ### X & Y
 
-This is used to move the background if you don't like where it is.
-If you put _-10_ in the Y section, the background would appear a bit higher in-game.
+These parameters determine the starting position of the background image. X is horizontal, Y is vertical, positive values translate the image right/down, and negative values translate the image left/up.
 
 ### Scroll X & Y
 
-This is the section that decides at which speed your background will move Horizontally (X) and Vertically (Y). If you plan to use the city background, setting Scroll Y to 0 would make it not move up and down.
+These parameters define the multiplier at which your background image scrolls relative to the screen. 0 locks it in place, and 1 causes it to scroll at the same rate as the gameplay layer, so you'll likely want something in between.
 
 ### Speed X & Y
 
-This decides at which speed your background will move _on its own_ Horizontally (X) and Vertically (Y). If Speed X is 1, the background will move to the right, while if Speed X is -1, the background will move left instead.
+These parameters set the speed at which the background image will scroll _on its own_, in pixels per second. Again, positive values mean the image will scroll right/down, and negative values make it scroll left/up.
 
 ### Alpha
 
-How transparent the background is, 0 being fully transparent and basically non-existent.
+How transparent the image is, with 1 being opaque, and 0 completely invisible. Unless you want a translucent background image, set this to 1.
 
 ### Fade In Checkbox
 
@@ -68,12 +66,11 @@ If ticked, the background will go from being transparent to the Alpha you set wh
 
 ### Flip X & Y Checkboxes
 
-If Flip X is ticked, the background will be flipped horizontally.
-If Flip Y is ticked, the background will be flipped vertically.
+If ticked, these will flip the background image horizontally and vertically, respectively.
 
 ### Foreground Checkbox
 
-If ticked, the background will appear in front of everything instead of the back. You usually want this unticked.
+If ticked, your image will appear in front of the gameplay layer. For background images, this should obviously be unticked, but it can be used for effects like mist in either the foreground or background. If you tick this, be sure to set the alpha value low so the gameplay is visible!
 
 ### Instant In and Out Checkboxes
 
@@ -87,7 +84,7 @@ If Loop Y is ticked, the background will loop vertically.
 
 ## Effect
 
-The **Effect** section is pretty small and very easy to learn. Here's what it looks like and I will go in order, explaining what each of these sections do.![Effect Window](https://user-images.githubusercontent.com/64371989/80316399-dba94280-87fd-11ea-9b8d-66ba9a42e55d.png)
+The **Effect** section is pretty small and very easy to learn. Below is an image of what it looks like, followed by explanations of each of the parameters in order.![Effect Window](https://user-images.githubusercontent.com/64371989/80316399-dba94280-87fd-11ea-9b8d-66ba9a42e55d.png)
 
 ### Name
 
@@ -95,8 +92,7 @@ The effect you want to add.
 
 ### Rooms, Exclude, Flag, Not Flag and Foreground Checkbox
 
-Rooms is the same as Only from the parallax tab.
-Exclude, Flag, Not Flag and the Foreground Checkbox are the exact same as the ones from the parallax tab.
+These are identical to the parameters of the same names in the Parallax tab.
 
 ### Tag
 
@@ -113,4 +109,4 @@ The file structure should look like this:
 
 Mods > yourmod > Graphics > Atlases > Gameplay > bgs > uniquefoldername > mybackground.png
 
-Once your background is in there, it will appear in Ahorn immediately. If you made an update to the image, the update will not appear in Ahorn until you restart it.
+If you add a new background image, it will appear in the list in Ahorn immediately. If you make an update to the image, however, it won't appear in the window until you restart Ahorn.
