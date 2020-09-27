@@ -27,6 +27,12 @@ The Everest installer will auto-download and verify the .zip for you.
 
 ---
 
+### [Glossary of all custom entities](https://max480-random-stuff.appspot.com/celeste/custom-entity-catalog)
+This list is auto-generated and contains an up-to-date listing of every custom entity you can use.
+Search through it to figure out which helper to use to get a certain feature.
+
+---
+
 ### [Modding tutorials](https://github.com/EverestAPI/Resources/wiki#tutorials)
 If you want to create your own mods or maps, read them.  
 The mod structure tutorial applies to non-code-mods as well!
