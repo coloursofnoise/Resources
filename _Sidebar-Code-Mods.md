@@ -4,7 +4,7 @@
 [**Useful Links**](https://github.com/EverestAPI/Resources/wiki/Useful-links)  
 [**Debug Mode**](https://github.com/EverestAPI/Resources/wiki/Debug-Mode)  
 [**Mod Structure**](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)  
-[**Commandline Arguments**](https://github.com/EverestAPI/Resources/wiki/Commandline-Arguments)
+[**Commandline Arguments**](https://github.com/EverestAPI/Resources/wiki/Commandline-Arguments)   
 [**everest.yaml validator**](https://max480-random-stuff.appspot.com/celeste/everest-yaml-validator)
 
 ## Map Making
