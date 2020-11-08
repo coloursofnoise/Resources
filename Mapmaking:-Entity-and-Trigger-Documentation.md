@@ -5,6 +5,7 @@
 *   [Table of contents](#table-of-contents)
 *   [Game mechanics](#game-mechanics)
     *   [Player (Spawn Point)](#player-spawn-point)
+    *   [Intro Car](#intro-car)
     *   [Jump Throughs](#jump-throughs)
     *   [Spikes](#spikes)
     *   [Strawberries](#strawberries)
@@ -17,7 +18,6 @@
     *   [Exit Blocks](#exit-blocks)
     *   [Zip Movers / Traffic Blocks](#zip-movers--traffic-blocks)
     *   [Refills](#refills)
-    *   [Refills (Two Dashes)](#refills-two-dashes)
     *   [Cassette](#cassette)
     *   [Cassette Blocks](#cassette-blocks)
     *   [Dash Blocks](#dash-blocks)
@@ -59,7 +59,9 @@
     *   [Badeline Boss](#badeline-boss)
     *   [Moving Block](#moving-block)
     *   [Badeline Boost](#badeline-boost)
+    *   [Summit Background Manager](#summit-background-manager)
     *   [Summit Checkpoint](#summit-checkpoint)
+    *   [Heart Doors](#heart-doors)
     *   [Wall Boosters / Ice Walls](#wall-boosters--ice-walls)
     *   [Bounce Blocks](#bounce-blocks)
     *   [Fireballs / Ice Balls](#fireballs--ice-balls)
@@ -68,6 +70,14 @@
     *   [Ice Blocks](#ice-blocks)
     *   [Rising Lava/Ice](#rising-lavaice)
     *   [Sandwich Lava/Ice](#sandwich-lava-ice)
+    *   [Floaty Space Blocks](#floaty-space-blocks)
+    *   [Refills (Two Dashes)](#refills-two-dashes)
+    *   [Lightning](#lightning)
+    *   [Lightning Breaker Boxes](#lightning-breaker-boxes)
+    *   [Pufferfish](#pufferfish)
+    *   [Jellyfish](#jellyfish)
+    *   [Crumble Wall On Rumble](#crumble-wall-on-rumble)
+    *   [Glass Blocks](#glass-blocks)
     *   [Other Entities:](#other-entities)
 *   [Triggers:](#triggers)
     *   [Light Fade](#light-fade)
@@ -88,6 +98,7 @@
     *   [Stop Boost](#stop-boost)
     *   [Snowballs](#snowballs)
     *   [Rumble](#rumble)
+    *   [Detach Followers](#detach-followers)
     *   [Other Triggers:](#other-triggers)
 
 </div>
@@ -102,6 +113,10 @@ Change Respawn triggers will change the spawn point to the nearest Player object
 
 The current spawn point will not automatically update without a transition or trigger, even if the player passes through a Player object. The game will not let the player enter a room if it does not have a Player object inside of it.
 
+### Intro Car
+
+Madeline's car from the Prologue. The roof and hood can be stood on, and, interestingly, springs and spikes will stick to them. If Has Road And Barriers is ticked, the road and barriers from the prologue will be generated along with the car.
+
 ### Jump Throughs
 
 These platforms found throughout the game enable the player to cross through its bottom and land on top safely. Used commonly for upwards screen transitions, aerial spikes, and one-way passages. If the player is crushed against it by a moving solid (like a Kevin or Falling Block), the player will fall through instead of dying. You can also clip through them if landing on them with a feather on the same frame you exit the feather state.
@@ -115,6 +130,8 @@ One of the most common obstacles in the game. Used for covering otherwise safe g
 Your regular fun but useless collectibles. If winged, it flies upward on dash, but it can still be collected while it is flying away. After grabbing a strawberry, you have to land on "safe ground" (FG tiles, most stationary solid objects, or water) for at least 9 frames to collect it.
 
 If you add nodes to them, strawberry seeds will appear. If you touch the ground for more than 9 frames, or jump or dash while on the ground, you will lose any seeds you are carrying. (You can, however, touch the ground and then walk off within 9 frames to keep them.) If all seeds are collected together, the strawberry itself will appear, and remain until collected, even if the player dies.
+
+If Moon is ticked, it will become the secret Moon Berry from Chapter 9. However, this won't work with winged or noded strawberries.
 
 ### Strawberry Blockfield
 
@@ -154,10 +171,6 @@ These move from their original position to wherever their node is set, marked vi
 
 These crystals refill the player's dash and stamina. If you run out of stamina while still having your dash and touch one, you'll use it, and refill only your stamina. If you dash through one or touch it after having dashed, you'll refill stamina and dash. If you have two dashes, only using one dash will still consume the refill, and using both dashes will refill both dashes, unless the second dash is a temporary one from a two-dash refill. Marking "One use" will make it not reappear after being used until a respawn or a screen transition. They respawn after 2.5 seconds.
 
-### Refills (Two Dashes)
-
-These act very similar to regular refill crystals, but they will give you a temporary second dash if the player only has one maximum dash. If the player has two maximum dashes, they act identically to regular refills.
-
 ### Cassette
 
 These entities are what is used to gate a B side of a level. Upon collection, the game will stop, play a cutscene, and then move the player through the nodes until it reaches the last one, where the bubble pops, and the player is free to move. Collecting it will disable all cassette blocks from alternating.
@@ -189,6 +202,8 @@ Exactly the same as Fake Walls, except that it will not disappear when the playe
 The more serious collectibles. When the player touches it, they will bounce off and gives back dashes. Dashing into it or throwing a Theo Crystal at it will make it shatter, and the player will collect it after a short cutscene, after which the player is frozen in place and the Chapter's Crystal Heart Poem line appears on the screen. The player can still die during this collection cutscene, which will not count as having collected it.
 
 In the vanilla A-sides, Crystal Hearts are usually very hidden or hard to reach. In the vanilla B- and C-sides as well as Core, they are used as the chapter's end. The player can only collect one of them per side of a level, regardless of if there are more placed through the map. In the metadata menu, there is an option to make the collection of a Crystal Heart count as the chapter's end, similar to the Core or B/C-sides.
+
+If Fake is ticked, the Crystal Heart will appear gray, and will start the associated scene from Chapter 9 when collected. Shortly into the scene, the dialog ID specified by the Fake Heart Dialog parameter will play, and after that finishes, the heart graphic will shatter, and the dialog ID specified by the Keep Going Dialog parameter will play.
 
 ### Space Jam/Dream Blocks
 
@@ -364,11 +379,19 @@ These blocks move from their original position to their node and back upon being
 
 ### Badeline Boost
 
-This is the way Badeline helps out Madeline by literally giving her a boost. If placed individually, it will activate the "final boost", used to transition into the next checkpoint in the Summit vanilla chapters. If it's noded, it will move to the next node once the player activates the one previous to it. These boosts have a set distance, but it can be interrupted with a dash. Final Boosts boost Madeline upwards indefinitely until they either go through a screen transition or hit a Stop Boost trigger. "Lock Camera" makes it so the game will always keep it on the screen once it is in it.
+This is the way Badeline helps out Madeline by literally giving her a boost. If placed individually, it will activate the "final boost", used to transition into the next checkpoint in the Summit vanilla chapters. If it's noded, it will move to the next node once the player activates the one previous to it. These boosts have a set distance, but it can be interrupted with a dash. Final Boosts boost Madeline upwards indefinitely until they either go through a screen transition or hit a Stop Boost trigger or Summit Background Manager. "Lock Camera" makes it so the game will always keep it on the screen once it is in it.
+
+### Summit Background Manager
+
+This entity manages the Summit launch cutscenes; when Madeline passes through it during a Badeline Booster's final boost, she'll freeze in place and the launch scene will begin. The Cutscene parameter determines what dialog entry to play for the cutscene, which will be skipped if the parameter is left empty or if the Intro Launch box is ticked. Badeline will always appear during the launch sequence for a cutscene included. The Ambience parameter determines the background ambience during the launch sequence, and if the Dark box is ticked, the background will become the dark version seen in Chapter 9. When the sequence finishes, the player will automatically take the screen transition directly above them in the room.
 
 ### Summit Checkpoint
 
 In essence, they are glorified mid-screen spawn point markers. Once the player is standing near it, it'll trigger a change of spawn point, so one needs to place spawn points near each one. Two Checkpoints can have the same number, but it has no purpose unless branching paths exist. The number set on their configuration window is what shows in-game. It is recommended to only use these when it is not possible to backtrack, since they can only be activated once.
+
+### Heart Doors
+
+These are the gates blocking progress into Chapter 8, its B- and C-side, and the latter two thirds of Chapter 9. The Requires parameter determines the number of Crystal Hearts the player needs to have collected to open the gate. If Start Hidden is ticked, the gate will be hidden at first, and come crashing down when the player gets within 12 tiles of it horizontally. The falling Heart Door will destroy any Dash Blocks in its way, and is the only thing that can kill the player in Assist Mode.
 
 ### Wall Boosters / Ice Walls
 
@@ -412,9 +435,40 @@ If set to a screen, Lava will appear on the bottom and the top of the screen. Th
 
 The camera can pan sideways without a problem, but if the camera pans upwards, the lava/ice will stick to the camera, as it's not programmed to scroll vertically. All screens of the Core in the vanilla game that use this have a screen height of 23 tiles, the default.
 
+### Floaty Space Blocks
+
+These blocks slowly hover up and down with a random offset, will sink slightly if Madeline stands on them, and if dashed into, they will briefly move in the direction of the dash before returning. Adjacent Floaty Space Blocks will automatically combine into a single connected block, and Jump Through Platforms and background tiles will stick to them.
+
+### Refills (Two Dashes)
+
+These act very similar to regular refill crystals, but they will give you a temporary second dash if the player only has one maximum dash. If the player has two maximum dashes, they act identically to regular refills.
+
+### Lightning
+
+Lightning is a hazard with a completely solid hitbox, as opposed to that of Crystal Spinners/Dust Bunnies. If noded, it will move back and forth between nodes over a time period defined by the Move Time parameter, in seconds. Like Floaty Space Blocks, adjacent lightning entities will connect visually, unless they differ in movement distance or time. If the global disabling flag set by Lightning Breaker Boxes is set, the lightning will not spawn, unless the Per Level box is ticked.
+
+### Lightning Breaker Boxes
+
+When dashed into twice, these boxes will vanish and kill any Lightning entities present in the room. The first hit will not refresh the player's dash, but the second hit will. The Music and Music Progress parameters are used to modify the music when the breaker box is destroyed, and when the Flag box is ticked, the breaker box will activate the lightning disabling flag when destroyed, permanently removing any lightning entities from the map that don't have the Per Level box ticked. Finally, if Flip X is ticked, the sprite of the breaker box will be flipped horizontally.
+
+### Pufferfish
+
+Pufferfish are launching entities that can be bounced on from above to send them downward by about 8 tiles, and can be bounced upwards/sideways by springs. Additionally, if the player enters the marked radius around the bottom half of the pufferfish, it will explode, launching them away from it, and will then respawn after 2.5 seconds. Similarly to Bumpers, the player will be boosted further if they hold the direction they'll be launched in when the pufferfish explodes. If the Right parameter is ticked, the pufferfish will face to the right, but this is only a visual change.
+
+### Jellyfish
+
+Jellyfish are carryable in the same way as Theo Crystals, but are much floatier, allowing Madeline to slowly glide downwards while holding one. The downward speed can be slightly decreased by holding up, and increased by holding down. Like Theo Crystals, Jellyfish can activate Touch Switches and Dash Switches, and if dashed into, they give a noticeable boost in the dash direction. If upward wind is present, the jellyfish will float upwards by default, even when Madeline is holding one. If Tutorial is ticked, the jellyfish will display a tutorial box showing how to hold it, and if Bubble is ticked, it will spawn on a fragile lace platform and will not fall down until Madeline grabs it. Finally, if a Jellyfish touches a Seeker Barrier, it will disintegrate, not respawning until the room is reset.
+
+### Crumble Wall On Rumble
+
+These blocks will crumble if a Rumble trigger is activated that has nodes encompassing the block's horizontal position. The Tiletype parameter determines what tileset the block will appear as, the Blending parameter will cause the block to blend with nearby walls when ticked, and the Persistent parameter will cause the block to stay gone once destroyed, even if the room is reset.
+
+### Glass Blocks
+
+Unused in vanilla Celeste, these blocks sport a wobbling starry texture and have the same contact noises as Starjump Blocks. By default, adjacent Glass Blocks will merge visually, similarly to Starjump Blocks and Floaty Space Blocks.
+
 ## Other Entities:
 
-*   Intro Car
 *   Intro Crusher
 *   Bonfire
 *   Hanging Lamp
@@ -495,6 +549,10 @@ Entering it will either make Snowballs start appearing at regular intervals or s
 ### Rumble
 
 Entering this trigger will cause all Crumble Wall on Rumble entities positioned between the trigger's nodes to crumble. The trigger only checks for the entities' horizontal position - the targeted entities will crumble regardless of their vertical position.
+
+### Detach Followers
+
+This trigger will detach any entities following the player (Strawberries, Golden Strawberries, Keys), and move them to its node position.
 
 ## Other Triggers:
 
