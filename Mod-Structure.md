@@ -10,6 +10,7 @@
   * [Adding Custom Tutorial Ghosts](#adding-custom-tutorial-ghosts)
 * [Using Helper Mods](#using-helper-mods)
 * [Packaging your mod for publishing](#packaging-your-mod-for-publishing)
+* [Optional Dependencies for everest.yaml (advanced)](#optional-dependencies-for-everestyaml-advanced)
 * [Complete Reference](#complete-reference)
   * [Formats](#formats)
   * [File Layout](#file-layout)
@@ -178,6 +179,30 @@ To get the zip to be published on GameBanana, just go to `Mods/yourmodname`, sel
 When you open your zip, you should see `Dialog`, `Maps` and `everest.yaml` right away, without needing to open another folder.
 
 If you did that correctly, publish the zip on GameBanana, and a "Everest 1-click installer" button should appear after a bit!
+
+## Optional Dependencies for everest.yaml (advanced)
+
+Optional dependencies are helpful in two cases:
+- You want your mod to load after another mod if it is installed, but you don't want to force the user to have that mod (like a regular dependency would). This is for example useful if you have a skin mod that reskins vanilla and the Spring Collab: you want your skin to load after the Spring Collab to override its textures, but you don't want to force the player to download the Spring Collab if they just want to play vanilla.
+- You want to prevent your mod from loading if another mod is present, but outdated (useful in case you know both mods are incompatible).
+
+For example, if you have a mod called `TestMod123` and know it will crash if a Randomizer version lower than 1.4.0 installed, you can write:
+```yaml
+- Name: TestMod123
+  Version: 1.0.0
+  Dependencies:
+    - Name: Everest
+      Version: 1.2002.0
+  OptionalDependencies:
+    - Name: Randomizer
+      Version: 1.4.0
+```
+
+- If `Randomizer` 1.4.0 is installed, `TestMod123` will load right after it.
+- If `Randomizer` is not installed, `TestMod123` **will load anyway**.
+- If `Randomizer` 1.3.0 is installed, `TestMod123` will **not** load. The main menu will display "1 mod failed to load", and the "Install missing dependencies" button will update `Randomizer`.
+
+_Optional Dependencies were added in Everest 2002._
 
 ## Complete Reference
 
