@@ -158,6 +158,7 @@ Some textures and objects used in the overworld are tinted with colors you can c
 
 ```yaml
 Mountain:
+  FogColor: 010817
   StarFogColor: 020915
   StarStreamColors:
     - 000000
@@ -171,6 +172,7 @@ Mountain:
     - fa70ea
 ```
 
+- `FogColor` is the color of the fog on the mountain. Vanilla value depends on the `State` (see [Map Position On The Mountain](#map-position-on-the-mountain)): `010817` for state 0, `13203E` for state 1, `281A35` for state 2.
 - `StarFogColor` is the color of the fog in space.
 - `StarStreamColors` is the color of the "streams" visible behind the moon. [Check this image](https://cdn.discordapp.com/attachments/445236692136230943/734524129511866378/unknown.png) to visualize what they are when set to red, green and blue. **You have to specify exactly 3 values** if you use this.
 - `StarBeltColors1` and `StarBeltColors2` are the colors of the small stars rotating around the moon. They are dispatched in 2 "belts" that are slightly misaligned between each other. **You can specify any number of colors for each one**, star colors will be picked randomly among the colors you give. If you give an empty array (`StarBeltColors1: []`), the star belt will be removed.
