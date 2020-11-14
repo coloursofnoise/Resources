@@ -186,7 +186,7 @@ Optional dependencies are helpful in two cases:
 - You want your mod to load after another mod if it is installed, but you don't want to force the user to have that mod (like a regular dependency would). This is for example useful if you have a skin mod that reskins vanilla and the Spring Collab: you want your skin to load after the Spring Collab to override its textures, but you don't want to force the player to download the Spring Collab if they just want to play vanilla.
 - You want to prevent your mod from loading if another mod is present, but outdated (useful in case you know both mods are incompatible).
 
-For example, if you have a mod called `TestMod123` and know it will crash if a Randomizer version lower than 1.4.0 installed, you can write:
+For example, if you have a mod called `TestMod123` and know it will crash if a Randomizer version lower than 1.4.0 is installed, you can write:
 ```yaml
 - Name: TestMod123
   Version: 1.0.0
