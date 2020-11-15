@@ -176,7 +176,7 @@ Mountain:
     - fa70ea
 ```
 
-- `FogColors` are the colors of the fog on the mountain, for each `State` (see [Map Position On The Mountain](#map-position-on-the-mountain)). 2 colors will be used by the game: the one you defined in `State`, and the first one (state 0) on the main menu. **Defining all the values isn't mandatory**: if you define less than 4 values, the others will be at their default. _This means if you're using state 0, you only need 1 value._
+- `FogColors` are the colors of the fog on the mountain, for each `State` (see [Map Position On The Mountain](#map-position-on-the-mountain)). 2 colors will be used by the game: the one for the state your custom mountain uses, and the first one (state 0) on the main menu. **Defining all the values isn't mandatory**: if you define less than 4 values, the others will be at their default. _This means if you're using state 0, you only need 1 value._
 - `StarFogColor` is the color of the fog in space.
 - `StarStreamColors` is the color of the "streams" visible behind the moon. [Check this image](https://cdn.discordapp.com/attachments/445236692136230943/734524129511866378/unknown.png) to visualize what they are when set to red, green and blue. **You have to specify exactly 3 values** if you use this.
 - `StarBeltColors1` and `StarBeltColors2` are the colors of the small stars rotating around the moon. They are dispatched in 2 "belts" that are slightly misaligned between each other. **You can specify any number of colors for each one**, star colors will be picked randomly among the colors you give. If you give an empty array (`StarBeltColors1: []`), the star belt will be removed.
