@@ -30,4 +30,5 @@ Inside of a `<decal>`, you can specify as many properties as you want. While oth
   * `hideFrames`: Plays when the player comes closer than `hideRange`
   * `hiddenFrames`: Plays after `hideFrames` (Loops)
   * `showFrames`: Plays when the player moves farther than `showRange`
+
   `Frames` attributes use the same formatting as the animations in the Sprites.xml (`0,1,2-5,6*3`)
