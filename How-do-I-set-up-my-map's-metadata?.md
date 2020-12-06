@@ -14,6 +14,8 @@
      * [Custom Background Music](#custom-background-music)
      * [Disabling the snow](#disabling-the-snow)
 *   [Chapter Complete Screen](#chapter-complete-screen)
+     * [Graphics](#graphics)
+     * [Music](#music)
 *   [Loading Vignette](#loading-vignette)
 *   [Checkpoint Images](#checkpoint-images)
 
@@ -216,9 +218,12 @@ This will turn off the snow that is falling on the mountain, or floating in spac
 
 ## Chapter Complete Screen
 
-This is also defined in the meta.yaml file (see previous section to set it up).
+### Graphics
+
+The image displayed on the chapter complete screen is also defined in the meta.yaml file (see previous section to set it up).
 To set up a static image as an endscreen, add something like this:
 
+```yaml
     CompleteScreen:
         Atlas: "Endscreens/yournickname/campaignname"
         Start: [ 0.0, 0.0 ]
@@ -229,11 +234,63 @@ To set up a static image as an endscreen, add something like this:
             Images: [ "mapname" ]
             Position: [ 0.0, 0.0 ]
             Scroll: [ 0.0 ]
+          - Type: "ui" # delete this line if you don't want the "Chapter Complete" text to appear
+```
 
 Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`.
-Its size should be 1920x1080px.
+If your chapter complete screen is an image taking up the whole screen, its size should be 1920x1080px.
 
-Putting multiple images will create an animation.
+Putting multiple images in `Images` will create an animation:
+```yaml
+        Layers:
+          - Type: "layer"
+            Images: [ "mapname1", "mapname2", "mapname3" ]
+            Position: [ 0.0, 0.0 ]
+            Scroll: [ 0.0 ]
+            FrameRate: 6 # FPS
+```
+
+To create an parallax animation like vanilla endscreens, you can specify multiple layers and give them different `Position` and `Scroll` values:
+```yaml
+    Layers:
+      - Type: "layer"
+        Images: [ "00" ]
+        Position: [ -75.0, -60.0 ]
+        Scroll: [ 0.0 ]
+      - Type: "layer"
+        Images: [ "01" ]
+        Position: [ -75.0, -60.0 ]
+        Scroll: [ 0.1 ]
+      - Type: "layer"
+        Images: [ "02" ]
+        Position: [ -75.0, -60.0 ]
+        Scroll: [ 0.2 ]
+      - Type: "layer"
+        Images: [ "03" ]
+        Position: [ -75.0, -60.0 ]
+        Scroll: [ 0.3 ]
+        Alpha: 0.5 # make this layer 50% transparent
+```
+
+`Position` controls the position of the layer, and `Scroll` how much it scrolls when the chapter complete screen appears.
+
+### Music
+
+You can make custom music play on the Chapter Complete screen, with this configuration in your meta.yaml (here with default values):
+
+```yaml
+CompleteScreen:
+  MusicBySide:
+    - event:/music/menu/complete_area # A-side
+    - event:/music/menu/complete_bside # B-side
+    - event:/music/menu/complete_bside # C-side
+```
+
+The 3 items in the list correspond to the 3 sides. You don't need to specify 3 elements if you have 1 or 2 sides.
+
+If you want your endscreen to use the same music as the chapter 7 endscreen, use `event:/music/menu/complete_summit`.
+
+To make your own, [import your music in FMOD](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos). The music will start playing as soon as the "snow falling" animation will start. When the chapter complete screen appears, the `end` audio param will be set to 1. You can use this to make your music synchronize with the endscreen.
 
 ## Loading Vignette
 
