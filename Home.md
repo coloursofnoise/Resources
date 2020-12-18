@@ -13,7 +13,7 @@ Make sure to follow the **pages list on the right side**, or the general FAQ bel
 ## Tutorials
 - [How do I package my maps?](https://github.com/EverestAPI/Resources/wiki/Mod-Structure)
 - [How do I modify the game's code?](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)
-- [[How do I install mods on PC?]]
+- [How do I install mods on PC?](https://everestapi.github.io/#installing-everest)
 - [[How do I make maps on PC?]]
 - [How do I make custom audio for my mod (f.e. custom music)?](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos)
 - [How do I set up my map's name/icon/position/endscreen?](https://github.com/EverestAPI/Resources/wiki/How-do-I-set-up-my-map's-metadata%3F)
