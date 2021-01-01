@@ -22,8 +22,8 @@ Ping 0x0ade#1584 in the Discord server if you want to get something promoted on 
 ---
 
 ### [List of all mods on GameBanana](https://gamebanana.com/games/6460)
-Note for Windows users: Use the 1-click installer button after installing Everest.  
-The Everest installer will auto-download and verify the .zip for you.
+Use the 1-click installer button if you're using Olympus to install Everest and mods.  
+Olympus (formerly "the Everest installer") will auto-download and verify the .zip for you.
 
 ---
 
