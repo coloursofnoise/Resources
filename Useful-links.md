@@ -3,7 +3,7 @@
 ---
 
 ### [Discord](https://discord.gg/6qjaePQ)
-![https://discord.gg/6qjaePQ](https://github.com/EverestAPI/Everest/blob/master/github/invite.png)
+![https://discord.gg/6qjaePQ](https://github.com/EverestAPI/EverestAPI.github.io/raw/master/images/invite.png)
 
 ## Modding
 
