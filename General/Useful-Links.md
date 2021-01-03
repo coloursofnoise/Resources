@@ -69,7 +69,7 @@ https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tl
 Ahorn itself doesn't add any features to Celeste.  
 If you want something entirely new, go write a code mod for Everest.
 
-If you have issues with installing Ahorn, [check this page](https://github.com/EverestAPI/Resources/wiki/Ahorn-Installation-Help).
+If you have issues with installing Ahorn, [check this page](../Mapping/Ahorn-Installation-Help).
 
 _Also useful:_
 - [Maple (Ahorn's backbone)](https://github.com/CelestialCartographers/Maple)

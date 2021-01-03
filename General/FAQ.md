@@ -2,7 +2,7 @@
 dnSpy. But please avoid using the dnSpy editor. Try to detour methods at runtime, and if something _must_ be patched, ask for help in the #modding_help channel on the Discord server.
 
 ### How can I mod my Nintendo Switch?
-See [here](https://github.com/EverestAPI/Resources/wiki/What's-going-on-with-mods-on-Nintendo-Switch%3F) for information.
+See [here](Nintendo-Switch-Modding) for information.
 
 ### How do you do code blocks?
 \`\`\`cs  

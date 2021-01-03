@@ -3,26 +3,26 @@ For questions and feedback, please contact @coloursofnoise on the Celeste [Disco
 
 # Table of Contents:
 ## Understanding the Atlas system
-- [Atlases](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites#atlases)
-- [SpriteBanks](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites#spritebanks)
+- [Atlases](#atlases)
+- [SpriteBanks](#spritebanks)
 ## Adding custom sprites to your code mod:
-- [Using MTextures in code](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-a-spritebank-file)
-- [Using a SpriteBank file](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-a-spritebank-file)
-- [Using Sprites in code](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites/#using-sprites-in-code)
+- [Using MTextures in code](/#using-a-spritebank-file)
+- [Using a SpriteBank file](/#using-a-spritebank-file)
+- [Using Sprites in code](/#using-sprites-in-code)
 
 
 # The Atlas System
 ## Atlases
 Celeste stores it’s textures in Atlases, with each atlas being used for different aspects of the game.
 
-To load a texture into a preexisting atlas, follow the directions [here](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#file-layout) relating to pre-supported content mappings.
+To load a texture into a preexisting atlas, follow the directions [here](../General/Mod-Structure#file-layout) relating to pre-supported content mappings.
 
 The atlases present in the game already include:
 - Gameplay - for ingame textures
 - Gui - for menus and title screens
 - Portraits - for character dialogue
 
-When the game is loaded, it takes every file present in each atlas’ [folder](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#file-layout), and adds them to an Atlas object. They can then be referenced later by querying the atlas using the relative path of the file within the file structure.
+When the game is loaded, it takes every file present in each atlas’ [folder](../General/Mod-Structure#file-layout), and adds them to an Atlas object. They can then be referenced later by querying the atlas using the relative path of the file within the file structure.
 ## SpriteBanks
 SpriteBanks are an extension of the Atlas system that incorporates an xml structure to compile multiple sprites into animations.
 

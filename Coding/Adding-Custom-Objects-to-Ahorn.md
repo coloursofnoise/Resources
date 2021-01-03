@@ -3,15 +3,15 @@
 This tutorial will explain how to integrate your custom Entities and Triggers with Ahorn, in order to access and place them from within the editor.
 
 ## Contents
-- [**Setup**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#setup)
-- [**Defining**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#defining)
-- [**Placing**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placing)
-  - [Placement](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#placement)
-  - [Adding dropdown options](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#adding-dropdown-options)
-  - [Selection](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#selection)
-- [**Rendering**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#rendering)
-- [**Examples**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#examples)
-  - [All you technically need](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn#all-you-technically-need)
+- [**Setup**](#setup)
+- [**Defining**](#defining)
+- [**Placing**](#placing)
+  - [Placement](#placement)
+  - [Adding dropdown options](#adding-dropdown-options)
+  - [Selection](#selection)
+- [**Rendering**](#rendering)
+- [**Examples**](#examples)
+  - [All you technically need](#all-you-technically-need)
 
 ## Setup
 Every distinct entity or trigger that you want to add to Ahorn needs to be defined in a `.jl` Julia language file within the `Ahorn` subfolder of your mod folder.
@@ -37,7 +37,7 @@ or
 @mapdef Trigger "YourMod/YourTrigger" YourTrigger(x::Integer, y::Integer, 
    width::Integer=Maple.defaultTriggerWidth, height::Integer=Maple.defaultTriggerHeight)
 ```
-The string (in quotes) should be the name of your [Custom Entity](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod#creating-custom-entities-and-triggers).
+The string (in quotes) should be the name of your [Custom Entity](Your-First-Code-Mod#creating-custom-entities-and-triggers).
 
 The Entity/Trigger constructor can take any number of arguments, which are then accessible from the EntityData object that is passed to your C# object's constructor.
 Depending on the Type of the argument, it will automatically be displayed in the configuration panel for your entity/trigger within Ahorn.
@@ -145,7 +145,7 @@ function Ahorn.render(ctx::Ahorn.Cairo.CairoContext, entity::YourEntity, room::M
 end
 ```
 
-A .zip file containing all graphics currently in the base game can be found [here](https://github.com/EverestAPI/Resources/wiki/Useful-links#dumped-graphics).
+A .zip file containing all graphics currently in the base game can be found [here](../General/Useful-Links#Dumped-graphics).
 
 
 ## Examples
