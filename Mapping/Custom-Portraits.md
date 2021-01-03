@@ -1,4 +1,4 @@
-Create a file named Portraits.xml in your Graphics folder (see [here](https://github.com/EverestAPI/Resources/wiki/Mod-Structure) for how to set that up).
+Create a file named Portraits.xml in your Graphics folder (see [here](Mod-Structure) for how to set that up).
 
 Follow this example, replacing {yourportrait} with the name of your portrait:
 ```xml

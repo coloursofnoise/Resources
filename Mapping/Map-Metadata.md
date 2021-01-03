@@ -23,7 +23,7 @@
 
 ## Map Name
 
-First, you have to ensure your map follows the [mod structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
+First, you have to ensure your map follows the [mod structure](Mod-Structure).
 In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/campaignname/mapname.bin`.
 
 You should now create the file `Mods/yourmodname/Dialog/English.txt`.
@@ -60,7 +60,7 @@ The banners for the base levels are:
 *   areas/core
 *   areas/farewell
 
-You can see them in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page).
+You can see them in the graphics dump (check the [Useful Links](Useful-links) page).
 
 If you want to use a custom icon, place it in `Mods/yourmodname/Graphics/Atlases/Gui/areas/yournickname/campaignname/mymapicon.png` (and `mymapicon_back.png` for the icon's back), then use `areas/yournickname/campaignname/mymapicon` as the map's icon.
 
@@ -72,7 +72,7 @@ If your map is in `Mods/yourmod/Maps/foldername/mapname.bin`:
 - if you want a scarf specific to your campaign, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/hover.png` 
 - if you want a scarf specific to one of your maps, drop it in `Mods/yourmod/Graphics/Atlases/Gui/areas/foldername/mapname_hover.png`
 
-You will find the vanilla scarf in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page), in `Graphics/Atlases/Gui/areas/hover.png`.
+You will find the vanilla scarf in the graphics dump (check the [Useful Links](Useful-links) page), in `Graphics/Atlases/Gui/areas/hover.png`.
 
 ## Chapter Card
 
@@ -88,7 +88,7 @@ Here is an example setup for a map in `Mods/CardTestMod/Maps/SSM24/cardtest/test
 
 ![image](https://cdn.discordapp.com/attachments/429775439423209472/748488914138038282/unknown.png)
 
-You will find the vanilla chapter card in the graphics dump (check the [Useful Links](https://github.com/EverestAPI/Resources/wiki/Useful-links) page), in `Graphics/Atlases/Gui/areaselect`.
+You will find the vanilla chapter card in the graphics dump (check the [Useful Links](Useful-links) page), in `Graphics/Atlases/Gui/areaselect`.
 
 ## Map Position On The Mountain
 
@@ -193,7 +193,7 @@ Mountain:
 ```
 Note that both are optional: if you want custom music but the default ambience, you can omit `BackgroundAmbience`.
 
-Check the [custom audio tutorial](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos) to make the game load your custom music.
+Check the [custom audio tutorial](Audio:-How-Tos) to make the game load your custom music.
 
 You can also set _music params_ through metadata, following the following format:
 ```yaml
@@ -293,7 +293,7 @@ The 3 items in the list correspond to the 3 sides. You don't need to specify 3 e
 
 If you want your endscreen to use the same music as the chapter 7 endscreen, use `event:/music/menu/complete_summit`.
 
-To make your own, [import your music in FMOD](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos). The music will start playing as soon as the "snow falling" animation will start. When the chapter complete screen appears, the `end` audio param will be set to 1. You can use this to make your music synchronize with the endscreen.
+To make your own, [import your music in FMOD](Audio:-How-Tos). The music will start playing as soon as the "snow falling" animation will start. When the chapter complete screen appears, the `end` audio param will be set to 1. You can use this to make your music synchronize with the endscreen.
 
 ## Loading Vignette
 
@@ -310,7 +310,7 @@ Note that only one of these can be used for each level.
 
 ## Checkpoint Images
 
-First of all, checkpoint images need to be masked to look like vanilla ones: [follow the instructions to do that here](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-maps-on-PC%3F#how-do-i-add-a-checkpoint-mask-onto-my-custom-checkpoints).
+First of all, checkpoint images need to be masked to look like vanilla ones: [follow the instructions to do that here](How-do-I-make-maps-on-PC%3F#how-do-i-add-a-checkpoint-mask-onto-my-custom-checkpoints).
 
 Then, if your map is in Mods/yourmodname/Maps/**mapfolder/mapname**.bin, you should drop your checkpoint images to this location for them to work:
 

@@ -103,7 +103,7 @@ If you pick the black hole effect and put **blackhole** in the Tag section, the 
 
 Let's say your custom background is called **mybackground.png**.
 
-To add your custom background, you must first have a proper mod structure, you can find the tutorial for that [here](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
+To add your custom background, you must first have a proper mod structure, you can find the tutorial for that [here](Mod-Structure).
 
 The file structure should look like this:
 

@@ -145,7 +145,7 @@ function Ahorn.render(ctx::Ahorn.Cairo.CairoContext, entity::YourEntity, room::M
 end
 ```
 
-A .zip file containing all graphics currently in the base game can be found [here](../General/Useful-Links#Dumped-graphics).
+A .zip file containing all graphics currently in the base game can be found [here](Useful-Links#Dumped-graphics).
 
 
 ## Examples

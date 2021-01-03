@@ -70,7 +70,7 @@ You are now ready to go and you will be able to add more folders / files to `Mod
 
 ## Getting started for code modding
 
-_This page covers mod structure for code mods. To get started with code modding itself, check [Your First Code Mod](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod)._
+_This page covers mod structure for code mods. To get started with code modding itself, check [Your First Code Mod](Your-First-Code-Mod)._
 
 Once you compiled your mod, you should get a DLL (often in a `bin/Debug/net452` folder or similar). In terms of mod structure, all you need to do is:
 - create a `Mods/yourmod` folder
@@ -117,7 +117,7 @@ Keep in mind that all your dialog IDs should start with `yourmodname_campaignnam
 
 You can also add more languages (for example, `Mods/yourmod/Dialog/French.txt`). If a language does not exist, the game will use English instead.
 
-For more details about how dialogue works, refer to [Adding Custom Dialogue](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Dialogue).
+For more details about how dialogue works, refer to [Adding Custom Dialogue](Adding-Custom-Dialogue).
 
 ### Adding Graphics
 
@@ -129,11 +129,11 @@ All custom graphics go to `Mods/yourmod/Graphics`. For example,
 
 **You should always have your mod name and campaign name in the path to prevent conflicts.**
 
-If you are code modding, you can access those textures in code as well: check [Adding Sprites](https://github.com/EverestAPI/Resources/wiki/Adding-Sprites) for more details.
+If you are code modding, you can access those textures in code as well: check [Adding Sprites](Adding-Sprites) for more details.
 
 ### Adding Custom Audio
 
-_Check the [Audio: How Tos](https://github.com/EverestAPI/Resources/wiki/Audio:-How-Tos) to learn how to make a custom bank file._
+_Check the [Audio: How Tos](Audio:-How-Tos) to learn how to make a custom bank file._
 
 Once you built a bank with your custom audio, drop the .bank and .guids.txt file to the `Mods/yourmod/Audio` directory: `Mods/yourmod/Audio/yourmodname_campaignname.bank` and `.guids.txt`. Everest will load the bank, and you will be able to use events in it as background music in Ahorn, or in code mods.
 

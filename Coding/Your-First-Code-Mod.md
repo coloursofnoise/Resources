@@ -80,7 +80,7 @@ The dialog should look like this:
 <h5>NOTE</h5>
 <p>
 
-For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](https://github.com/EverestAPI/Resources/wiki/Mod-Structure).
+For more info about the mod structure, the `everest.yaml` format, how to add extra content and on how to zip up your mod, [read the mod structure page](Mod-Structure).
 
 </p>
 </div>
@@ -231,7 +231,7 @@ Save data and session classes are very similar, but inherit from `EverestModuleS
 **All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` / `LoadSession` and `SaveSession` to bypass YamlDotNet's restrictions.
 
 This example only shows a subset of Everest's capabilities.  
-[**Read the full `EverestModuleSettings` documentation here**](https://github.com/EverestAPI/Resources/wiki/Mod-Settings)
+[**Read the full `EverestModuleSettings` documentation here**](Mod-Settings)
 
 </p>
 </div>
@@ -308,7 +308,7 @@ namespace Celeste.Mod.Example {
 
 ## Executing code when specific events occur
 
-You can use Everest events to execute some actions when an event such as a new level starting, etc. happens. You'll find a full list of Everest events in [this page](https://github.com/EverestAPI/Resources/wiki/Everest-Events).
+You can use Everest events to execute some actions when an event such as a new level starting, etc. happens. You'll find a full list of Everest events in [this page](Everest-Events).
 
 For example, to call the `onPlayerSpawn` method when the player spawns, use this:
 ```cs

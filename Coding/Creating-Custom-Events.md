@@ -1,6 +1,6 @@
 This is a guide on how to define a custom event in a code mod. If you are not familiar with the C# language, or do not have prior experience 
 in making code mods for Celeste, [Lua Cutscenes](https://gamebanana.com/gamefiles/10788) may be a more suitable option.  
-If you are interested in making code mods but don't know how, read [Your First Code Mod](https://github.com/EverestAPI/Resources/wiki/Your-First-Code-Mod) to get started.
+If you are interested in making code mods but don't know how, read [Your First Code Mod](Your-First-Code-Mod) to get started.
 
 
 ## Contents
@@ -22,7 +22,7 @@ If an Event Trigger is placed on the edge of a screen, it may be necessary to se
 
 
 ## `OnCustomEvent`
-Hooking [`EventTrigger.OnCustomEvent`](https://github.com/EverestAPI/Resources/wiki/Everest-Events#EventTrigger) provides a way to execute nearly any action when an EventTrigger is entered.
+Hooking [`EventTrigger.OnCustomEvent`](Everest-Events#EventTrigger) provides a way to execute nearly any action when an EventTrigger is entered.
 Simply check that the eventID matches the desired event, and return `true` if it does, to notify the game that an appropriate event has been found.
 
 :warning: While this can be a convenient way to test code, it is only recommended if there are no other predefined options.  
@@ -72,7 +72,7 @@ This can be done using either of the methods described above.
 
 `CutsceneEntity` is an abstract class that contains two required methods:
 
-* `OnBegin(Level level)` should be used to set up the cutscene, and to add a new [`Coroutine`](https://github.com/EverestAPI/Resources/wiki/Monocle-Reference#Coroutine) to execute the cutscene within.  
+* `OnBegin(Level level)` should be used to set up the cutscene, and to add a new [`Coroutine`](Monocle-Reference#Coroutine) to execute the cutscene within.  
 * `OnEnd(Level level)` should be used to clean up after the coroutine has finished. If necessary, the `WasSkipped` field should be checked in case the cutscene was ended prematurely.
 
 `EndCutscene(Level level, bool removeSelf)` should be called at the end of the *coroutine*, to let the level know it has completed.

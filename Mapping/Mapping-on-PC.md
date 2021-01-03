@@ -26,7 +26,7 @@ YourMap.bin + YourMap-B.bin
 You'll need to collect each heart in every A and B side _in the levelset_ and complete the side at least once, or use cheat mode.
 
 ### How do I use Stylegrounds in Ahorn?
-See the Stylegrounds tutorial [here](https://github.com/EverestAPI/Resources/wiki/Adding-Stylegrounds).
+See the Stylegrounds tutorial [here](Adding-Stylegrounds).
 
 ### How do I add my own decals in Ahorn?
 Ahorn will find it if you place it in `Celeste/Mods/YourMod/Graphics/Atlases/Gameplay/decals/author/decal.png`  

@@ -1,4 +1,4 @@
-This page will explain you how to change the appearance of entities **for your map only**. If you are working on a texture pack that should apply to the whole game, including vanilla maps, head to [How do I make a texture pack?](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-a-texture-pack%3F)
+This page will explain you how to change the appearance of entities **for your map only**. If you are working on a texture pack that should apply to the whole game, including vanilla maps, head to [How do I make a texture pack?](Texture-Packs)
 
 You should grab [the graphics dump](https://drive.google.com/open?id=1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet) to be able to use the vanilla sprites as a reference.
 

@@ -1,4 +1,4 @@
-To add custom lines of Dialogue, it is important to follow the correct [Mod Structure](https://github.com/EverestAPI/Resources/wiki/Mod-Structure#mod-structure).
+To add custom lines of Dialogue, it is important to follow the correct [Mod Structure](Mod-Structure#mod-structure).
 
 ## Setting up the Dialogue File
 
@@ -74,7 +74,7 @@ To set an Object to use a set Dialog ID right click them in Ahorn to open up the
 Here you will likely see `Dialog ID` or something of similar nature. Copy your ID into the field, click update, save your map and your changes should now be present ingame.
 
 Code Mods can also setup Custom Objects that allow for Custom Dialogue IDs to be used.
-If you want to use Custom Dialog in your own Code Mods, check [this page.](https://github.com/EverestAPI/Resources/wiki/Character-Dialogues)
+If you want to use Custom Dialog in your own Code Mods, check [this page.](Character-Dialogues)
 
 ## Custom Font Loading
 

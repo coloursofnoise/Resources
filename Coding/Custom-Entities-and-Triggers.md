@@ -1,5 +1,5 @@
 This is a guide on how to define a custom Entity or Trigger in a code mod. This is the part that needs to be written in C# 
- in Visual Studio, and then compiled into a .dll file. For information on integrating a _pre-existing_ Entity or Trigger with Ahorn for use in maps, please see [here](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn).
+ in Visual Studio, and then compiled into a .dll file. For information on integrating a _pre-existing_ Entity or Trigger with Ahorn for use in maps, please see [here](Adding-Custom-Objects-to-Ahorn).
 
 ## Contents
 * [Attributes](#creating-custom-entities-and-triggers)
@@ -26,7 +26,7 @@ You have to define a constructor for the game to be able to build your entity. T
 
 <br></br>
 
-To be able to place your entity in Ahorn, you will also have to create an [**Ahorn plugin**](https://github.com/EverestAPI/Resources/wiki/Adding-Custom-Objects-to-Ahorn) for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
+To be able to place your entity in Ahorn, you will also have to create an [**Ahorn plugin**](Adding-Custom-Objects-to-Ahorn) for it. There are numerous examples of those on the [Spring Collab 2020 repo](https://github.com/EverestAPI/SpringCollab2020/tree/master/Ahorn). The `entities` and `triggers` folders contain the entity/trigger plugins, and the `lang` folder contains the tooltips for the different options. To make the link between the Ahorn plugin and your entity in code, the parts in bold have to match:
 
 Ahorn plugin:
 > @mapdef Trigger "**SpringCollab2020/NoRefillField**" NoRefillField(x::Integer, y::Integer, width::Integer=Maple.defaultTriggerWidth, height::Integer=Maple.defaultTriggerHeight)
