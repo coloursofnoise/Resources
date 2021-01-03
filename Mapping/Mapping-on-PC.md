@@ -1,4 +1,4 @@
-To make maps, first make sure you've done everything in [[How do I install mods on PC?]]. Next, you'll need Ahorn. For up-to-date Ahorn documentation, including installation, see https://github.com/CelestialCartographers/Ahorn.
+To make maps, first make sure you've done everything in [[Installing-Mods-on-PC]]. Next, you'll need Ahorn. For up-to-date Ahorn documentation, including installation, see https://github.com/CelestialCartographers/Ahorn.
 
 ## Map-Making FAQ
 ### How do I save maps?
