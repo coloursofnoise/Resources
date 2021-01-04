@@ -64,7 +64,7 @@ Now, your map should show up in-game in its own category, and have the name you 
     - Name: Everest
       Version: 1.2330.0
 ```
-Replace 1375 with the version of Everest you're using, and YourModName with your mod name (it should be unique, and you should not change it once your map is published).
+Replace 2330 with the version of Everest you're using, and YourModName with your mod name (it should be unique, and you should not change it once your map is published).
 
 You are now ready to go and you will be able to add more folders / files to `Mods/yourmod` when you will need to!
 
@@ -85,7 +85,7 @@ Once you compiled your mod, you should get a DLL (often in a `bin/Debug/net452` 
       Version: 1.2330.0
 ```
 Replace:
-- 1375 with the version of Everest you're using
+- 2330 with the version of Everest you're using
 - YourModName with your mod name (it should be unique, and you should not change it once your map is published)
 - `Code/mymod.dll` with the path to your mod's DLL (for example, here, Everest would expect the DLL to be in `Mods/yourmod/Code/mymod.dll`).
 
