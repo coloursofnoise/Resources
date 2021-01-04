@@ -39,7 +39,7 @@ Example: `MAPAUTHOR_MAPNAME_JUMPDIALOG_1` instead of `Jump1`
 
 `[THEO left normal]` is used to determine what Dialogue Portrait and Dialogue Box should be used. 
 
-`THEO` in this case means that the Text will display Theo's Dialogue Box and Dialogue Portrait. This can naturally be changed to use to different Character's assets.
+`THEO` in this case means that the Text will display Theo's Dialogue Box and Dialogue Portrait. This can naturally be changed to use to different Character's assets. To add custom portraits see [here](Custom-Portraits)
 
 `left` is the orientation of the Dialogue Portrait, in this case it would appear on the left side of the Dialogue Box.
 

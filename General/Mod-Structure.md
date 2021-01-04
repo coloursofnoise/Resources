@@ -62,7 +62,7 @@ Now, your map should show up in-game in its own category, and have the name you 
   Version: 1.0.0
   Dependencies:
     - Name: Everest
-      Version: 1.1375.0
+      Version: 1.2330.0
 ```
 Replace 1375 with the version of Everest you're using, and YourModName with your mod name (it should be unique, and you should not change it once your map is published).
 
@@ -82,7 +82,7 @@ Once you compiled your mod, you should get a DLL (often in a `bin/Debug/net452` 
   DLL: Code/mymod.dll
   Dependencies:
     - Name: Everest
-      Version: 1.1375.0
+      Version: 1.2330.0
 ```
 Replace:
 - 1375 with the version of Everest you're using
@@ -117,7 +117,8 @@ Keep in mind that all your dialog IDs should start with `yourmodname_campaignnam
 
 You can also add more languages (for example, `Mods/yourmod/Dialog/French.txt`). If a language does not exist, the game will use English instead.
 
-For more details about how dialogue works, refer to [Adding Custom Dialogue](Adding-Custom-Dialogue).
+For more details about how dialogue works, refer to [Adding Custom Dialogue](Adding-Custom-Dialogue).  
+For a reference for adding custom portraits, see [here](Custom-Portraits)
 
 ### Adding Graphics
 
@@ -133,7 +134,7 @@ If you are code modding, you can access those textures in code as well: check [A
 
 ### Adding Custom Audio
 
-_Check the [Audio: How Tos](Audio:-How-Tos) to learn how to make a custom bank file._
+_Check the [Audio: How Tos](Adding-Custom-Audio) to learn how to make a custom bank file._
 
 Once you built a bank with your custom audio, drop the .bank and .guids.txt file to the `Mods/yourmod/Audio` directory: `Mods/yourmod/Audio/yourmodname_campaignname.bank` and `.guids.txt`. Everest will load the bank, and you will be able to use events in it as background music in Ahorn, or in code mods.
 
