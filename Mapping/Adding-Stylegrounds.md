@@ -3,6 +3,8 @@
 **Stylegrounds** are backgrounds and effects you can add to your map. 
 This tutorial explains the _entire_ Stylegrounds menu and how you are able to add your own backgrounds to your mod.
 
+Jump to the [Effects Reference](#effects-reference)
+
 # The Stylegrounds menu
 
 The Stylegrounds menu is divided into two sections, **Parallax** and **Effect**.
@@ -110,3 +112,80 @@ The file structure should look like this:
 Mods > yourmod > Graphics > Atlases > Gameplay > bgs > uniquefoldername > mybackground.png
 
 If you add a new background image, it will appear in the list in Ahorn immediately. If you make an update to the image, however, it won't appear in the window until you restart Ahorn.
+
+# Effects Reference
+:information_source: Some effects take up the entire screen, effectively neutralizing any stylegrounds behind them. To put a styleground in front of an effect, set the styleground to foreground, update, then set it back to background.  
+:information_source: Several settings may reset to default values on pressing add, and should be set after adding the effect
+
+### Blackhole: 
+The black hole in farewell.  
+Use with the `blackhole strength trigger` to achieve the pink black hole with more particles used in Reconciliation.  
+Shows wind but should not be the only indicator of wind.  
+Takes up the whole screen.
+
+### BossStarfield: 
+The background for the badeline bossfight in Reflection.  
+Particles move horizontally across the screen if the room's width is less than or equal to its height; otherwise, the particles move primarily vertically.  
+Takes up the whole screen.
+
+### CoreStarsFG: 
+White particles from the screen wrap bit at the end of Core.
+
+### Godrays: 
+Red diamonds move down the screen.  
+Used in Reflection.
+
+### Heatwave: 
+Provides dynamic particle and mist effects for both the `hot` and `cold` modes in Core.  
+The core mode metadata setting must be something other than `none` for this to show.
+
+### MirrorFG: 
+A red particle effect used in the Mirror Temple's mirror section.
+
+### NorthernLights: 
+The aurora borealis seen in the very beginning of Reflection.  
+Takes up the whole screen.
+
+### DreamStars: 
+Green squares rise from the bottom of the screen.  
+Unused ingame.
+
+### Petals: 
+Pink petals at the end of Reflection.
+
+### Planets: 
+The pink and green starfish in the background during the first few checkpoints of Farewell. The amount field starts out waaay too high for most rooms, resulting in overlapping starfish; Lower this down to at most single digits for most rooms.  
+:information_source: The size field shows only the options big or small; however, this can be replaced with any set of numbered stylegrounds from the root bgs/10. this means you can set size to things like blackhole/particles for the  long pink particles from the blackhole effect, or planets/small/planets/big for actual planets (unused ingame).  
+:information_source: if this effect is just above a styleground with blend mode set to additive, this effect will also be set to have additive blend mode.
+
+### Rain: 
+The rain at the start of Farewell.
+
+### ReflectionFG: 
+Exactly the same as [MirrorFG](#mirrorfg) but a pinkish red color.
+
+### SnowFG: 
+White/blue particles fly across the screen.  
+Used in Forsaken City and Celestial Resort along with [SnowBG](#snowbg).
+
+### SnowBG: 
+Same as above, but using darker blue colors.
+
+### Stardust: 
+Pink & green particles in farewell, move with the wind.
+
+### Starfield: 
+The moving ribbon of stars used in the first part of farewell.
+
+### Stars: 
+Star background in Old Site.  
+If the `dreaming` tag in map metadata is set to true, the stars will fall down the screen as in the majority of Old Site. Otherwise, the stars will be stationary as in the Awake checkpoint.  
+Takes up the whole screen.
+
+### Tentacles: 
+Tentacles like those in Reflection.  
+Setting the side field to down or up will crash the game. This may be useful for emulating something like last screen of the Badeline bossfight in Reflection, where the tentacles move smoothly.  
+This effect is not used ingame - the entity is used instead.
+
+### Windsnow: 
+Used to indicate wind in Golden Ridge.
