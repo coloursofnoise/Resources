@@ -11,7 +11,7 @@
 [**Ahorn Installation**](Ahorn-Installation-Help)  
 [**Maps on PC**](Mapping-on-PC)  
 [**Stylegrounds**](Adding-Stylegrounds)  
-[**Map Metadata**](.Map-Metadata)  
+[**Map Metadata**](Map-Metadata)  
 [**Entity & Trigger Documentation**](Entity-and-Trigger-Documentation)  
 [**Adding Custom Audio**](Adding-Custom-Audio)  
 [**Texture Packs**](Texture-Packs)   
