@@ -295,6 +295,91 @@ If you want your endscreen to use the same music as the chapter 7 endscreen, use
 
 To make your own, [import your music in FMOD](Audio:-How-Tos). The music will start playing as soon as the "snow falling" animation will start. When the chapter complete screen appears, the `end` audio param will be set to 1. You can use this to make your music synchronize with the endscreen.
 
+### Title
+
+You can make custom title text shown on the Chapter Complete screen without editing image anymore, with this configuration in your meta.yaml (here with default values):
+
+```yaml
+CompleteScreen:
+  Title:
+    ASide: 'AREACOMPLETE_NORMAL' # A-side complete ("Chapter Complete")
+    BSide: 'AREACOMPLETE_BSIDE' # B-side complete ("B-Side Complete")
+    CSide: 'AREACOMPLETE_CSIDE' # C-side complete ("C-Side Complete")
+    FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR' # A-side full clear ("Chapter Clear")
+  Layers:
+  - Type: 'ui' # don't forget to add this line for your text to appear
+```
+
+You can replace the Dialogue IDs to your custom ones. If an item is omitted, it will automatically fallback to default value.
+
+Here is an example usage and preview to display "D-Side Complete" on vanilla Chapter 2 endscreen after completing A-side:
+
+![image](https://user-images.githubusercontent.com/7558201/102515332-96a58980-40c8-11eb-86a0-6fa696d846c0.png)
+
+In meta.yaml file:
+
+```yaml
+CompleteScreen:
+  Atlas: 'OldSite'
+  Start: [0.0, 1050.0]
+  Center: [0.0, 250.0]
+  Offset: [-108.0, 0.0]
+  Title:
+    ASide: 'WEGFan_CompleteScreenTest_Endscreen_A_Side'
+  Layers:
+  - Type: 'layer'
+    Images: ['00']
+    Position: [0.0, 0.0]
+    Scroll: [0]
+  - Type: 'layer'
+    Images: ['01']
+    Position: [0.0, 0.0]
+    Scroll: [0.02]
+  - Type: 'layer'
+    Images: ['02']
+    Position: [0.0, 0.0]
+    Scroll: [0.04]
+  - Type: 'layer'
+    Images: ['03']
+    Position: [0.0, 0.0]
+    Scroll: [0.06]
+  - Type: 'layer'
+    Images: ['04']
+    Position: [0.0, 0.0]
+    Scroll: [0.10]
+  - Type: 'layer'
+    Images: ['05']
+    Position: [0.0, 0.0]
+    Scroll: [0.10]
+  - Type: 'layer'
+    Images: ['06']
+    Position: [0.0, -20.0]
+    Scroll: [0.11]
+  - Type: 'layer'
+    Images: ['07']
+    Position: [0.0, 0.0]
+    Scroll: [0.12]
+  - Type: 'ui'
+  - Type: 'layer'
+    Images: ['08']
+    Position: [0.0, -680.0]
+    Scroll: [0.13]
+  - Type: 'layer'
+    Images: ['09']
+    Position: [0.0, 0.0]
+    Scroll: [0.13]
+  - Type: 'layer'
+    Images: ['10']
+    Position: [0.0, -680.0]
+    Scroll: [0.15]
+```
+
+In your dialog file:
+
+```text
+WEGFan_CompleteScreenTest_Endscreen_A_Side= D-Side Complete
+```
+
 ## Loading Vignette
 
 A loading vignette is displayed when a level is selected, similarly to the Intro, Summit, and Core chapters.
