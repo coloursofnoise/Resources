@@ -95,22 +95,22 @@ You will find the vanilla chapter card in the graphics dump (check the [Useful L
 To define that, you need to create a meta.yaml next to your map: for example, create `testmap.meta.yaml` next to `testmap.bin`.
 
 To define your map's position, add this to the meta.yaml file:
-
-    Mountain:
-        Idle:
-            Position: [ 7.565, 8.614, -5.318 ]
-            Target: [ 6.210, 7.754, -4.125 ]
-        Select:
-            Position: [ 8.782, 6.271, -1.953 ]
-            Target: [ 6.799, 6.172, -2.194 ]
-        Zoom:
-            Position: [ 6.462, 5.235, -1.605 ]
-            Target: [ 4.542, 5.754, -1.819 ]
-        Cursor: [ 5.706, 5.492, -1.542 ]
-        State: 2
-        ShowCore: false
-        Rotate: true
-
+```yaml
+Mountain:
+    Idle:
+        Position: [ 7.565, 8.614, -5.318 ]
+        Target: [ 6.210, 7.754, -4.125 ]
+    Select:
+        Position: [ 8.782, 6.271, -1.953 ]
+        Target: [ 6.799, 6.172, -2.194 ]
+    Zoom:
+        Position: [ 6.462, 5.235, -1.605 ]
+        Target: [ 4.542, 5.754, -1.819 ]
+    Cursor: [ 5.706, 5.492, -1.542 ]
+    State: 2
+    ShowCore: false
+    Rotate: true
+```
 You can get the coordinates by enabling debug mode (in Mod Options), restarting the game, and pressing Space on the mountain screen.
 Look around with the mouse, move around with WASD and move the camera up/down with Q and Z.
 The coordinates will be displayed on the top left.
@@ -302,7 +302,7 @@ A loading vignette is displayed when a level is selected, similarly to the Intro
 To display an image, use the same structure as a [Chapter Complete Screen](#chapter-complete-screen), but replace `CompleteScreen` with `LoadingVignetteScreen`.
 
 To display text, add the following:
-```
+```yaml
 LoadingVignetteText:
     Dialog: "YourDialogHere"
 ```
