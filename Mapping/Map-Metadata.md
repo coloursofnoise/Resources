@@ -395,7 +395,7 @@ Note that only one of these can be used for each level.
 
 ## Checkpoint Images
 
-First of all, checkpoint images need to be masked to look like vanilla ones: [follow the instructions to do that here](How-do-I-make-maps-on-PC%3F#how-do-i-add-a-checkpoint-mask-onto-my-custom-checkpoints).
+First of all, checkpoint images need to be masked to look like vanilla ones: [follow the instructions to do that here](Mapping-on-PC#how-do-i-add-a-checkpoint-mask-onto-my-custom-checkpoints).
 
 Then, if your map is in Mods/yourmodname/Maps/**mapfolder/mapname**.bin, you should drop your checkpoint images to this location for them to work:
 
