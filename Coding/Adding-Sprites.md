@@ -6,14 +6,14 @@ For questions and feedback, please contact @coloursofnoise on the Celeste [Disco
 - [Atlases](#atlases)
 - [SpriteBanks](#spritebanks)
 ## Adding custom sprites to your code mod:
-- [Using MTextures in code](/#using-a-spritebank-file)
-- [Using a SpriteBank file](/#using-a-spritebank-file)
-- [Using Sprites in code](/#using-sprites-in-code)
+- [Using MTextures in code](#using-a-spritebank-file)
+- [Using a SpriteBank file](#using-a-spritebank-file)
+- [Using Sprites in code](#using-sprites-in-code)
 
 
 # The Atlas System
 ## Atlases
-Celeste stores it’s textures in Atlases, with each atlas being used for different aspects of the game.
+Celeste stores its textures in Atlases, with each atlas being used for different aspects of the game.
 
 To load a texture into a preexisting atlas, follow the directions [here](Mod-Structure#file-layout) relating to pre-supported content mappings.
 
