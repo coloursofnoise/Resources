@@ -134,8 +134,9 @@ Adding the `SettingMaxLength` attribute to a [String](#String) property will set
 ```
 Adding the `DefaultButtonBinding` attribute to a [ButtonBinding](#ButtonBinding) property will set the default button and key associated with the setting to the supplied values. 
 The `ForceDefaultButton` and `ForceDefaultKey` properties can be set in order to ensure that the specified input is always bound.
+If there is no default binding set the button or key to 0.
 
-ℹ️ The `Buttons` and `Keys` Enumeration types come from the `Microsoft.Xna.Framework.Input` namespace. If there is no default binding, set the button or key to 0.
+ℹ️ The `Buttons` and `Keys` Enumeration types come from the `Microsoft.Xna.Framework.Input` namespace.
 
 ## SettingInGame
 ```csharp
