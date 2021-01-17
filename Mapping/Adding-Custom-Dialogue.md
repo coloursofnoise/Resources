@@ -1,7 +1,7 @@
 To add custom lines of Dialogue, it is important to follow the correct [Mod Structure](Mod-Structure#mod-structure).
 
 **Note:**  
-If you're using Notepad++, you can import a custom user defined language for Celeste Dialog.txt files.  
+If you're using Notepad++, you can import a custom user defined language for Celeste Dialog .txt files.  
 Thanks to iSkLz on the Celeste Discord server for creating and publishing this file!  
 [Celeste_Dialogs.xml](https://cdn.discordapp.com/attachments/429775260108324865/800351539793231882/Celeste_Dialogs.xml)
 
