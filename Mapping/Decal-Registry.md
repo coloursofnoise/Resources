@@ -22,6 +22,9 @@ Inside of a `<decal>`, you can specify as many properties as you want. While oth
 * `<coreSwap>`: Attributes:
   * `coldPath`: The path to the sprite to use when the room is in cold core mode
   * `hotPath`: The path to the sprite to use when the room is in hot core mode
+* `<mirror>`: Attributes: `keepOffsetsClose(bool)` - Makes the reflection offset look slightly closer to the player.
+  * To make the decal reflective, create a folder named `mirrormasks` on the same level as your `decals` folder, and create all the subfolders corresponding to the decal's original file path. Create a texture file with the same name as the original decal in this path (for example, `decals/modname/mytexture.png` will have a corresponding `mirrormasks/modname/mytexture.png` texture file).  
+The red channel controls the vertical offset of the reflection, and the green channel controls the horizontal offset (the blue channel is unused). So 255 red and 255 green makes it the closest to the player, 0 red and 255 green makes it furthest horizontally, 255 red and 0 green makes it furthest vertically, and 0 red and 0 green makes it the furthest in both axis. Transparent pixels do not cast reflections.
 * `<solid>`: Attributes: `x(float)`, `y(float)`, `width(float)`, `height(float)`, `index(int)`, `blockWaterfalls(bool)` - Adds a solid block relative to this decal with the SoundSurfaceIndex of `index`
 * `<staticMover>`: Attributes: `x(int)`, `y(int)`, `width(int)`, `height(int)` - Attaches this decal to entities within the relative collision box (not guaranteed to work with other attributes)
 * `<scared>`: Attributes:
