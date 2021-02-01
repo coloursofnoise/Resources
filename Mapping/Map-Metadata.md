@@ -18,6 +18,7 @@
      * [Music](#music)
 *   [Loading Vignette](#loading-vignette)
 *   [Checkpoint Images](#checkpoint-images)
+*   [Overriding Metadata](#overriding-metadata)
 
 </div>
 
@@ -423,5 +424,18 @@ Graphics/
               03a.png
               start.png
 ```
+
+## Overriding Metadata
+By default, the map metadata for the A-side is also used for the B and C-Sides. Some metadata can be overridden by checking `OverrideASideMeta` in the B/C side metadata.
+
+A semi-comprehensive list of the features that can be overridden is as follows:
+- IntroType
+- Dreaming
+- ColorGrade
+- DarknessAlpha
+- BloomBase
+- BloomStrength
+- CoreMode
+
 
 _If any of this information is incorrect, feel free to correct it and to shout at max480 on Discord._
