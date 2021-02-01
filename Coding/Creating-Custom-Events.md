@@ -67,7 +67,7 @@ If no generator method is specified in the CustomEvent ID, Everest will look for
 
 
 ## `CutsceneEntity`
-One major use of Event Triggers is in triggering cutscenes, which is done by adding a `CustsceneEntity` to the Level.
+One major use of Event Triggers is in triggering cutscenes, which is done by adding a `CutsceneEntity` to the Level.
 This can be done using either of the methods described above.
 
 `CutsceneEntity` is an abstract class that contains two required methods:
