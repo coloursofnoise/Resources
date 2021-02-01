@@ -11,7 +11,7 @@
 ### Step 2
 
 Make a copy of a tileset template, then edit it with any image editor to make your tileset.  
-If you want to create your own custom template, read [this page](#tileset-format-reference).
+If you want to create your own custom template, read [this page](Tileset-Format-Reference).
 
 #### Using the improved template by 0x0ade
 
