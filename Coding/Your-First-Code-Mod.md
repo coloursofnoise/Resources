@@ -144,7 +144,7 @@ Your module class should look similar to the example.
 <p>
 
 This example only shows a subset of Everest's capabilities.  
-[**See the `ExampleMod` repo for more of what Everest can do.**](https://github.com/EverestAPI/ExampleMod)
+[**See `ExampleMod/ExampleModule` for more of what Everest can do.**](https://github.com/EverestAPI/ExampleMod/blob/master/ExampleModule.cs)
 
 </p>
 </div>
@@ -231,7 +231,7 @@ Save data and session classes are very similar, but inherit from `EverestModuleS
 **All entries must be properties**, unless you're overriding `LoadSettings` and `SaveSettings` / `LoadSaveData` and `SaveSaveData` / `LoadSession` and `SaveSession` to bypass YamlDotNet's restrictions.
 
 This example only shows a subset of Everest's capabilities.  
-[**Read the full `EverestModuleSettings` documentation here**](Mod-Settings)
+[**See `ExampleMod/ExampleModuleSettings` for more of what Everest can do.**](https://github.com/EverestAPI/ExampleMod/blob/master/ExampleModuleSettings.cs)
 
 </p>
 </div>
