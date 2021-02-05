@@ -144,7 +144,7 @@ Your module class should look similar to the example.
 <p>
 
 This example only shows a subset of Everest's capabilities.  
-[**Read the full `EverestModule` documentation here.**](https://everestapi.github.io/api/Celeste.Mod.EverestModule.html)
+[**See the `ExampleMod` repo for more of what Everest can do.**](https://github.com/EverestAPI/ExampleMod)
 
 </p>
 </div>
