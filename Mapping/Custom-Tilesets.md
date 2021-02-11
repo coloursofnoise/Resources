@@ -21,6 +21,14 @@ To set up this template, open the `ForegroundTiles.xml` file you just copied. Ju
 
 This XML refers to the `subfolder/betterTemplate` tileset. For it not to crash, copy the template into `Mods/yourmod/Graphics/Atlases/Gameplay/tilesets/subfolder/betterTemplate.png`.
 
+#### Using the complete template by pixelator
+
+![complete template](https://cdn.discordapp.com/attachments/696801669517672658/785573985009532938/alternateTemplate.png)
+
+This template adds additional tiles for certain tiling scenarios which aren't accounted for in the vanilla game. It can be set up in the same way as the improved tileset, by inserting [this text](https://cdn.discordapp.com/attachments/696801669517672658/785574087820705812/alt_tile.txt) into your XML file instead.
+
+If converting a tileset to this template from one of the other two, **additional tiles will need to be drawn** to fill in the entire template. Otherwise, certain tiles will either be invisible or look like the template itself, which is likely unwanted.
+
 #### Using the vanilla template
 
 You can find this template in [the graphics dump](https://drive.google.com/file/d/1ITwCI2uJ7YflAG0OwBR4uOUEJBjwTCet/view), in `Graphics/Atlases/Gameplay/tilesets/template.png`.
