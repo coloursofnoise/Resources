@@ -179,7 +179,7 @@ To get the zip to be published on GameBanana, just go to `Mods/yourmodname`, sel
 
 When you open your zip, you should see `Dialog`, `Maps` and `everest.yaml` right away, without needing to open another folder.
 
-If you did that correctly, publish the zip on GameBanana, and a "Everest 1-click installer" button should appear after a bit!
+If you did that correctly, publish the zip on GameBanana, and an "Olympus 1-click install" button should appear automatically! If it's not there right away, don't panic - it usually takes a few minutes for the button to show up.
 
 ## Optional Dependencies for everest.yaml (advanced)
 
