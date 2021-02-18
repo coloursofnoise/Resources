@@ -28,7 +28,7 @@ The red channel controls the horizontal offset of the reflection, and the green 
 * `<solid>`: Attributes: `x(float)`, `y(float)`, `width(float)`, `height(float)`, `index(int)`, `blockWaterfalls(bool)` - Adds a solid block relative to this decal
   * `x` and `y` are offsets relative to the decal position.
   * `index`: the SoundSurfaceIndex to use for the solid.
-* `<staticMover>`: Attributes: `x(int)`, `y(int)`, `width(int)`, `height(int)` - Attaches this decal to entities within the relative collision box (not guaranteed to work with other properties)
+* `<staticMover>`: Attributes: `x(int)`, `y(int)`, `width(int)`, `height(int)` - Attaches this decal to solid entities within the relative collision box described by the attributes (see `solid` for details) (not guaranteed to work with other properties)
 * `<scared>`: Attributes:
   * `range(int)`, `hideRange(int)`, `showRange(int)`: The distance from the player (in pixels) at which each animation will play. `range` sets the values of both `hideRange` and `showRange`
   * `idleFrames`: Plays by default and after `showFrames` (Loops)
