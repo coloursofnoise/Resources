@@ -35,5 +35,10 @@ The red channel controls the horizontal offset of the reflection, and the green 
   * `hideFrames`: Plays when the player comes closer than `hideRange`
   * `hiddenFrames`: Plays after `hideFrames` (Loops)
   * `showFrames`: Plays when the player moves farther than `showRange`
+* `<light>`: Attributes: `offsetX(float)`, `offsetY(float)`, `color(string)`, `alpha(float)`, `startFade(int)`, `endFade(int)` - Adds a VertexLight object to the decal at an offset, this appropriately adds a light to the decal, basically.
+  * `offsetX` and `offsetX` are offsets relative to the decal position.
+  * `color`: Sets the color to the hex string placed in this. Leave blank for White light.
+  * `alpha`: Sets the opacity of the light, default value is full opacity (1.0)
+  * `startFade` and `endFade`: The alpha of the light stays at (alpha) from radius 0 to startFade and then fades from (alpha) to 0 from radius startFade to endFade. 
 
   `Frames` attributes use the same formatting as the animations in the Sprites.xml (`0,1,2-5,6*3`)
