@@ -35,7 +35,7 @@ The red channel controls the horizontal offset of the reflection, and the green 
   * `hideFrames`: Plays when the player comes closer than `hideRange`
   * `hiddenFrames`: Plays after `hideFrames` (Loops)
   * `showFrames`: Plays when the player moves farther than `showRange`
-  * (See Frames for information on setting up the frame data for this attribute)
+  * See `Frames` below for information on setting up the frame data for this attribute
 * `<light>`: Attributes: `offsetX(float)`, `offsetY(float)`, `color(string)`, `alpha(float)`, `startFade(int)`, `endFade(int)` - Adds a VertexLight object to the decal at an offset, this appropriately adds a light to the decal, basically.
   * `offsetX` and `offsetX` are offsets relative to the decal position.
   * `color`: Sets the color to the hex string placed in this. Leave blank for White light.
