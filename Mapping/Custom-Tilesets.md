@@ -19,8 +19,6 @@ If you want to create your own custom template, read [this page](Tileset-Format-
 
 To set up this template, open the `ForegroundTiles.xml` file you just copied. Just below `<Data>` at the beginning of the file, copy-paste the entirety of [this XML file](https://gist.github.com/0x0ade/3beb5eb3008f3f25be0b3204d1ee585a).
 
-This XML refers to the `subfolder/betterTemplate` tileset. For it not to crash, copy the template into `Mods/yourmod/Graphics/Atlases/Gameplay/tilesets/subfolder/betterTemplate.png`.
-
 #### Using the complete template by pixelator
 
 ![complete template](https://cdn.discordapp.com/attachments/696801669517672658/785573985009532938/alternateTemplate.png)
