@@ -1,4 +1,4 @@
-The [Monocle Engine](https://bitbucket.org/MattThorson/monocle-engine/src) is an open source game engine, developed by Matt Thorson, 
+The [Monocle Engine](https://bitbucket.org/MattThorson/monocle-engine/src) is an open source game engine, developped by Matt Thorson, 
 that is based on the [MonoGame Framework](https://www.monogame.net/).  
 It is based on the [TowerFall Ascension](http://www.towerfall-game.com/) core engine, and has since been used as the base for Celeste.
 
@@ -78,7 +78,7 @@ Using a `yield return` statement in the method will determine how often the code
 - Returning an `int` or `float` value will wait the specified number of seconds before trying to continue.
 - Returning a `null` value will wait for the next update to continue.
 
-Using a `yield break` statement will cause the coroutine to end when the statement is reached.
+Uising a `yield break` statement will cause the coroutine to end when the statement is reached.
 
 :information_source: [Modified by Everest](https://github.com/EverestAPI/Everest/blob/master/Celeste.Mod.mm/Patches/Monocle/Coroutine.cs) 
 to add `Jump()` to skip the wait timer.
