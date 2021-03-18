@@ -1,23 +1,24 @@
-Welcome to the Everest resources repository!
+# Welcome to the [Everest](https://everestapi.github.io) Wiki!
 
-Make sure to follow the **pages list on the right side**, or the general FAQ below.
+Come say hi on the [Celeste discord](https://discord.gg/6qjaePQ), and tell us what you're working on!
 
-**If you want to install Everest (mod loader) or Ahorn (map editor), check the [useful links page](Useful-links)!**
+Make sure to **check out the sidebar on the right** for a list of community-written guides, tutorials, and reference pages.
 
-## [[FAQ]]
+## Frequently Asked Questions
+- [Playing Mods](FAQ#playing-mods)
+- [Making Maps](FAQ#making-maps)
+- [Making Code Mods](FAQ#making-code-mods)
 
-## [[Useful Links]]
+If you run into issues while playing with Everest, make sure to read the [Common Crashes](common-crashes) page to see if a fix has been provided.
 
-## [[Entity and Trigger Documentation]]
+## The Essentials:
+- [Frequently Asked Questions](FAQ).
+- [How to use mods on PC](https://everestapi.github.io/#installing-everest).
+- [How to make a map](FAQ#making-maps) ([additional guide](Mapping-on-PC)).
+- [How to make a texture pack/skin mod](Texture-Packs).
+- [How to modify the game's code](Your-First-Code-Mod).
+- [How to package your mod for release](Mod-Structure).
+- [How to add custom audio](Adding-Custom-Audio).
+- [What does Debug Mode do?](Debug-Mode).
 
-## Tutorials
-- [How do I package my maps?](Mod-Structure)
-- [How do I modify the game's code?](Your-First-Code-Mod)
-- [How do I install mods on PC?](https://everestapi.github.io/#installing-everest)
-- [How do I make maps on PC?](Mapping-on-PC)
-- [How do I make custom audio for my mod (f.e. custom music)?](Adding-Custom-Audio)
-- [How do I set up my map's name/icon/position/endscreen?](Map-Metadata)
-- [How do I make a custom tileset?](Custom-Tilesets)
-- [How do I make a texture pack?](Texture-Packs)
-- [What's going on with mods on Nintendo Switch?](Nintendo-Switch-Modding)
-- [What does Debug Mode do?](Debug-Mode)
+## [Other Useful Links](useful-links)
