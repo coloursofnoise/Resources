@@ -11,14 +11,21 @@ Enabling Debug Mode gives you access to some debug functions hidden in the game.
 
 ## Keys available in the debug map
 
-This debug map is especially useful to teleport around in the game.
+This debug map is especially useful to teleport around in the game.  
+Key controls for navigation are displayed in the bottom right, and can be toggled with F5.
 
 * Right click on a room: teleport to it
 * Ctrl + Right click on a room: teleport to it **losing your current session** (like collected strawberries)
-* Shift + Right click on a room: teleport to a specific point in the room, rather than to the closest spawn point. (Yes, even in walls.)
+* Shift + Right click on a room: teleport to a specific point in the room, rather than to the closest spawn point (yes, even in walls)
 * Mouse wheel: zoom in and out
 * Move around with the keys you use for movement, or by holding the mouse wheel, or by holding Space and using the left mouse button
 * Ctrl+Space resets zoom and position to default
+* Escape: exit the debug map
+* Holding Q: shows you the strawberry order, in the format `checkpointId:order`
+* Holding F1: shows keys placed in the map
+* F2: center the camera on the current respawn point
+* F5: toggles displaying the controls in the bottom right
+
 
 You can also "edit" levels, but the save function is gone, so you won't be able to play them afterwards. You can still play around with it though:
 * You can drag rooms around
@@ -26,8 +33,6 @@ You can also "edit" levels, but the save function is gone, so you won't be able 
 * Ctrl+A selects everything
 * Ctrl+Z is Undo, Ctrl+Y is Redo (~~crashes the game though~~)
 * Keys 1 to 7 change the rooms' colors
-* F1 or Ctrl+S are supposed to save but don't
-* Holding Q shows you the strawberry order, in the format `checkpointId:order`
 
 ## The Debug Save
 

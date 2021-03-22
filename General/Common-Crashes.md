@@ -15,8 +15,9 @@ If the particular error is not in the list, no fix is provided, or the fix does 
 <br/>
 
 ## `OutOfMemoryException`
-You've got too many mods (including maps) installed, and your poor PC can't handle them all at once. Try blacklisting or uninstalling some of them.
-* To blacklist a mod, go to the Mods folder next to Celeste.exe, and add the name of the zip/folder in the `blacklist.txt` file. For example, if you want Everest to skip over `CrystalValley.zip` and `Dadbod.zip`, just put those in `blacklist.txt`:
+You've got too many mods (including maps) installed, and your poor PC can't handle them all at once. Try blacklisting or uninstalling some of them.  
+* To disable a mod while Celeste is running, open the `Mod Options` menu from the main menu and select the option to `Enable or Disable Mods`.
+* If you are unable to start Celeste, go to the Mods folder next to Celeste.exe, and add the name of the zip/folder in the `blacklist.txt` file. For example, if you want Everest to skip over `CrystalValley.zip` and `Dadbod.zip`, just put those in `blacklist.txt`:
 ```
 CrystalValley.zip
 Dadbod.zip

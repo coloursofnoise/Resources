@@ -17,9 +17,9 @@ No. See [here](Nintendo-Switch-Modding) for more information.
 
 ### Which PC versions can be modded?
 At the time of writing, the Steam, Epic Games, and itch.io versions **can** be modded. The only PC version that **cannot** be modded is from the Microsoft Store, as part of the Xbox Game Pass.  
-For more information see [this post](https://discord.com/channels/403698615446536203/683777712115941407/774671383828496514) from the [Celeste discord](https://discord.gg/6qjaePQ) (Paraphrased here):
+For more information see [this post](https://discord.com/channels/403698615446536203/683777712115941407/774671383828496514) from the [Celeste Discord](https://discord.gg/6qjaePQ) (Paraphrased here):
 >- **The game is encrypted** on a per-user license basis, meaning **no mods without cracking the game, even to just replace maps or text**.
->- It is built using the [Universal Windows Platform](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) and [.Net Native](https://docs.microsoft.com/en-us/dotnet/framework/net-native/net-native-and-compilation), meaning **the mod loader would have to be completely rewritten**.
+>- It is built using the [Universal Windows Platform](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) and [.NET Native](https://docs.microsoft.com/en-us/dotnet/framework/net-native/net-native-and-compilation), meaning **the mod loader would have to be completely rewritten**.
 >- In short, **UWP Celeste is as locked down as the Xbox version. Neither the Celeste devs nor the Modding Community can change this**.
 
 ### How can I backup my savedata?

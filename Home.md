@@ -1,6 +1,6 @@
 # Welcome to the [Everest](https://everestapi.github.io) Wiki!
 
-Come say hi on the [Celeste discord](https://discord.gg/6qjaePQ), and tell us what you're working on!
+Come say hi on the [Celeste Discord](https://discord.gg/6qjaePQ), and tell us what you're working on!
 
 Make sure to **check out the sidebar on the right** for a list of community-written guides, tutorials, and reference pages.
 
@@ -19,6 +19,6 @@ If you run into issues while playing with Everest, make sure to read the [Common
 - [How to modify the game's code](Your-First-Code-Mod).
 - [How to package your mod for release](Mod-Structure).
 - [How to add custom audio](Adding-Custom-Audio).
-- [What does Debug Mode do?](Debug-Mode).
+- [What does Debug Mode do?](Debug-Mode)
 
 ## [Other Useful Links](useful-links)
