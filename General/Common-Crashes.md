@@ -45,7 +45,7 @@ Two FMOD banks define the same event.
 If you aren't actively using FMOD, this error is usually caused by having more than one copy of the same mod (and therefore the same audio bank) loaded at the same time.  
 Check your Mods folder carefully for duplicate mods and remove them.
 
-## `Exception: FMOD Failed: ERR_INVALID_HANDLE`
+## `Exception: FMOD Failed: ERR_OUTPUT_INIT`
 Something went wrong with the sound engine used by Celeste.  
 Possible fixes are:
 - Unplug/replug your speakers/headphones
