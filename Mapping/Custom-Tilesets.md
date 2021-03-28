@@ -5,8 +5,10 @@
 * Go to your Celeste folder -> Content -> Graphics
 * Copy the `ForegroundTiles.xml` file
 * Go back to your Celeste folder, and go to Mods -> YourModFolder -> Graphics
-* Create a new folder there (for example `Xaphan`)
+* Create new folders there (for example yournickname -> campaignname)
 * Paste the `ForegroundTiles.xml` file in that new folder
+
+It is recommended to create 2 subfolders with your nickname _and_ your map / campaign name, to avoid conflicting with maps from other people but also to prevent your maps from conflicting with each other.
 
 ### Step 2
 
@@ -39,24 +41,24 @@ Here is an annotated version of this template:
 
 At the end of the `ForegroundTiles.xml` file, just before the `</Data>` line, add the following line:
 ```xml
-<Tileset id="w" copy="y" path="name" sound="8"/>
+<Tileset id="w" copy="y" path="yournickname/campaignname/tilesetname" sound="8"/>
 ```
 * Replace `w` by the id you want, that is not one already used (so do not use 1, 3 to 9, a to o, y and z). **This id has to be 1 character long.**
 * Replace `y` with `z` if using the vanilla template.
-* Replace `name` by the name you want to call your tileset. Remember that name, you will need it later.
+* Replace `yournickname/campaignname/tilesetname` by your nickname, your map or campaign name, and what you want to call your tileset. Remember those names, you will need them later.
 * Replace `8` by whatever sound you want (see [bottom of page](#Tileset-sound-IDs) for the list).
 
 Then, save and close the file.
 
 ### Step 4
 * Go back to your Graphics folder (the one in your mod folder) -> Atlases -> Gameplay
-* Create a `tilesets` folder
-* Copy your tileset there, and name it the same thing you put in ForegroundTiles.xml (`name` in this exemple)
+* Create a `tilesets` folder, then a `yournickname` and a `campaignname` folder in them (the names should match what you used in `ForegroundTiles.xml` earlier)
+* Copy your tileset there, and name it the same thing you put in ForegroundTiles.xml (`tilesetname.png` in this exemple)
 
 ### Step 5
 * Open Ahorn and load your map
 * Go to Map -> Metadata
-* In the Foreground Tiles field, copy the path to your `ForegroundTiles.xml`: in this tutorial, it is `Graphics/Xaphan/ForegroundTiles.xml` (replace `Xaphan` by the name of the folder you created in step 2)
+* In the Foreground Tiles field, copy the path to your `ForegroundTiles.xml`: in this tutorial, it is `Graphics/yournickname/campaignname/ForegroundTiles.xml` (replace `yournickname/campaignname` by the name of the folders you created in step 2)
 * Click Update. Save and reload your map.
 
 _Thanks Xaphan for the tutorial!_
