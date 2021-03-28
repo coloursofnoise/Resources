@@ -7,6 +7,7 @@
 * [Modifying the game's code](#modifying-the-games-code)
   * [On.Celeste hooks](#onceleste-hooks)
   * [IL.Celeste hooks](#ilceleste-hooks)
+  * [Hooking coroutines](#hooking-coroutines)
 * [Accessing private fields or methods](#accessing-private-fields-or-methods)
   * [Private fields / properties](#private-fields--properties)
   * [Private methods](#private-methods)
