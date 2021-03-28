@@ -439,6 +439,63 @@ The dash attack timer (determining dash length) is now multiplied with an arbitr
 
 **Please note that IL code is slightly different between the XNA and FNA versions, at least on Steam**. Testing IL hooks against both versions is highly recommended.
 
+### Hooking coroutines
+
+Coroutines are methods returning `IEnumerator` and containing `yield return xxx` in them. Their name usually ends with "Routine".
+
+- When `yield return [number]` is called, the coroutine pauses for this amount of time (in seconds).
+- When `yield return null` is called, the coroutine pauses for one frame.
+
+Hooking them behaves particularly:
+
+#### On.* Hooks
+
+Contrary to other hooks, running `orig` does **not** execute the code in the coroutine. It just returns an `IEnumerator` object allowing to do so: when calling `origEnum.MoveNext()`, the code runs until a `yield return` is hit, and you can get the returned value with `origEnum.Current`. `MoveNext()` returns a boolean that will be `false` if the end of the method was reached.
+
+So, this code:
+```cs
+IEnumerator origEnum = orig(self);
+while (origEnum.MoveNext()) {
+    if (origEnum.Current is float f && f == 2f) {
+        yield return 4f;
+    } else {
+        yield return origEnum.Current;
+    }
+}
+```
+will run the entire vanilla coroutine, replacing each 2-second delay with a 4-second one.
+
+#### IL.* hooks
+
+The actual code of the coroutine is not in the method itself. For example, the IL code for `Player.DashCoroutine()` is:
+```
+IL_0000: ldc.i4.0
+IL_0001: newobj instance void Celeste.Player/'<DashCoroutine>d__423'::.ctor(int32)
+IL_0006: dup
+IL_0007: ldarg.0
+IL_0008: stfld class Celeste.Player Celeste.Player/'<DashCoroutine>d__423'::'<>4__this'
+IL_000d: ret
+```
+
+⬆️ This is not the actual code for the method, this only instantiates a `Celeste.Player/'<DashCoroutine>d__423'` object and returns it. This is what `IL.Celeste.Player.DashCoroutine += ...` will hook, so using that will lead to unexpected results.
+
+The code you see in the C# view in ILSpy is actually located in `Celeste.Player/'<DashCoroutine>d__423'::MoveNext()`, so if you want to IL hook it, this is the method you want to hook.
+
+You can do so by building an IL hook manually:
+```cs
+ILHook dashCoroutineHook = new ILHook(
+    typeof(Player).GetMethod("DashCoroutine", BindingFlags.NonPublic | BindingFlags.Instance).GetStateMachineTarget(),
+    modDashSpeed);
+```
+`GetStateMachineTarget()` is what allows to turn `Celeste.Player::DashCoroutine()` into `Celeste.Player/'<DashCoroutine>d__423'::MoveNext()`.
+
+To undo this IL hook, you can do:
+```
+dashCoroutineHook.Dispose();
+```
+
+Note that building an IL hook manually is also useful to hook orig_* methods and other methods that are not made available through `IL.Celeste.*`.
+
 ## Accessing private fields or methods
 
 ### Private fields / properties
