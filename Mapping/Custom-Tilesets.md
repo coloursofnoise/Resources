@@ -21,13 +21,11 @@ If you want to create your own custom template, read [this page](Tileset-Format-
 
 To set up this template, open the `ForegroundTiles.xml` file you just copied. Just below `<Data>` at the beginning of the file, copy-paste the entirety of [this XML file](https://gist.github.com/0x0ade/3beb5eb3008f3f25be0b3204d1ee585a).
 
-#### Using the complete template by pixelator
+#### Using other tileset templates
 
-![complete template](https://cdn.discordapp.com/attachments/696801669517672658/785573985009532938/alternateTemplate.png)
-
-This template adds additional tiles for certain tiling scenarios which aren't accounted for in the vanilla game. It can be set up in the same way as the improved tileset, by inserting [this text](https://cdn.discordapp.com/attachments/696801669517672658/785574087820705812/alt_tile.txt) into your XML file instead.
-
-If converting a tileset to this template from one of the other two, **additional tiles will need to be drawn** to fill in the entire template. Otherwise, certain tiles will either be invisible or look like the template itself, which is likely unwanted.
+Other custom tileset templates can be used similarly to the improved tileset above, by copying the template xml into the beginning of your `ForegroundTiles.xml` file.  
+:warning: *You must also include the template image at the location specified in the template xml*.  
+If you are unsure of where this should go, or if you have any other questions related to the template you are using, please contact the creator of the template that you are using.
 
 #### Using the vanilla template
 
