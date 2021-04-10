@@ -5,6 +5,7 @@
 [**Debug Mode**](Debug-Mode)  
 [**Mod Structure**](Mod-Structure)  
 [**Commandline Arguments**](Commandline-Arguments)   
+[**Common Crashes**](common-crashes)   
 [**everest.yaml validator**](https://max480-random-stuff.appspot.com/celeste/everest-yaml-validator)
 
 ## Map Making
