@@ -451,20 +451,17 @@ Hooking them behaves particularly:
 
 #### On.* Hooks
 
-Contrary to other hooks, running `orig` does **not** execute the code in the coroutine. It just returns an `IEnumerator` object allowing to do so: when calling `origEnum.MoveNext()`, the code runs until a `yield return` is hit, and you can get the returned value with `origEnum.Current`. `MoveNext()` returns a boolean that will be `false` if the end of the method was reached.
+In order to run the vanilla coroutine in your hook, you need to use `yield return orig(self)`:
 
-So, this code:
 ```cs
-IEnumerator origEnum = orig(self);
-while (origEnum.MoveNext()) {
-    if (origEnum.Current is float f && f == 2f) {
-        yield return 4f;
-    } else {
-        yield return origEnum.Current;
-    }
+private static IEnumerator onFileSelectLeave(On.Celeste.OuiFileSelect.orig_Leave orig, OuiFileSelect self, Oui next) {
+    yield return orig(self, next);
+
+    Logger.Log("TestMod", "I left file select!");
 }
 ```
-will run the entire vanilla coroutine, replacing each 2-second delay with a 4-second one.
+
+ℹ️ _To be able to use `yield return orig(self)`, you need to depend on Everest 2563 or later in your everest.yaml._
 
 #### IL.* hooks
 
