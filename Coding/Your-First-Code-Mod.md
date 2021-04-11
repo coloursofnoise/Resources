@@ -461,7 +461,7 @@ private static IEnumerator onFileSelectLeave(On.Celeste.OuiFileSelect.orig_Leave
 }
 ```
 
-ℹ️ _To be able to use `yield return orig(self)`, you need to depend on Everest 2563 or later in your everest.yaml._
+ℹ️ _To be able to use `yield return orig(self)` without issues, you need to depend on Everest 2563 or later in your everest.yaml._
 
 #### IL.* hooks
 
