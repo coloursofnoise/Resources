@@ -31,9 +31,15 @@ If a link is missing/broken, **Do Not Bother the Mod Author**. Either add/update
 ## FactoryHelper
 - [Documentation](https://github.com/acsBenceTamas/Kayden-Fox-Celeste-Mods/blob/master/FactoryHelper/Readme.md)
 
+## FrostHelper
+- [Documentation](https://github.com/JaThePlayer/FrostHelper/blob/master/README.md)
+
 ## LuaCutscenes
 - [Mod Documentation](https://storage.googleapis.com/lua-cutscenes-documentation/index.html)
 - [Lua Documentation](https://www.lua.org/pil/1.html)
 
 ## MaxHelpingHand
 - [Flag Touch Switch documentation](https://github.com/max4805/MaxHelpingHand/blob/master/README.md)
+
+## VivHelper
+- [Documentation](https://docs.google.com/document/d/1g1w0HChLaEH7S1rh-eDftlIvzgCJTZxWj9Vzzq5Rmr0)
