@@ -451,17 +451,17 @@ Hooking them behaves particularly:
 
 #### On.* Hooks
 
-In order to run the vanilla coroutine in your hook, you need to use `yield return orig(self)`:
+When hooking Coroutines, it is required to wrap any `yield return orig()` in a `SwapImmediately` object as shown here:
 
 ```cs
 private static IEnumerator onFileSelectLeave(On.Celeste.OuiFileSelect.orig_Leave orig, OuiFileSelect self, Oui next) {
-    yield return orig(self, next);
+    yield return new SwapImmediately(orig(self, next));
 
     Logger.Log("TestMod", "I left file select!");
 }
 ```
-
-ℹ️ _To be able to use `yield return orig(self)` without issues, you need to depend on Everest 2563 or later in your everest.yaml._
+This is due to the one frame delay that is present when switching between IEnumerators in a Coroutine.  
+:information_source: _To be able to use `yield return new SwapImmediately(orig(self))` without issues, you need to depend on Everest 2781 or later in your everest.yaml._
 
 #### IL.* hooks
 
