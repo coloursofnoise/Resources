@@ -463,7 +463,7 @@ private static IEnumerator onFileSelectLeave(On.Celeste.OuiFileSelect.orig_Leave
 This is due to the one frame delay that is present when switching between IEnumerators in a Coroutine.  
 :information_source: _To be able to use `yield return new SwapImmediately(orig(self))` without issues, you need to depend on Everest 2781 or later in your everest.yaml._
 
-:warning: This one-line method might not work in all cases: in some situations, the coroutine is interrupted before it reaches its end, which especially happens with "state machine" coroutines, so any code you insert after the coroutine ends isn't run. In this case, use this instead:
+:warning: This one-line method might not work in all cases, especially if the vanilla routine is a "state machine" routine that changes the state (`StateMachine.State = xx`). In this case, any code you insert after the coroutine ends isn't run. In this case, use this instead:
 ```cs
 IEnumerator origEnum = orig(self);
 while (origEnum.MoveNext()) yield return origEnum.Current;
