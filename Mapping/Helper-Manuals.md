@@ -22,6 +22,9 @@ If a link is missing/broken, **Do Not Bother the Mod Author**. Either add/update
 ## AdventureHelper
 - [Documentation](https://github.com/acsBenceTamas/Kayden-Fox-Celeste-Mods/blob/master/AdventureHelper/Readme.md)
 
+## AltSidesHelper
+- [Documentation](https://github.com/l-Luna/AltSidesHelper/blob/master/DOCUMENTATION.md)
+
 ## CollabUtils2
 - [Documentation](https://github.com/EverestAPI/CelesteCollabUtils2/blob/master/DOCUMENTATION.md)
 
