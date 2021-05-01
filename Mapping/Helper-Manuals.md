@@ -37,6 +37,9 @@ If a link is missing/broken, **Do Not Bother the Mod Author**. Either add/update
 ## FrostHelper
 - [Documentation](https://github.com/JaThePlayer/FrostHelper/blob/master/README.md)
 
+## Hyperline
+- [Hair Trigger documentation](https://github.com/lordseanington/Hyperline/wiki/Modding-Support#hair-trigger)
+
 ## LuaCutscenes
 - [Mod Documentation](https://storage.googleapis.com/lua-cutscenes-documentation/index.html)
 - [Lua Documentation](https://www.lua.org/pil/1.html)
