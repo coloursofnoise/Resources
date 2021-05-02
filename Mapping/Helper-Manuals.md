@@ -47,5 +47,8 @@ If a link is missing/broken, **Do Not Bother the Mod Author**. Either add/update
 ## MaxHelpingHand
 - [Flag Touch Switch documentation](https://github.com/max4805/MaxHelpingHand/blob/master/README.md)
 
+## SkinModHelper
+- [Documentation](https://github.com/bigkahuna443/SkinModHelper/blob/master/README.md)
+
 ## VivHelper
 - [Documentation](https://docs.google.com/document/d/1g1w0HChLaEH7S1rh-eDftlIvzgCJTZxWj9Vzzq5Rmr0)
