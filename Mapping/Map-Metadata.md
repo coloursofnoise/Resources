@@ -8,14 +8,15 @@
 *   [Chapter Card](#chapter-card)
 *   [Map Position On The Mountain](#map-position-on-the-mountain)
 *   [Customizing the overworld](#customizing-the-overworld)
-     * [Custom mountain/moon models](#custom-mountainmoon-models)
-     * [Custom textures](#custom-textures)
-     * [Custom colors](#custom-colors)
-     * [Custom Background Music and Ambience](#custom-background-music-and-ambience)
-     * [Disabling the snow](#disabling-the-snow)
+    * [Custom mountain/moon models](#custom-mountainmoon-models)
+    * [Custom textures](#custom-textures)
+    * [Custom colors](#custom-colors)
+    * [Custom Background Music and Ambience](#custom-background-music-and-ambience)
+    * [Disabling the snow](#disabling-the-snow)
 *   [Chapter Complete Screen](#chapter-complete-screen)
-     * [Graphics](#graphics)
-     * [Music](#music)
+    * [Graphics](#graphics)
+    * [Music](#music)
+    * [Title](#title)
 *   [Loading Vignette](#loading-vignette)
 *   [Checkpoint Images](#checkpoint-images)
 *   [Overriding Metadata](#overriding-metadata)
@@ -29,18 +30,19 @@ In particular, your map bin should be in `Mods/yourmodname/Maps/yournickname/cam
 
 You should now create the file `Mods/yourmodname/Dialog/English.txt`.
 It should contain the following:
-
-    yournickname_campaignname= Campaign Name
-    yournickname_campaignname_mapname= Map Name
-
+```
+yournickname_campaignname= Campaign Name
+yournickname_campaignname_mapname= Map Name
+```
 It also works to define checkpoint names:
-
-    yournickname_campaignname_mapname_roomname= Checkpoint Name
-
+```
+yournickname_campaignname_mapname_roomname= Checkpoint Name
+```
 As a general rule, if you see `{blah_blah}` in the game, and you want it to display `some text` instead,
 you need to add this in your English.txt:
-
-    blah_blah= some text
+```
+blah_blah= some text
+```
 
 (If you feel like translating your map name in other languages, you can create other files in the Dialog directory, for example `French.txt`.
 All non-existing languages will fall back to English.)
@@ -134,7 +136,7 @@ To place this, move the camera to where you want the cursor to be, then copy the
 You can customize the mountain 3D models that are displayed when your map is selected, by defining a custom model directory in your map meta.yaml:
 ```yaml
 Mountain:
-  MountainModelDirectory: Mountain/yourname/campaignname
+    MountainModelDirectory: Mountain/yourname/campaignname
 ```
 After defining that, you can drop your custom objects in `Mods/yourmod/Mountain/yourname/campaignname`.
 
@@ -147,7 +149,7 @@ You can find the vanilla mountain models in the Content/Overworld folder. If you
 To change the mountain textures when your map is selected, you can define a custom model directory in your map meta.yaml:
 ```yaml
 Mountain:
-  MountainTextureDirectory: yourname/campaignname
+    MountainTextureDirectory: yourname/campaignname
 ```
 After defining that, you can drop your custom textures in `Mods/yourmod/Graphics/Atlases/Mountain/yourname/campaignname`.
 
@@ -161,22 +163,22 @@ Some textures and objects used in the overworld are tinted with colors you can c
 
 ```yaml
 Mountain:
-  FogColors:
-    - 010817
-    - 13203E
-    - 281A35
-    - 010817
-  StarFogColor: 020915
-  StarStreamColors:
-    - 000000
-    - 9228e2
-    - 30ffff
-  StarBeltColors1:
-    - 53f3dd
-    - 53c9f3
-  StarBeltColors2:
-    - ab6ffa
-    - fa70ea
+    FogColors:
+      - 010817
+      - 13203E
+      - 281A35
+      - 010817
+    StarFogColor: 020915
+    StarStreamColors:
+      - 000000
+      - 9228e2
+      - 30ffff
+    StarBeltColors1:
+      - 53f3dd
+      - 53c9f3
+    StarBeltColors2:
+      - ab6ffa
+      - fa70ea
 ```
 
 - `FogColors` are the colors of the fog on the mountain, for each `State` (see [Map Position On The Mountain](#map-position-on-the-mountain)). 2 colors will be used by the game: the one for the state your custom mountain uses, and the first one (state 0) on the main menu. **Defining all the values isn't mandatory**: if you define less than 4 values, the others will be at their default. _This means if you're using state 0, you only need 1 value._
@@ -189,8 +191,8 @@ Mountain:
 For a different background music and ambience to play when the player selects your map, use this in your map meta.yaml:
 ```yaml
 Mountain:
-  BackgroundMusic: event:/max480/test_music
-  BackgroundAmbience: event:/env/amb/06_lake
+    BackgroundMusic: event:/max480/test_music
+    BackgroundAmbience: event:/env/amb/06_lake
 ```
 Note that both are optional: if you want custom music but the default ambience, you can omit `BackgroundAmbience`.
 
@@ -199,23 +201,23 @@ Check the [custom audio tutorial](Audio:-How-Tos) to make the game load your cus
 You can also set _music params_ through metadata, following the following format:
 ```yaml
 Mountain:
-  BackgroundMusicParams:
-    param1: value1
-    param2: value2
+    BackgroundMusicParams:
+        param1: value1
+        param2: value2
 ```
 
 For example, **this is what you want to use if you want to have the Farewell background music on your map**:
 ```yaml
 Mountain:
-  BackgroundMusicParams:
-    moon: 1
+    BackgroundMusicParams:
+        moon: 1
 ```
 
 ### Disabling the snow
 
 ```yaml
 Mountain:
-  ShowSnow: false
+    ShowSnow: false
 ```
 
 This will turn off the snow that is falling on the mountain, or floating in space.
@@ -228,17 +230,17 @@ The image displayed on the chapter complete screen is also defined in the meta.y
 To set up a static image as an endscreen, add something like this:
 
 ```yaml
-    CompleteScreen:
-        Atlas: "Endscreens/yournickname/campaignname"
-        Start: [ 0.0, 0.0 ]
-        Center: [ 0.0, 0.0 ]
-        Offset: [ 0.0, 0.0 ]
-        Layers:
-          - Type: "layer"
-            Images: [ "mapname" ]
-            Position: [ 0.0, 0.0 ]
-            Scroll: [ 0.0 ]
-          - Type: "ui" # delete this line if you don't want the "Chapter Complete" text to appear
+CompleteScreen:
+    Atlas: "Endscreens/yournickname/campaignname"
+    Start: [ 0.0, 0.0 ]
+    Center: [ 0.0, 0.0 ]
+    Offset: [ 0.0, 0.0 ]
+    Layers:
+      - Type: "layer"
+        Images: [ "mapname" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+      - Type: "ui" # delete this line if you don't want the "Chapter Complete" text to appear
 ```
 
 Here, the endscreen will be loaded from `Mods/yourmodname/Graphics/Atlases/Endscreens/yournickname/campaignname/mapname.png`.
@@ -246,12 +248,12 @@ If your chapter complete screen is an image taking up the whole screen, its size
 
 Putting multiple images in `Images` will create an animation:
 ```yaml
-        Layers:
-          - Type: "layer"
-            Images: [ "mapname1", "mapname2", "mapname3" ]
-            Position: [ 0.0, 0.0 ]
-            Scroll: [ 0.0 ]
-            FrameRate: 6 # FPS
+    Layers:
+      - Type: "layer"
+        Images: [ "mapname1", "mapname2", "mapname3" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        FrameRate: 6 # FPS
 ```
 
 To create an parallax animation like vanilla endscreens, you can specify multiple layers and give them different `Position` and `Scroll` values:
@@ -284,10 +286,10 @@ You can make custom music play on the Chapter Complete screen, with this configu
 
 ```yaml
 CompleteScreen:
-  MusicBySide:
-    - event:/music/menu/complete_area # A-side
-    - event:/music/menu/complete_bside # B-side
-    - event:/music/menu/complete_bside # C-side
+    MusicBySide:
+      - event:/music/menu/complete_area # A-side
+      - event:/music/menu/complete_bside # B-side
+      - event:/music/menu/complete_bside # C-side
 ```
 
 The 3 items in the list correspond to the 3 sides. You don't need to specify 3 elements if you have 1 or 2 sides.
@@ -302,13 +304,13 @@ You can make custom title text shown on the Chapter Complete screen without edit
 
 ```yaml
 CompleteScreen:
-  Title:
-    ASide: 'AREACOMPLETE_NORMAL' # A-side complete ("Chapter Complete")
-    BSide: 'AREACOMPLETE_BSIDE' # B-side complete ("B-Side Complete")
-    CSide: 'AREACOMPLETE_CSIDE' # C-side complete ("C-Side Complete")
-    FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR' # A-side full clear ("Chapter Clear")
-  Layers:
-  - Type: 'ui' # don't forget to add this line for your text to appear
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL' # A-side complete ("Chapter Complete")
+        BSide: 'AREACOMPLETE_BSIDE' # B-side complete ("B-Side Complete")
+        CSide: 'AREACOMPLETE_CSIDE' # C-side complete ("C-Side Complete")
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR' # A-side full clear ("Chapter Clear")
+    Layers:
+      - Type: 'ui' # don't forget to add this line for your text to appear
 ```
 
 You can replace the Dialogue IDs to your custom ones. If an item is omitted, it will automatically fallback to default value.
@@ -321,58 +323,58 @@ In meta.yaml file:
 
 ```yaml
 CompleteScreen:
-  Atlas: 'OldSite'
-  Start: [0.0, 1050.0]
-  Center: [0.0, 250.0]
-  Offset: [-108.0, 0.0]
-  Title:
-    ASide: 'WEGFan_CompleteScreenTest_Endscreen_A_Side'
-  Layers:
-  - Type: 'layer'
-    Images: ['00']
-    Position: [0.0, 0.0]
-    Scroll: [0]
-  - Type: 'layer'
-    Images: ['01']
-    Position: [0.0, 0.0]
-    Scroll: [0.02]
-  - Type: 'layer'
-    Images: ['02']
-    Position: [0.0, 0.0]
-    Scroll: [0.04]
-  - Type: 'layer'
-    Images: ['03']
-    Position: [0.0, 0.0]
-    Scroll: [0.06]
-  - Type: 'layer'
-    Images: ['04']
-    Position: [0.0, 0.0]
-    Scroll: [0.10]
-  - Type: 'layer'
-    Images: ['05']
-    Position: [0.0, 0.0]
-    Scroll: [0.10]
-  - Type: 'layer'
-    Images: ['06']
-    Position: [0.0, -20.0]
-    Scroll: [0.11]
-  - Type: 'layer'
-    Images: ['07']
-    Position: [0.0, 0.0]
-    Scroll: [0.12]
-  - Type: 'ui'
-  - Type: 'layer'
-    Images: ['08']
-    Position: [0.0, -680.0]
-    Scroll: [0.13]
-  - Type: 'layer'
-    Images: ['09']
-    Position: [0.0, 0.0]
-    Scroll: [0.13]
-  - Type: 'layer'
-    Images: ['10']
-    Position: [0.0, -680.0]
-    Scroll: [0.15]
+    Atlas: 'OldSite'
+    Start: [0.0, 1050.0]
+    Center: [0.0, 250.0]
+    Offset: [-108.0, 0.0]
+    Title:
+        ASide: 'WEGFan_CompleteScreenTest_Endscreen_A_Side'
+    Layers:
+      - Type: 'layer'
+        Images: ['00']
+        Position: [0.0, 0.0]
+        Scroll: [0]
+      - Type: 'layer'
+        Images: ['01']
+        Position: [0.0, 0.0]
+        Scroll: [0.02]
+      - Type: 'layer'
+        Images: ['02']
+        Position: [0.0, 0.0]
+        Scroll: [0.04]
+      - Type: 'layer'
+        Images: ['03']
+        Position: [0.0, 0.0]
+        Scroll: [0.06]
+      - Type: 'layer'
+        Images: ['04']
+        Position: [0.0, 0.0]
+        Scroll: [0.10]
+      - Type: 'layer'
+        Images: ['05']
+        Position: [0.0, 0.0]
+        Scroll: [0.10]
+      - Type: 'layer'
+        Images: ['06']
+        Position: [0.0, -20.0]
+        Scroll: [0.11]
+      - Type: 'layer'
+        Images: ['07']
+        Position: [0.0, 0.0]
+        Scroll: [0.12]
+      - Type: 'ui'
+      - Type: 'layer'
+        Images: ['08']
+        Position: [0.0, -680.0]
+        Scroll: [0.13]
+      - Type: 'layer'
+        Images: ['09']
+        Position: [0.0, 0.0]
+        Scroll: [0.13]
+      - Type: 'layer'
+        Images: ['10']
+        Position: [0.0, -680.0]
+        Scroll: [0.15]
 ```
 
 In your dialog file:
